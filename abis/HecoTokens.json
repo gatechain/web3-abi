@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Heco-Peg ETH Token",
+    "symbol": "ETH",
+    "address": "0x64ff637fb478863b7468bc97d30a5bf3a428a1fd",
+    "chainId": 128,
+    "decimals": 18
+  },
+  {
+    "name": "Heco-Peg USDTHECO Token",
+    "symbol": "USDT",
+    "address": "0xa71edc38d189767582c38a3145b5873052c3e47a",
+    "chainId": 128,
+    "decimals": 18
+  },
+  {
+    "name": "Heco-Peg USDCHECO Token",
+    "symbol": "USDC-HECO",
+    "address": "0x9362bbef4b8313a8aa9f0c9808b80577aa26b73b",
+    "chainId": 128,
+    "decimals": 6
+  },
+  {
+    "name": "Heco-Peg HUSD Token",
+    "symbol": "HUSD",
+    "address": "0x0298c2b32eae4da002a15f36fdf7615bea3da047",
+    "chainId": 128,
+    "decimals": 8
+  }
+]
