@@ -4,23 +4,23 @@ abi集合
 
 所有的abi
 整理出一个Table 表格
-| 名称 | 描述|
-|--|--|
-ArbitrumsushiswapPair      |Arbitrum链的交易所sushiswap的pair
+| 名称 | 描述|  相关网站|
+|--|--|--|
+ArbitrumsushiswapPair      |Arbitrum链的交易所sushiswap的pair  |https://www.sushi.com/|
 Arbitrumuniswapv2Router    |Arbitrum链的交易所sushiswap的router
-AvaxPangolinPair           |Avax链下的交易所Pangolin的pair
+AvaxPangolinPair           |Avax链下的交易所Pangolin的pair    |https://explorer.0x.org/liquiditySources/Pangolin|
 AvaxPangolinRouter         |Avax链下的交易所Pangolin的router
-AvaxTraderjoePair          |Avax链下的交易所Traderjoe的pair
+AvaxTraderjoePair          |Avax链下的交易所Traderjoe的pair  
 AvaxTraderjoeRouter        | Avax链下的交易所Traderjoe的router
-BscmdexPair                |Bsc链下的交易所mdex的pair
+BscmdexPair                |Bsc链下的交易所mdex的pair       |https://bsc.mdex.com/#/swap|
 BscmdexRouter              |Bsc链下的交易所mdex的router
 BscMulticall               |暂时没有用--很多链下没有此合约
-Bscpair                    |Bac链下的交易所pancake的pair
+Bscpair                    |Bac链下的交易所pancake的pair     |https://pancakeswap.finance/| 
 BscRouter                  |Bac链下的交易所pancake的router
 BscTokens                  |Bac链下的交易所pancake的Tokens 
 CommonBridge               |GtaeBridgeV1生成合约
 Erc20preseMinter           |用于发行代币
-EtherbalanceProxy          |Ether链下的交易所Balancer的router
+EtherbalanceProxy          |Ether链下的交易所Balance的router    |https://etherscan.io/balancecheck-tool|
 EtherCurvedepositZap       |添加流动性
 EtherCurveswapPool         |同上
 EtherCurvelpGauge          |存储lp
@@ -30,7 +30,7 @@ EtherCurveswappoolnCoin    |同上
 EtherCurveFactory          | hipo中未使用
 EtherCurvestableSwap       |Ether链下的交易所curves的router
 EtherCurvesynthSwap        |hipo中暂未使用
-KyberaggrengationExecutor  |Ether链下的交易所kyber的aggregationExecutor
+KyberaggrengationExecutor  |Ether链下的交易所kyber的aggregationExecutor   |https://kyber.network/|
 KyberdmmPool               |Ether链下的交易所kyber的pair
 KyberFactory               |Ether链下的交易所kyber的factory
 KyberProxy                 |hipo中暂未使用
@@ -47,7 +47,7 @@ HecomunltiCall             | hipo中未使用
 HecoPair                   |Heco链下的pair
 HecoRouter                 |Heco链下的router
 HecoTokens                 |Heco链下的tokens
-AavedebtToken              |loan链下的交易所Aave的btToken
+AavedebtToken              |loan链下的交易所Aave的btToken   |https://aave.com/|
 AaveEth                    |loan链下的交易所Aave的ETh
 AavelendingpoolProxy       |loan链下的交易所Aave的proxy
 AavepooladdressProvider    |loan链下的交易所Aave的Provider
@@ -56,7 +56,7 @@ AavepooladdressProvider    |loan链下的交易所Aave的pooladdressProvider
 CompoundCeth               |loan链下的交易所Compound的CEth
 CompoundCtoken             |loan链下的交易所Compound的Ctoken
 CompoundTroller            |loan链下的交易所Compound的Troller 
-CreamCeth                  |loan链下的交易所Cream的ceth
+CreamCeth                  |loan链下的交易所Cream的ceth       |https://app.cream.finance/|
 CreamcomptrollerProxy      |loan链下的交易所Cream的comptrollerProxy
 CreamcToken                |loan链下的交易所Cream的cToken 
 CreaminterestRate          |loan链下的交易所Cream的interestRate
