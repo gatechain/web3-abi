@@ -20,3 +20,4 @@ class SelfBridgeV1Contract extends bridge_v1_1.BridgeV1Contract {
     }
 }
 exports.SelfBridgeV1Contract = SelfBridgeV1Contract;
+SelfBridgeV1Contract.contractName = "SelfBridgeV1Contract";
