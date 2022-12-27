@@ -1,6 +1,25 @@
 {
   "name": "web3-abi",
   "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT"
+  "main": "./dist/index.js",
+  "license": "MIT",
+  "scripts": {
+    "genindex": "node ./scripts/gen-index.js",
+    "abigen": "rm -rf ./src/base && abigen abis='./src/abis/**/*.json' out='./src/base'",
+    "tsc": "rm -rf ./dist && tsc",
+    "build": "npm run abigen && npm run genindex && npm run tsc"
+  },
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "@tsconfig/recommended": "^1.0.1",
+    "abigen": "https://github.com/gatechain/abigen",
+    "ethers": "^5.7.2",
+    "fs-extra": "^11.1.0",
+    "hipo-contract": "^1.0.28"
+  },
+  "peerDependencies": {
+    "hipo-contract": "^1.0.28"
+  }
 }

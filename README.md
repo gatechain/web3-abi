@@ -2,6 +2,13 @@
 
 ### abi 集合
 
+| 名称     | 描述     |
+| -------- | -------- |
+| erc20    | erc20    |
+| BridgeV1 | 跨链合约 |
+
+### 历史合约 abi 集合
+
 | 名称                      | 描述                                            |
 | ------------------------- | ----------------------------------------------- |
 | ArbitrumsushiswapPair     | Arbitrum 链的交易所 sushiswap 的 pair           |
@@ -16,7 +23,6 @@
 | Bscpair                   | Bac 链下的交易所 pancake 的 pair                |
 | BscRouter                 | Bac 链下的交易所 pancake 的 router              |
 | BscTokens                 | Bac 链下的交易所 pancake 的 Tokens              |
-| CommonBridge              | GtaeBridgeV1 生成合约                           |
 | Erc20preseMinter          | 用于发行代币                                    |
 | EtherbalanceProxy         | Ether 链下的交易所 Balancer 的 router           |
 | EtherCurvedepositZap      | 添加流动性                                      |
@@ -65,7 +71,6 @@
 | PolygonsushiswapRouter    | polygon 链下的交易所 sushiswap 的 router        |
 | QuickswapPair             | polygon 链下的交易所 quickswap 的 pair          |
 | QuickswapRouter           | polygon 链下的交易所 quickswap 的 router        |
-| ERC20                     | ERC20                                           |
 
 ---
 
@@ -76,4 +81,3 @@ UnipoolStaking
 DeleteauguStus |hipo 中暂未使用
 DeletebalancerProxy |同上
 DeletekyberProxy |同上
-TestbscPair |hipo 暂未使用

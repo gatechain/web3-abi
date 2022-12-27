@@ -1,0 +1,17 @@
+{
+  "extends": "@tsconfig/recommended/tsconfig.json",
+  "compilerOptions": {
+    "declaration": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "outDir": "./dist"
+  },
+  "exclude": [
+    "**/*.spec.ts"
+  ],
+  "include": [
+    "./src",
+    "./index",
+    "globle.d.ts"
+  ]
+}
