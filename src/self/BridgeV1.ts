@@ -2,6 +2,7 @@ import { BridgeV1Contract } from "../base/bridge_v1";
 import { ethers } from "ethers";
 
 export class SelfBridgeV1Contract extends BridgeV1Contract {
+  public static contractName = "SelfBridgeV1Contract";
   constructor(props: any) {
     super(props);
   }
