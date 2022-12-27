@@ -38,7 +38,7 @@ class ERC20Contract extends ContractAbstract_js_1.default {
     approve(spender, value, opt) {
         return __awaiter(this, void 0, void 0, function* () {
             const signer = this.getContractSigner(this.address);
-            const gasLimit = yield signer.estimateGas.approve(spender, value);
+            const gasLimit = yield signer.estimateGas.approve(spender, value, opt);
             const options = Object.assign({
                 gasLimit
             }, opt);
@@ -64,7 +64,7 @@ class ERC20Contract extends ContractAbstract_js_1.default {
     permit(owner, spender, value, deadline, v, r, s, opt) {
         return __awaiter(this, void 0, void 0, function* () {
             const signer = this.getContractSigner(this.address);
-            const gasLimit = yield signer.estimateGas.permit(owner, spender, value, deadline, v, r, s);
+            const gasLimit = yield signer.estimateGas.permit(owner, spender, value, deadline, v, r, s, opt);
             const options = Object.assign({
                 gasLimit
             }, opt);
@@ -85,7 +85,7 @@ class ERC20Contract extends ContractAbstract_js_1.default {
     transfer(to, value, opt) {
         return __awaiter(this, void 0, void 0, function* () {
             const signer = this.getContractSigner(this.address);
-            const gasLimit = yield signer.estimateGas.transfer(to, value);
+            const gasLimit = yield signer.estimateGas.transfer(to, value, opt);
             const options = Object.assign({
                 gasLimit
             }, opt);
@@ -96,7 +96,7 @@ class ERC20Contract extends ContractAbstract_js_1.default {
     transferFrom(from, to, value, opt) {
         return __awaiter(this, void 0, void 0, function* () {
             const signer = this.getContractSigner(this.address);
-            const gasLimit = yield signer.estimateGas.transferFrom(from, to, value);
+            const gasLimit = yield signer.estimateGas.transferFrom(from, to, value, opt);
             const options = Object.assign({
                 gasLimit
             }, opt);

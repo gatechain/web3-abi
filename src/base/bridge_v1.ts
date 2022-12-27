@@ -119,7 +119,7 @@ export class BridgeV1Contract extends ContractAbstract {
 	  public async adminAddRelayer(relayerAddress:string,opt?: IOption){
 
 			const signer = this.getContractSigner(this.address)
-			const gasLimit = await signer.estimateGas.adminAddRelayer(relayerAddress)
+			const gasLimit = await signer.estimateGas.adminAddRelayer(relayerAddress,opt)
 
 			const options = Object.assign({
 				gasLimit
@@ -130,7 +130,7 @@ export class BridgeV1Contract extends ContractAbstract {
 	  public async adminChangeRelayerThreshold(newThreshold:BigNumber,opt?: IOption){
 
 			const signer = this.getContractSigner(this.address)
-			const gasLimit = await signer.estimateGas.adminChangeRelayerThreshold(newThreshold)
+			const gasLimit = await signer.estimateGas.adminChangeRelayerThreshold(newThreshold,opt)
 
 			const options = Object.assign({
 				gasLimit
@@ -141,7 +141,7 @@ export class BridgeV1Contract extends ContractAbstract {
 	  public async adminPauseTransfers(opt?: IOption){
 
 			const signer = this.getContractSigner(this.address)
-			const gasLimit = await signer.estimateGas.adminPauseTransfers()
+			const gasLimit = await signer.estimateGas.adminPauseTransfers(opt)
 
 			const options = Object.assign({
 				gasLimit
@@ -152,7 +152,7 @@ export class BridgeV1Contract extends ContractAbstract {
 	  public async adminRemoveRelayer(relayerAddress:string,opt?: IOption){
 
 			const signer = this.getContractSigner(this.address)
-			const gasLimit = await signer.estimateGas.adminRemoveRelayer(relayerAddress)
+			const gasLimit = await signer.estimateGas.adminRemoveRelayer(relayerAddress,opt)
 
 			const options = Object.assign({
 				gasLimit
@@ -163,7 +163,7 @@ export class BridgeV1Contract extends ContractAbstract {
 	  public async adminSetBurnable(handlerAddress:string,tokenAddress:string,opt?: IOption){
 
 			const signer = this.getContractSigner(this.address)
-			const gasLimit = await signer.estimateGas.adminSetBurnable(handlerAddress,tokenAddress)
+			const gasLimit = await signer.estimateGas.adminSetBurnable(handlerAddress,tokenAddress,opt)
 
 			const options = Object.assign({
 				gasLimit
@@ -174,7 +174,7 @@ export class BridgeV1Contract extends ContractAbstract {
 	  public async adminSetGasPrice(chainIds:BigNumber[],prices:BigNumber[],opt?: IOption){
 
 			const signer = this.getContractSigner(this.address)
-			const gasLimit = await signer.estimateGas.adminSetGasPrice(chainIds,prices)
+			const gasLimit = await signer.estimateGas.adminSetGasPrice(chainIds,prices,opt)
 
 			const options = Object.assign({
 				gasLimit
@@ -185,7 +185,7 @@ export class BridgeV1Contract extends ContractAbstract {
 	  public async adminSetGenericResource(handlerAddress:string,resourceID:string,contractAddress:string,depositFunctionSig:string,executeFunctionSig:string,opt?: IOption){
 
 			const signer = this.getContractSigner(this.address)
-			const gasLimit = await signer.estimateGas.adminSetGenericResource(handlerAddress,resourceID,contractAddress,depositFunctionSig,executeFunctionSig)
+			const gasLimit = await signer.estimateGas.adminSetGenericResource(handlerAddress,resourceID,contractAddress,depositFunctionSig,executeFunctionSig,opt)
 
 			const options = Object.assign({
 				gasLimit
@@ -196,7 +196,7 @@ export class BridgeV1Contract extends ContractAbstract {
 	  public async adminSetResource(handlerAddress:string,resourceID:string,tokenAddress:string,opt?: IOption){
 
 			const signer = this.getContractSigner(this.address)
-			const gasLimit = await signer.estimateGas.adminSetResource(handlerAddress,resourceID,tokenAddress)
+			const gasLimit = await signer.estimateGas.adminSetResource(handlerAddress,resourceID,tokenAddress,opt)
 
 			const options = Object.assign({
 				gasLimit
@@ -207,7 +207,7 @@ export class BridgeV1Contract extends ContractAbstract {
 	  public async adminSetTokenPrice(chainIds:BigNumber[],prices:BigNumber[],opt?: IOption){
 
 			const signer = this.getContractSigner(this.address)
-			const gasLimit = await signer.estimateGas.adminSetTokenPrice(chainIds,prices)
+			const gasLimit = await signer.estimateGas.adminSetTokenPrice(chainIds,prices,opt)
 
 			const options = Object.assign({
 				gasLimit
@@ -218,7 +218,7 @@ export class BridgeV1Contract extends ContractAbstract {
 	  public async adminUnpauseTransfers(opt?: IOption){
 
 			const signer = this.getContractSigner(this.address)
-			const gasLimit = await signer.estimateGas.adminUnpauseTransfers()
+			const gasLimit = await signer.estimateGas.adminUnpauseTransfers(opt)
 
 			const options = Object.assign({
 				gasLimit
@@ -229,7 +229,7 @@ export class BridgeV1Contract extends ContractAbstract {
 	  public async adminWithdraw(handlerAddress:string,tokenAddress:string,recipient:string,amountOrTokenID:BigNumber,opt?: IOption){
 
 			const signer = this.getContractSigner(this.address)
-			const gasLimit = await signer.estimateGas.adminWithdraw(handlerAddress,tokenAddress,recipient,amountOrTokenID)
+			const gasLimit = await signer.estimateGas.adminWithdraw(handlerAddress,tokenAddress,recipient,amountOrTokenID,opt)
 
 			const options = Object.assign({
 				gasLimit
@@ -240,7 +240,7 @@ export class BridgeV1Contract extends ContractAbstract {
 	  public async cancelProposal(chainID:number|BigNumber,depositNonce:BigNumber,dataHash:string,opt?: IOption){
 
 			const signer = this.getContractSigner(this.address)
-			const gasLimit = await signer.estimateGas.cancelProposal(chainID,depositNonce,dataHash)
+			const gasLimit = await signer.estimateGas.cancelProposal(chainID,depositNonce,dataHash,opt)
 
 			const options = Object.assign({
 				gasLimit
@@ -251,7 +251,7 @@ export class BridgeV1Contract extends ContractAbstract {
 	  public async deposit(destinationChainID:number|BigNumber,resourceID:string,data:string,opt?: IOption){
 
 			const signer = this.getContractSigner(this.address)
-			const gasLimit = await signer.estimateGas.deposit(destinationChainID,resourceID,data)
+			const gasLimit = await signer.estimateGas.deposit(destinationChainID,resourceID,data,opt)
 
 			const options = Object.assign({
 				gasLimit
@@ -262,7 +262,7 @@ export class BridgeV1Contract extends ContractAbstract {
 	  public async depositEventAgain(destinationChainID:number|BigNumber,resourceID:string,depositNonce:BigNumber,opt?: IOption){
 
 			const signer = this.getContractSigner(this.address)
-			const gasLimit = await signer.estimateGas.depositEventAgain(destinationChainID,resourceID,depositNonce)
+			const gasLimit = await signer.estimateGas.depositEventAgain(destinationChainID,resourceID,depositNonce,opt)
 
 			const options = Object.assign({
 				gasLimit
@@ -273,7 +273,7 @@ export class BridgeV1Contract extends ContractAbstract {
 	  public async executeProposal(chainID:number|BigNumber,depositNonce:BigNumber,data:string,resourceID:string,opt?: IOption){
 
 			const signer = this.getContractSigner(this.address)
-			const gasLimit = await signer.estimateGas.executeProposal(chainID,depositNonce,data,resourceID)
+			const gasLimit = await signer.estimateGas.executeProposal(chainID,depositNonce,data,resourceID,opt)
 
 			const options = Object.assign({
 				gasLimit
@@ -314,7 +314,7 @@ export class BridgeV1Contract extends ContractAbstract {
 	  public async grantRole(role:string,account:string,opt?: IOption){
 
 			const signer = this.getContractSigner(this.address)
-			const gasLimit = await signer.estimateGas.grantRole(role,account)
+			const gasLimit = await signer.estimateGas.grantRole(role,account,opt)
 
 			const options = Object.assign({
 				gasLimit
@@ -343,7 +343,7 @@ export class BridgeV1Contract extends ContractAbstract {
 	  public async renounceAdmin(newAdmin:string,opt?: IOption){
 
 			const signer = this.getContractSigner(this.address)
-			const gasLimit = await signer.estimateGas.renounceAdmin(newAdmin)
+			const gasLimit = await signer.estimateGas.renounceAdmin(newAdmin,opt)
 
 			const options = Object.assign({
 				gasLimit
@@ -354,7 +354,7 @@ export class BridgeV1Contract extends ContractAbstract {
 	  public async renounceRole(role:string,account:string,opt?: IOption){
 
 			const signer = this.getContractSigner(this.address)
-			const gasLimit = await signer.estimateGas.renounceRole(role,account)
+			const gasLimit = await signer.estimateGas.renounceRole(role,account,opt)
 
 			const options = Object.assign({
 				gasLimit
@@ -365,7 +365,7 @@ export class BridgeV1Contract extends ContractAbstract {
 	  public async revokeRole(role:string,account:string,opt?: IOption){
 
 			const signer = this.getContractSigner(this.address)
-			const gasLimit = await signer.estimateGas.revokeRole(role,account)
+			const gasLimit = await signer.estimateGas.revokeRole(role,account,opt)
 
 			const options = Object.assign({
 				gasLimit
@@ -376,7 +376,7 @@ export class BridgeV1Contract extends ContractAbstract {
 	  public async transferFunds(addrs:string[],amounts:BigNumber[],opt?: IOption){
 
 			const signer = this.getContractSigner(this.address)
-			const gasLimit = await signer.estimateGas.transferFunds(addrs,amounts)
+			const gasLimit = await signer.estimateGas.transferFunds(addrs,amounts,opt)
 
 			const options = Object.assign({
 				gasLimit
@@ -387,7 +387,7 @@ export class BridgeV1Contract extends ContractAbstract {
 	  public async voteProposal(chainID:number|BigNumber,depositNonce:BigNumber,resourceID:string,dataHash:string,opt?: IOption){
 
 			const signer = this.getContractSigner(this.address)
-			const gasLimit = await signer.estimateGas.voteProposal(chainID,depositNonce,resourceID,dataHash)
+			const gasLimit = await signer.estimateGas.voteProposal(chainID,depositNonce,resourceID,dataHash,opt)
 
 			const options = Object.assign({
 				gasLimit

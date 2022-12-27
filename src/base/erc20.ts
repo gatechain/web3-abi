@@ -35,7 +35,7 @@ export class ERC20Contract extends ContractAbstract {
 	  public async approve(spender:string,value:BigNumber,opt?: IOption){
 
 			const signer = this.getContractSigner(this.address)
-			const gasLimit = await signer.estimateGas.approve(spender,value)
+			const gasLimit = await signer.estimateGas.approve(spender,value,opt)
 
 			const options = Object.assign({
 				gasLimit
@@ -64,7 +64,7 @@ export class ERC20Contract extends ContractAbstract {
 	  public async permit(owner:string,spender:string,value:BigNumber,deadline:BigNumber,v:number|BigNumber,r:string,s:string,opt?: IOption){
 
 			const signer = this.getContractSigner(this.address)
-			const gasLimit = await signer.estimateGas.permit(owner,spender,value,deadline,v,r,s)
+			const gasLimit = await signer.estimateGas.permit(owner,spender,value,deadline,v,r,s,opt)
 
 			const options = Object.assign({
 				gasLimit
@@ -87,7 +87,7 @@ export class ERC20Contract extends ContractAbstract {
 	  public async transfer(to:string,value:BigNumber,opt?: IOption){
 
 			const signer = this.getContractSigner(this.address)
-			const gasLimit = await signer.estimateGas.transfer(to,value)
+			const gasLimit = await signer.estimateGas.transfer(to,value,opt)
 
 			const options = Object.assign({
 				gasLimit
@@ -98,7 +98,7 @@ export class ERC20Contract extends ContractAbstract {
 	  public async transferFrom(from:string,to:string,value:BigNumber,opt?: IOption){
 
 			const signer = this.getContractSigner(this.address)
-			const gasLimit = await signer.estimateGas.transferFrom(from,to,value)
+			const gasLimit = await signer.estimateGas.transferFrom(from,to,value,opt)
 
 			const options = Object.assign({
 				gasLimit
