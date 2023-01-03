@@ -35,11 +35,12 @@ export class ERC20Contract extends ContractAbstract {
 	  public async approve(spender:string,value:BigNumber,opt?: IOption){
 
 			const signer = this.getContractSigner(this.address)
-			const gasLimit = await signer.estimateGas.approve(spender,value,opt)
+			const _opt = opt || {}
+			const gasLimit = await signer.estimateGas.approve(spender,value,_opt)
 
 			const options = Object.assign({
 				gasLimit
-			}, opt)
+			}, _opt)
 			return signer.approve(spender,value,options)
 
 		};
@@ -64,11 +65,12 @@ export class ERC20Contract extends ContractAbstract {
 	  public async permit(owner:string,spender:string,value:BigNumber,deadline:BigNumber,v:number|BigNumber,r:string,s:string,opt?: IOption){
 
 			const signer = this.getContractSigner(this.address)
-			const gasLimit = await signer.estimateGas.permit(owner,spender,value,deadline,v,r,s,opt)
+			const _opt = opt || {}
+			const gasLimit = await signer.estimateGas.permit(owner,spender,value,deadline,v,r,s,_opt)
 
 			const options = Object.assign({
 				gasLimit
-			}, opt)
+			}, _opt)
 			return signer.permit(owner,spender,value,deadline,v,r,s,options)
 
 		};
@@ -87,22 +89,24 @@ export class ERC20Contract extends ContractAbstract {
 	  public async transfer(to:string,value:BigNumber,opt?: IOption){
 
 			const signer = this.getContractSigner(this.address)
-			const gasLimit = await signer.estimateGas.transfer(to,value,opt)
+			const _opt = opt || {}
+			const gasLimit = await signer.estimateGas.transfer(to,value,_opt)
 
 			const options = Object.assign({
 				gasLimit
-			}, opt)
+			}, _opt)
 			return signer.transfer(to,value,options)
 
 		};
 	  public async transferFrom(from:string,to:string,value:BigNumber,opt?: IOption){
 
 			const signer = this.getContractSigner(this.address)
-			const gasLimit = await signer.estimateGas.transferFrom(from,to,value,opt)
+			const _opt = opt || {}
+			const gasLimit = await signer.estimateGas.transferFrom(from,to,value,_opt)
 
 			const options = Object.assign({
 				gasLimit
-			}, opt)
+			}, _opt)
 			return signer.transferFrom(from,to,value,options)
 
 		};
