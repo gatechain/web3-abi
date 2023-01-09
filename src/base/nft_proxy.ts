@@ -1,4 +1,4 @@
-import ContractAbstract from "hipo-contract/dist/contract/ContractAbstract.js";
+import ContractAbstract from "web3-contract/dist/contract/ContractAbstract.js";
 import NftProxyAbi from '../abis/NftProxy.json'
 
 type BigNumber = any 

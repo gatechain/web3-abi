@@ -1,16 +1,23 @@
 # web3-abi
 
+### Install
+
+```
+"web3-abi": "https://github.com/gatechain/web3-abi",
+```
+
 ### abi 集合
 
-| 名称     | 描述     |
-| -------- | -------- |
-| erc20    | erc20    |
-| BridgeV1 | 跨链合约 |
-| erc1155 | erc1155 |
-| erc720 | erc720 |
+| 名称         | 描述         |
+| ------------ | ------------ |
+| erc20        | erc20        |
+| BridgeV1     | 跨链合约     |
+| erc1155      | erc1155      |
+| erc720       | erc720       |
 | NFT_exchange | NFT_exchange |
-| NFT_proxy | NFT_proxy |
-| wgt | wgt |
+| NFT_proxy    | NFT_proxy    |
+| wgt          | wgt          |
+
 ### 历史合约 abi 集合
 
 | 名称                      | 描述                                            |

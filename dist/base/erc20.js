@@ -13,7 +13,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ERC20Contract = void 0;
-const ContractAbstract_js_1 = __importDefault(require("hipo-contract/dist/contract/ContractAbstract.js"));
+const ContractAbstract_js_1 = __importDefault(require("web3-contract/dist/contract/ContractAbstract.js"));
 const ERC20_json_1 = __importDefault(require("../abis/ERC20.json"));
 class ERC20Contract extends ContractAbstract_js_1.default {
     constructor(props) {

@@ -13,7 +13,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.BridgeV1Contract = void 0;
-const ContractAbstract_js_1 = __importDefault(require("hipo-contract/dist/contract/ContractAbstract.js"));
+const ContractAbstract_js_1 = __importDefault(require("web3-contract/dist/contract/ContractAbstract.js"));
 const BridgeV1_json_1 = __importDefault(require("../abis/BridgeV1.json"));
 class BridgeV1Contract extends ContractAbstract_js_1.default {
     constructor(props) {

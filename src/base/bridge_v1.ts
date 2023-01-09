@@ -1,4 +1,4 @@
-import ContractAbstract from "hipo-contract/dist/contract/ContractAbstract.js";
+import ContractAbstract from "web3-contract/dist/contract/ContractAbstract.js";
 import BridgeV1Abi from '../abis/BridgeV1.json'
 
 type BigNumber = any 
