@@ -21,5 +21,8 @@
   },
   "peerDependencies": {
     "hipo-contract": "^1.0.28"
+  },
+  "dependencies": {
+    "typescript": "^4.9.4"
   }
 }

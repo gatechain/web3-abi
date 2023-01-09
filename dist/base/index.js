@@ -15,4 +15,9 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 __exportStar(require("./bridge_v1"), exports);
+__exportStar(require("./erc1155"), exports);
 __exportStar(require("./erc20"), exports);
+__exportStar(require("./erc721"), exports);
+__exportStar(require("./nft_exchange"), exports);
+__exportStar(require("./nft_proxy"), exports);
+__exportStar(require("./wgt"), exports);

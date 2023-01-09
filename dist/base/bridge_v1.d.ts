@@ -1,5 +1,5 @@
 import ContractAbstract from "hipo-contract/dist/contract/ContractAbstract.js";
-declare type BigNumber = any;
+type BigNumber = any;
 interface IOption {
     gasLimit?: Number;
     from?: string;

@@ -6,7 +6,11 @@
 | -------- | -------- |
 | erc20    | erc20    |
 | BridgeV1 | 跨链合约 |
-
+| erc1155 | erc1155 |
+| erc720 | erc720 |
+| NFT_exchange | NFT_exchange |
+| NFT_proxy | NFT_proxy |
+| wgt | wgt |
 ### 历史合约 abi 集合
 
 | 名称                      | 描述                                            |
