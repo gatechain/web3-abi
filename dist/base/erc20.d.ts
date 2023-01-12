@@ -1,10 +1,4 @@
-import ContractAbstract from "web3-contract/dist/contract/ContractAbstract.js";
-type BigNumber = any;
-interface IOption {
-    gasLimit?: Number;
-    from?: string;
-    value?: string;
-}
+import ContractAbstract, { BigNumber, IOption } from "web3-contract/dist/contract/ContractAbstract.js";
 export declare class ERC20Contract extends ContractAbstract {
     static contractName: string;
     Abi: ({
@@ -53,17 +47,16 @@ export declare class ERC20Contract extends ContractAbstract {
         anonymous?: undefined;
     })[];
     constructor(props: any);
-    DOMAIN_SEPARATOR(): any;
-    PERMIT_TYPEHASH(): any;
-    allowance(index_0: string, index_1: string): any;
+    DOMAIN_SEPARATOR(opt?: IOption): any;
+    PERMIT_TYPEHASH(opt?: IOption): any;
+    allowance(index_0: string, index_1: string, opt?: IOption): any;
     approve(spender: string, value: BigNumber, opt?: IOption): Promise<any>;
-    balanceOf(index_0: string): any;
-    decimals(): any;
-    nonces(index_0: string): any;
+    balanceOf(index_0: string, opt?: IOption): any;
+    decimals(opt?: IOption): any;
+    nonces(index_0: string, opt?: IOption): any;
     permit(owner: string, spender: string, value: BigNumber, deadline: BigNumber, v: number | BigNumber, r: string, s: string, opt?: IOption): Promise<any>;
-    symbol(): any;
-    totalSupply(): any;
+    symbol(opt?: IOption): any;
+    totalSupply(opt?: IOption): any;
     transfer(to: string, value: BigNumber, opt?: IOption): Promise<any>;
     transferFrom(from: string, to: string, value: BigNumber, opt?: IOption): Promise<any>;
 }
-export {};

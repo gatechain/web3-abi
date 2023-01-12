@@ -22,8 +22,9 @@ class WGTContract extends ContractAbstract_js_1.default {
     }
     approve(guy, wad, opt) {
         return __awaiter(this, void 0, void 0, function* () {
-            const signer = this.getContractSigner(this.address);
-            const _opt = opt || {};
+            const [address, rest] = this.parseOption(opt);
+            const signer = this.getContractSigner(address);
+            const _opt = rest;
             const gasLimit = yield signer.estimateGas.approve(guy, wad, _opt);
             const options = Object.assign({
                 gasLimit
@@ -32,15 +33,17 @@ class WGTContract extends ContractAbstract_js_1.default {
         });
     }
     ;
-    totalSupply() {
-        const provider = this.getContractProvider(this.address);
+    totalSupply(opt) {
+        const [address] = this.parseOption(opt);
+        const provider = this.getContractProvider(address);
         return provider.totalSupply();
     }
     ;
     transferFrom(src, dst, wad, opt) {
         return __awaiter(this, void 0, void 0, function* () {
-            const signer = this.getContractSigner(this.address);
-            const _opt = opt || {};
+            const [address, rest] = this.parseOption(opt);
+            const signer = this.getContractSigner(address);
+            const _opt = rest;
             const gasLimit = yield signer.estimateGas.transferFrom(src, dst, wad, _opt);
             const options = Object.assign({
                 gasLimit
@@ -51,8 +54,9 @@ class WGTContract extends ContractAbstract_js_1.default {
     ;
     withdraw(wad, opt) {
         return __awaiter(this, void 0, void 0, function* () {
-            const signer = this.getContractSigner(this.address);
-            const _opt = opt || {};
+            const [address, rest] = this.parseOption(opt);
+            const signer = this.getContractSigner(address);
+            const _opt = rest;
             const gasLimit = yield signer.estimateGas.withdraw(wad, _opt);
             const options = Object.assign({
                 gasLimit
@@ -61,25 +65,29 @@ class WGTContract extends ContractAbstract_js_1.default {
         });
     }
     ;
-    decimals() {
-        const provider = this.getContractProvider(this.address);
+    decimals(opt) {
+        const [address] = this.parseOption(opt);
+        const provider = this.getContractProvider(address);
         return provider.decimals();
     }
     ;
-    balanceOf(index_0) {
-        const provider = this.getContractProvider(this.address);
+    balanceOf(index_0, opt) {
+        const [address] = this.parseOption(opt);
+        const provider = this.getContractProvider(address);
         return provider.balanceOf(index_0);
     }
     ;
-    symbol() {
-        const provider = this.getContractProvider(this.address);
+    symbol(opt) {
+        const [address] = this.parseOption(opt);
+        const provider = this.getContractProvider(address);
         return provider.symbol();
     }
     ;
     transfer(dst, wad, opt) {
         return __awaiter(this, void 0, void 0, function* () {
-            const signer = this.getContractSigner(this.address);
-            const _opt = opt || {};
+            const [address, rest] = this.parseOption(opt);
+            const signer = this.getContractSigner(address);
+            const _opt = rest;
             const gasLimit = yield signer.estimateGas.transfer(dst, wad, _opt);
             const options = Object.assign({
                 gasLimit
@@ -90,8 +98,9 @@ class WGTContract extends ContractAbstract_js_1.default {
     ;
     deposit(opt) {
         return __awaiter(this, void 0, void 0, function* () {
-            const signer = this.getContractSigner(this.address);
-            const _opt = opt || {};
+            const [address, rest] = this.parseOption(opt);
+            const signer = this.getContractSigner(address);
+            const _opt = rest;
             const gasLimit = yield signer.estimateGas.deposit(_opt);
             const options = Object.assign({
                 gasLimit
@@ -100,8 +109,9 @@ class WGTContract extends ContractAbstract_js_1.default {
         });
     }
     ;
-    allowance(index_0, index_1) {
-        const provider = this.getContractProvider(this.address);
+    allowance(index_0, index_1, opt) {
+        const [address] = this.parseOption(opt);
+        const provider = this.getContractProvider(address);
         return provider.allowance(index_0, index_1);
     }
     ;

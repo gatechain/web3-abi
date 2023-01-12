@@ -22,8 +22,9 @@ class ERC721Contract extends ContractAbstract_js_1.default {
     }
     approve(to, tokenId, opt) {
         return __awaiter(this, void 0, void 0, function* () {
-            const signer = this.getContractSigner(this.address);
-            const _opt = opt || {};
+            const [address, rest] = this.parseOption(opt);
+            const signer = this.getContractSigner(address);
+            const _opt = rest;
             const gasLimit = yield signer.estimateGas.approve(to, tokenId, _opt);
             const options = Object.assign({
                 gasLimit
@@ -32,60 +33,71 @@ class ERC721Contract extends ContractAbstract_js_1.default {
         });
     }
     ;
-    balanceOf(owner) {
-        const provider = this.getContractProvider(this.address);
+    balanceOf(owner, opt) {
+        const [address] = this.parseOption(opt);
+        const provider = this.getContractProvider(address);
         return provider.balanceOf(owner);
     }
     ;
-    getApproved(tokenId) {
-        const provider = this.getContractProvider(this.address);
+    getApproved(tokenId, opt) {
+        const [address] = this.parseOption(opt);
+        const provider = this.getContractProvider(address);
         return provider.getApproved(tokenId);
     }
     ;
-    getStage(_stage) {
-        const provider = this.getContractProvider(this.address);
+    getStage(_stage, opt) {
+        const [address] = this.parseOption(opt);
+        const provider = this.getContractProvider(address);
         return provider.getStage(_stage);
     }
     ;
-    getSystemAddress() {
-        const provider = this.getContractProvider(this.address);
+    getSystemAddress(opt) {
+        const [address] = this.parseOption(opt);
+        const provider = this.getContractProvider(address);
         return provider.getSystemAddress();
     }
     ;
-    hashToSign(sender, stage, quantity, price, max) {
-        const provider = this.getContractProvider(this.address);
+    hashToSign(sender, stage, quantity, price, max, opt) {
+        const [address] = this.parseOption(opt);
+        const provider = this.getContractProvider(address);
         return provider.hashToSign(sender, stage, quantity, price, max);
     }
     ;
-    isApprovedForAll(owner, operator) {
-        const provider = this.getContractProvider(this.address);
+    isApprovedForAll(owner, operator, opt) {
+        const [address] = this.parseOption(opt);
+        const provider = this.getContractProvider(address);
         return provider.isApprovedForAll(owner, operator);
     }
     ;
-    nextOwnerToExplicitlySet() {
-        const provider = this.getContractProvider(this.address);
+    nextOwnerToExplicitlySet(opt) {
+        const [address] = this.parseOption(opt);
+        const provider = this.getContractProvider(address);
         return provider.nextOwnerToExplicitlySet();
     }
     ;
-    numberMinted(stage, owner) {
-        const provider = this.getContractProvider(this.address);
+    numberMinted(stage, owner, opt) {
+        const [address] = this.parseOption(opt);
+        const provider = this.getContractProvider(address);
         return provider.numberMinted(stage, owner);
     }
     ;
-    owner() {
-        const provider = this.getContractProvider(this.address);
+    owner(opt) {
+        const [address] = this.parseOption(opt);
+        const provider = this.getContractProvider(address);
         return provider.owner();
     }
     ;
-    ownerOf(tokenId) {
-        const provider = this.getContractProvider(this.address);
+    ownerOf(tokenId, opt) {
+        const [address] = this.parseOption(opt);
+        const provider = this.getContractProvider(address);
         return provider.ownerOf(tokenId);
     }
     ;
     renounceOwnership(opt) {
         return __awaiter(this, void 0, void 0, function* () {
-            const signer = this.getContractSigner(this.address);
-            const _opt = opt || {};
+            const [address, rest] = this.parseOption(opt);
+            const signer = this.getContractSigner(address);
+            const _opt = rest;
             const gasLimit = yield signer.estimateGas.renounceOwnership(_opt);
             const options = Object.assign({
                 gasLimit
@@ -96,8 +108,9 @@ class ERC721Contract extends ContractAbstract_js_1.default {
     ;
     safeTransferFrom1(from, to, tokenId, opt) {
         return __awaiter(this, void 0, void 0, function* () {
-            const signer = this.getContractSigner(this.address);
-            const _opt = opt || {};
+            const [address, rest] = this.parseOption(opt);
+            const signer = this.getContractSigner(address);
+            const _opt = rest;
             const gasLimit = yield signer.estimateGas.safeTransferFrom1(from, to, tokenId, _opt);
             const options = Object.assign({
                 gasLimit
@@ -108,8 +121,9 @@ class ERC721Contract extends ContractAbstract_js_1.default {
     ;
     safeTransferFrom2(from, to, tokenId, _data, opt) {
         return __awaiter(this, void 0, void 0, function* () {
-            const signer = this.getContractSigner(this.address);
-            const _opt = opt || {};
+            const [address, rest] = this.parseOption(opt);
+            const signer = this.getContractSigner(address);
+            const _opt = rest;
             const gasLimit = yield signer.estimateGas.safeTransferFrom2(from, to, tokenId, _data, _opt);
             const options = Object.assign({
                 gasLimit
@@ -120,8 +134,9 @@ class ERC721Contract extends ContractAbstract_js_1.default {
     ;
     saleMint(stage, quantity, price, max, hash, signature, opt) {
         return __awaiter(this, void 0, void 0, function* () {
-            const signer = this.getContractSigner(this.address);
-            const _opt = opt || {};
+            const [address, rest] = this.parseOption(opt);
+            const signer = this.getContractSigner(address);
+            const _opt = rest;
             const gasLimit = yield signer.estimateGas.saleMint(stage, quantity, price, max, hash, signature, _opt);
             const options = Object.assign({
                 gasLimit
@@ -132,8 +147,9 @@ class ERC721Contract extends ContractAbstract_js_1.default {
     ;
     setApprovalForAll(operator, approved, opt) {
         return __awaiter(this, void 0, void 0, function* () {
-            const signer = this.getContractSigner(this.address);
-            const _opt = opt || {};
+            const [address, rest] = this.parseOption(opt);
+            const signer = this.getContractSigner(address);
+            const _opt = rest;
             const gasLimit = yield signer.estimateGas.setApprovalForAll(operator, approved, _opt);
             const options = Object.assign({
                 gasLimit
@@ -144,8 +160,9 @@ class ERC721Contract extends ContractAbstract_js_1.default {
     ;
     setStage(_stage, _startTime, _endTime, _price, opt) {
         return __awaiter(this, void 0, void 0, function* () {
-            const signer = this.getContractSigner(this.address);
-            const _opt = opt || {};
+            const [address, rest] = this.parseOption(opt);
+            const signer = this.getContractSigner(address);
+            const _opt = rest;
             const gasLimit = yield signer.estimateGas.setStage(_stage, _startTime, _endTime, _price, _opt);
             const options = Object.assign({
                 gasLimit
@@ -156,8 +173,9 @@ class ERC721Contract extends ContractAbstract_js_1.default {
     ;
     setSystemAddress(_address, opt) {
         return __awaiter(this, void 0, void 0, function* () {
-            const signer = this.getContractSigner(this.address);
-            const _opt = opt || {};
+            const [address, rest] = this.parseOption(opt);
+            const signer = this.getContractSigner(address);
+            const _opt = rest;
             const gasLimit = yield signer.estimateGas.setSystemAddress(_address, _opt);
             const options = Object.assign({
                 gasLimit
@@ -166,40 +184,47 @@ class ERC721Contract extends ContractAbstract_js_1.default {
         });
     }
     ;
-    supportsInterface(interfaceId) {
-        const provider = this.getContractProvider(this.address);
+    supportsInterface(interfaceId, opt) {
+        const [address] = this.parseOption(opt);
+        const provider = this.getContractProvider(address);
         return provider.supportsInterface(interfaceId);
     }
     ;
-    symbol() {
-        const provider = this.getContractProvider(this.address);
+    symbol(opt) {
+        const [address] = this.parseOption(opt);
+        const provider = this.getContractProvider(address);
         return provider.symbol();
     }
     ;
-    tokenByIndex(index) {
-        const provider = this.getContractProvider(this.address);
+    tokenByIndex(index, opt) {
+        const [address] = this.parseOption(opt);
+        const provider = this.getContractProvider(address);
         return provider.tokenByIndex(index);
     }
     ;
-    tokenOfOwnerByIndex(owner, index) {
-        const provider = this.getContractProvider(this.address);
+    tokenOfOwnerByIndex(owner, index, opt) {
+        const [address] = this.parseOption(opt);
+        const provider = this.getContractProvider(address);
         return provider.tokenOfOwnerByIndex(owner, index);
     }
     ;
-    tokenURI(tokenId) {
-        const provider = this.getContractProvider(this.address);
+    tokenURI(tokenId, opt) {
+        const [address] = this.parseOption(opt);
+        const provider = this.getContractProvider(address);
         return provider.tokenURI(tokenId);
     }
     ;
-    totalSupply() {
-        const provider = this.getContractProvider(this.address);
+    totalSupply(opt) {
+        const [address] = this.parseOption(opt);
+        const provider = this.getContractProvider(address);
         return provider.totalSupply();
     }
     ;
     transferFrom(from, to, tokenId, opt) {
         return __awaiter(this, void 0, void 0, function* () {
-            const signer = this.getContractSigner(this.address);
-            const _opt = opt || {};
+            const [address, rest] = this.parseOption(opt);
+            const signer = this.getContractSigner(address);
+            const _opt = rest;
             const gasLimit = yield signer.estimateGas.transferFrom(from, to, tokenId, _opt);
             const options = Object.assign({
                 gasLimit
@@ -210,8 +235,9 @@ class ERC721Contract extends ContractAbstract_js_1.default {
     ;
     transferOwnership(newOwner, opt) {
         return __awaiter(this, void 0, void 0, function* () {
-            const signer = this.getContractSigner(this.address);
-            const _opt = opt || {};
+            const [address, rest] = this.parseOption(opt);
+            const signer = this.getContractSigner(address);
+            const _opt = rest;
             const gasLimit = yield signer.estimateGas.transferOwnership(newOwner, _opt);
             const options = Object.assign({
                 gasLimit

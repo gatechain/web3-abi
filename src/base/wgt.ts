@@ -1,12 +1,6 @@
-import ContractAbstract from "web3-contract/dist/contract/ContractAbstract.js";
+import ContractAbstract, {BigNumber, IOption} from "web3-contract/dist/contract/ContractAbstract.js";
 import WGTAbi from '../abis/WGT.json'
 
-type BigNumber = any 
-interface IOption {
-	gasLimit?: Number
-	from?: string 
-	value?: string 
-} 
 
 export class WGTContract extends ContractAbstract {
     public static contractName = 'WGTContract';
@@ -16,8 +10,9 @@ export class WGTContract extends ContractAbstract {
 		}
 	  public async approve(guy:string,wad:BigNumber,opt?: IOption){
 
-			const signer = this.getContractSigner(this.address)
-			const _opt = opt || {}
+			const [address, rest] = this.parseOption(opt)
+			const signer = this.getContractSigner(address)
+			const _opt = rest
 			const gasLimit = await signer.estimateGas.approve(guy,wad,_opt)
 
 			const options = Object.assign({
@@ -26,16 +21,18 @@ export class WGTContract extends ContractAbstract {
 			return signer.approve(guy,wad,options)
 
 		};
-	  public totalSupply(){
+	  public totalSupply(opt?: IOption){
 
-			const provider = this.getContractProvider(this.address)
+			const [address] = this.parseOption(opt)
+			const provider = this.getContractProvider(address)
 			return provider.totalSupply()
 
 		};
 	  public async transferFrom(src:string,dst:string,wad:BigNumber,opt?: IOption){
 
-			const signer = this.getContractSigner(this.address)
-			const _opt = opt || {}
+			const [address, rest] = this.parseOption(opt)
+			const signer = this.getContractSigner(address)
+			const _opt = rest
 			const gasLimit = await signer.estimateGas.transferFrom(src,dst,wad,_opt)
 
 			const options = Object.assign({
@@ -46,8 +43,9 @@ export class WGTContract extends ContractAbstract {
 		};
 	  public async withdraw(wad:BigNumber,opt?: IOption){
 
-			const signer = this.getContractSigner(this.address)
-			const _opt = opt || {}
+			const [address, rest] = this.parseOption(opt)
+			const signer = this.getContractSigner(address)
+			const _opt = rest
 			const gasLimit = await signer.estimateGas.withdraw(wad,_opt)
 
 			const options = Object.assign({
@@ -56,28 +54,32 @@ export class WGTContract extends ContractAbstract {
 			return signer.withdraw(wad,options)
 
 		};
-	  public decimals(){
+	  public decimals(opt?: IOption){
 
-			const provider = this.getContractProvider(this.address)
+			const [address] = this.parseOption(opt)
+			const provider = this.getContractProvider(address)
 			return provider.decimals()
 
 		};
-	  public balanceOf(index_0:string){
+	  public balanceOf(index_0:string,opt?: IOption){
 
-			const provider = this.getContractProvider(this.address)
+			const [address] = this.parseOption(opt)
+			const provider = this.getContractProvider(address)
 			return provider.balanceOf(index_0)
 
 		};
-	  public symbol(){
+	  public symbol(opt?: IOption){
 
-			const provider = this.getContractProvider(this.address)
+			const [address] = this.parseOption(opt)
+			const provider = this.getContractProvider(address)
 			return provider.symbol()
 
 		};
 	  public async transfer(dst:string,wad:BigNumber,opt?: IOption){
 
-			const signer = this.getContractSigner(this.address)
-			const _opt = opt || {}
+			const [address, rest] = this.parseOption(opt)
+			const signer = this.getContractSigner(address)
+			const _opt = rest
 			const gasLimit = await signer.estimateGas.transfer(dst,wad,_opt)
 
 			const options = Object.assign({
@@ -88,8 +90,9 @@ export class WGTContract extends ContractAbstract {
 		};
 	  public async deposit(opt?: IOption){
 
-			const signer = this.getContractSigner(this.address)
-			const _opt = opt || {}
+			const [address, rest] = this.parseOption(opt)
+			const signer = this.getContractSigner(address)
+			const _opt = rest
 			const gasLimit = await signer.estimateGas.deposit(_opt)
 
 			const options = Object.assign({
@@ -98,9 +101,10 @@ export class WGTContract extends ContractAbstract {
 			return signer.deposit(options)
 
 		};
-	  public allowance(index_0:string,index_1:string){
+	  public allowance(index_0:string,index_1:string,opt?: IOption){
 
-			const provider = this.getContractProvider(this.address)
+			const [address] = this.parseOption(opt)
+			const provider = this.getContractProvider(address)
 			return provider.allowance(index_0,index_1)
 
 		};

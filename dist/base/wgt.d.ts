@@ -1,10 +1,4 @@
-import ContractAbstract from "web3-contract/dist/contract/ContractAbstract.js";
-type BigNumber = any;
-interface IOption {
-    gasLimit?: Number;
-    from?: string;
-    value?: string;
-}
+import ContractAbstract, { BigNumber, IOption } from "web3-contract/dist/contract/ContractAbstract.js";
 export declare class WGTContract extends ContractAbstract {
     static contractName: string;
     Abi: ({
@@ -47,14 +41,13 @@ export declare class WGTContract extends ContractAbstract {
     })[];
     constructor(props: any);
     approve(guy: string, wad: BigNumber, opt?: IOption): Promise<any>;
-    totalSupply(): any;
+    totalSupply(opt?: IOption): any;
     transferFrom(src: string, dst: string, wad: BigNumber, opt?: IOption): Promise<any>;
     withdraw(wad: BigNumber, opt?: IOption): Promise<any>;
-    decimals(): any;
-    balanceOf(index_0: string): any;
-    symbol(): any;
+    decimals(opt?: IOption): any;
+    balanceOf(index_0: string, opt?: IOption): any;
+    symbol(opt?: IOption): any;
     transfer(dst: string, wad: BigNumber, opt?: IOption): Promise<any>;
     deposit(opt?: IOption): Promise<any>;
-    allowance(index_0: string, index_1: string): any;
+    allowance(index_0: string, index_1: string, opt?: IOption): any;
 }
-export {};

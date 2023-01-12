@@ -1,10 +1,4 @@
-import ContractAbstract from "web3-contract/dist/contract/ContractAbstract.js";
-type BigNumber = any;
-interface IOption {
-    gasLimit?: Number;
-    from?: string;
-    value?: string;
-}
+import ContractAbstract, { BigNumber, IOption } from "web3-contract/dist/contract/ContractAbstract.js";
 export declare class ERC721Contract extends ContractAbstract {
     static contractName: string;
     Abi: ({
@@ -37,16 +31,16 @@ export declare class ERC721Contract extends ContractAbstract {
     })[];
     constructor(props: any);
     approve(to: string, tokenId: BigNumber, opt?: IOption): Promise<any>;
-    balanceOf(owner: string): any;
-    getApproved(tokenId: BigNumber): any;
-    getStage(_stage: BigNumber): any;
-    getSystemAddress(): any;
-    hashToSign(sender: string, stage: BigNumber, quantity: BigNumber, price: BigNumber, max: BigNumber): any;
-    isApprovedForAll(owner: string, operator: string): any;
-    nextOwnerToExplicitlySet(): any;
-    numberMinted(stage: number | BigNumber, owner: string): any;
-    owner(): any;
-    ownerOf(tokenId: BigNumber): any;
+    balanceOf(owner: string, opt?: IOption): any;
+    getApproved(tokenId: BigNumber, opt?: IOption): any;
+    getStage(_stage: BigNumber, opt?: IOption): any;
+    getSystemAddress(opt?: IOption): any;
+    hashToSign(sender: string, stage: BigNumber, quantity: BigNumber, price: BigNumber, max: BigNumber, opt?: IOption): any;
+    isApprovedForAll(owner: string, operator: string, opt?: IOption): any;
+    nextOwnerToExplicitlySet(opt?: IOption): any;
+    numberMinted(stage: number | BigNumber, owner: string, opt?: IOption): any;
+    owner(opt?: IOption): any;
+    ownerOf(tokenId: BigNumber, opt?: IOption): any;
     renounceOwnership(opt?: IOption): Promise<any>;
     safeTransferFrom1(from: string, to: string, tokenId: BigNumber, opt?: IOption): Promise<any>;
     safeTransferFrom2(from: string, to: string, tokenId: BigNumber, _data: string, opt?: IOption): Promise<any>;
@@ -54,13 +48,12 @@ export declare class ERC721Contract extends ContractAbstract {
     setApprovalForAll(operator: string, approved: boolean, opt?: IOption): Promise<any>;
     setStage(_stage: BigNumber, _startTime: BigNumber, _endTime: BigNumber, _price: BigNumber, opt?: IOption): Promise<any>;
     setSystemAddress(_address: string, opt?: IOption): Promise<any>;
-    supportsInterface(interfaceId: string): any;
-    symbol(): any;
-    tokenByIndex(index: BigNumber): any;
-    tokenOfOwnerByIndex(owner: string, index: BigNumber): any;
-    tokenURI(tokenId: BigNumber): any;
-    totalSupply(): any;
+    supportsInterface(interfaceId: string, opt?: IOption): any;
+    symbol(opt?: IOption): any;
+    tokenByIndex(index: BigNumber, opt?: IOption): any;
+    tokenOfOwnerByIndex(owner: string, index: BigNumber, opt?: IOption): any;
+    tokenURI(tokenId: BigNumber, opt?: IOption): any;
+    totalSupply(opt?: IOption): any;
     transferFrom(from: string, to: string, tokenId: BigNumber, opt?: IOption): Promise<any>;
     transferOwnership(newOwner: string, opt?: IOption): Promise<any>;
 }
-export {};

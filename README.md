@@ -6,6 +6,24 @@
 "web3-abi": "https://github.com/gatechain/web3-abi",
 ```
 
+### Used
+
+```
+import { Web3Contract } from "web3-contract";
+
+const contract = new Web3Contract({...})
+contract.registerContract(SelfBridgeV1Contract)
+
+// 1. use coustom contract address
+const fee = await contract.SelfBridgeV1Contract?.getFee(5, 85, {
+      address: 'xxxxxxxxx',
+})
+
+// 2. use config contract address
+const fee = await contract.SelfBridgeV1Contract?.getFee(5, 85)
+
+```
+
 ### abi 集合
 
 | 名称         | 描述         |

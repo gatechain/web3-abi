@@ -1,12 +1,6 @@
-import ContractAbstract from "web3-contract/dist/contract/ContractAbstract.js";
+import ContractAbstract, {BigNumber, IOption} from "web3-contract/dist/contract/ContractAbstract.js";
 import NftProxyAbi from '../abis/NftProxy.json'
 
-type BigNumber = any 
-interface IOption {
-	gasLimit?: Number
-	from?: string 
-	value?: string 
-} 
 
 export class NftProxyContract extends ContractAbstract {
     public static contractName = 'NftProxyContract';
@@ -14,16 +8,18 @@ export class NftProxyContract extends ContractAbstract {
 		constructor(props: any) {
 			super(props)
 		}
-	  public initialAddressSet(){
+	  public initialAddressSet(opt?: IOption){
 
-			const provider = this.getContractProvider(this.address)
+			const [address] = this.parseOption(opt)
+			const provider = this.getContractProvider(address)
 			return provider.initialAddressSet()
 
 		};
 	  public async endGrantAuthentication(addr:string,opt?: IOption){
 
-			const signer = this.getContractSigner(this.address)
-			const _opt = opt || {}
+			const [address, rest] = this.parseOption(opt)
+			const signer = this.getContractSigner(address)
+			const _opt = rest
 			const gasLimit = await signer.estimateGas.endGrantAuthentication(addr,_opt)
 
 			const options = Object.assign({
@@ -34,8 +30,9 @@ export class NftProxyContract extends ContractAbstract {
 		};
 	  public async revokeAuthentication(addr:string,opt?: IOption){
 
-			const signer = this.getContractSigner(this.address)
-			const _opt = opt || {}
+			const [address, rest] = this.parseOption(opt)
+			const signer = this.getContractSigner(address)
+			const _opt = rest
 			const gasLimit = await signer.estimateGas.revokeAuthentication(addr,_opt)
 
 			const options = Object.assign({
@@ -44,22 +41,25 @@ export class NftProxyContract extends ContractAbstract {
 			return signer.revokeAuthentication(addr,options)
 
 		};
-	  public pending(index_0:string){
+	  public pending(index_0:string,opt?: IOption){
 
-			const provider = this.getContractProvider(this.address)
+			const [address] = this.parseOption(opt)
+			const provider = this.getContractProvider(address)
 			return provider.pending(index_0)
 
 		};
-	  public contracts(index_0:string){
+	  public contracts(index_0:string,opt?: IOption){
 
-			const provider = this.getContractProvider(this.address)
+			const [address] = this.parseOption(opt)
+			const provider = this.getContractProvider(address)
 			return provider.contracts(index_0)
 
 		};
 	  public async renounceOwnership(opt?: IOption){
 
-			const signer = this.getContractSigner(this.address)
-			const _opt = opt || {}
+			const [address, rest] = this.parseOption(opt)
+			const signer = this.getContractSigner(address)
+			const _opt = rest
 			const gasLimit = await signer.estimateGas.renounceOwnership(_opt)
 
 			const options = Object.assign({
@@ -68,28 +68,32 @@ export class NftProxyContract extends ContractAbstract {
 			return signer.renounceOwnership(options)
 
 		};
-	  public owner(){
+	  public owner(opt?: IOption){
 
-			const provider = this.getContractProvider(this.address)
+			const [address] = this.parseOption(opt)
+			const provider = this.getContractProvider(address)
 			return provider.owner()
 
 		};
-	  public delegateProxyImplementation(){
+	  public delegateProxyImplementation(opt?: IOption){
 
-			const provider = this.getContractProvider(this.address)
+			const [address] = this.parseOption(opt)
+			const provider = this.getContractProvider(address)
 			return provider.delegateProxyImplementation()
 
 		};
-	  public proxies(index_0:string){
+	  public proxies(index_0:string,opt?: IOption){
 
-			const provider = this.getContractProvider(this.address)
+			const [address] = this.parseOption(opt)
+			const provider = this.getContractProvider(address)
 			return provider.proxies(index_0)
 
 		};
 	  public async startGrantAuthentication(addr:string,opt?: IOption){
 
-			const signer = this.getContractSigner(this.address)
-			const _opt = opt || {}
+			const [address, rest] = this.parseOption(opt)
+			const signer = this.getContractSigner(address)
+			const _opt = rest
 			const gasLimit = await signer.estimateGas.startGrantAuthentication(addr,_opt)
 
 			const options = Object.assign({
@@ -100,8 +104,9 @@ export class NftProxyContract extends ContractAbstract {
 		};
 	  public async registerProxy(opt?: IOption){
 
-			const signer = this.getContractSigner(this.address)
-			const _opt = opt || {}
+			const [address, rest] = this.parseOption(opt)
+			const signer = this.getContractSigner(address)
+			const _opt = rest
 			const gasLimit = await signer.estimateGas.registerProxy(_opt)
 
 			const options = Object.assign({
@@ -110,16 +115,18 @@ export class NftProxyContract extends ContractAbstract {
 			return signer.registerProxy(options)
 
 		};
-	  public DELAY_PERIOD(){
+	  public DELAY_PERIOD(opt?: IOption){
 
-			const provider = this.getContractProvider(this.address)
+			const [address] = this.parseOption(opt)
+			const provider = this.getContractProvider(address)
 			return provider.DELAY_PERIOD()
 
 		};
 	  public async transferOwnership(_newOwner:string,opt?: IOption){
 
-			const signer = this.getContractSigner(this.address)
-			const _opt = opt || {}
+			const [address, rest] = this.parseOption(opt)
+			const signer = this.getContractSigner(address)
+			const _opt = rest
 			const gasLimit = await signer.estimateGas.transferOwnership(_newOwner,_opt)
 
 			const options = Object.assign({
@@ -130,8 +137,9 @@ export class NftProxyContract extends ContractAbstract {
 		};
 	  public async grantInitialAuthentication(authAddress:string,opt?: IOption){
 
-			const signer = this.getContractSigner(this.address)
-			const _opt = opt || {}
+			const [address, rest] = this.parseOption(opt)
+			const signer = this.getContractSigner(address)
+			const _opt = rest
 			const gasLimit = await signer.estimateGas.grantInitialAuthentication(authAddress,_opt)
 
 			const options = Object.assign({

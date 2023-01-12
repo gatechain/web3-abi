@@ -1,10 +1,4 @@
-import ContractAbstract from "web3-contract/dist/contract/ContractAbstract.js";
-type BigNumber = any;
-interface IOption {
-    gasLimit?: Number;
-    from?: string;
-    value?: string;
-}
+import ContractAbstract, { BigNumber, IOption } from "web3-contract/dist/contract/ContractAbstract.js";
 export declare class NftExchangeContract extends ContractAbstract {
     static contractName: string;
     Abi: ({
@@ -49,38 +43,37 @@ export declare class NftExchangeContract extends ContractAbstract {
         stateMutability?: undefined;
     })[];
     constructor(props: any);
-    tokenTransferProxy(): any;
-    staticCall(target: string, calldata: string, extradata: string): any;
+    tokenTransferProxy(opt?: IOption): any;
+    staticCall(target: string, calldata: string, extradata: string, opt?: IOption): any;
     changeMinimumMakerProtocolFee(newMinimumMakerProtocolFee: BigNumber, opt?: IOption): Promise<any>;
     changeMinimumTakerProtocolFee(newMinimumTakerProtocolFee: BigNumber, opt?: IOption): Promise<any>;
     guardedArrayReplace(array: string, desired: string, mask: string, opt?: IOption): Promise<any>;
-    minimumTakerProtocolFee(): any;
-    codename(): any;
+    minimumTakerProtocolFee(opt?: IOption): any;
+    codename(opt?: IOption): any;
     testCopyAddress(addr: string, opt?: IOption): Promise<any>;
     testCopy(arrToCopy: string, opt?: IOption): Promise<any>;
-    calculateCurrentPrice_(addrs: string[], uints: BigNumber[], feeMethod: number | BigNumber, side: number | BigNumber, saleKind: number | BigNumber, howToCall: number | BigNumber, calldata: string, replacementPattern: string, staticExtradata: string): any;
+    calculateCurrentPrice_(addrs: string[], uints: BigNumber[], feeMethod: number | BigNumber, side: number | BigNumber, saleKind: number | BigNumber, howToCall: number | BigNumber, calldata: string, replacementPattern: string, staticExtradata: string, opt?: IOption): any;
     changeProtocolFeeRecipient(newProtocolFeeRecipient: string, opt?: IOption): Promise<any>;
-    version(): any;
+    version(opt?: IOption): any;
     orderCalldataCanMatch(buyCalldata: string, buyReplacementPattern: string, sellCalldata: string, sellReplacementPattern: string, opt?: IOption): Promise<any>;
-    validateOrder_(addrs: string[], uints: BigNumber[], feeMethod: number | BigNumber, side: number | BigNumber, saleKind: number | BigNumber, howToCall: number | BigNumber, calldata: string, replacementPattern: string, staticExtradata: string, v: number | BigNumber, r: string, s: string): any;
-    calculateFinalPrice(side: number | BigNumber, saleKind: number | BigNumber, basePrice: BigNumber, extra: BigNumber, listingTime: BigNumber, expirationTime: BigNumber): any;
-    protocolFeeRecipient(): any;
+    validateOrder_(addrs: string[], uints: BigNumber[], feeMethod: number | BigNumber, side: number | BigNumber, saleKind: number | BigNumber, howToCall: number | BigNumber, calldata: string, replacementPattern: string, staticExtradata: string, v: number | BigNumber, r: string, s: string, opt?: IOption): any;
+    calculateFinalPrice(side: number | BigNumber, saleKind: number | BigNumber, basePrice: BigNumber, extra: BigNumber, listingTime: BigNumber, expirationTime: BigNumber, opt?: IOption): any;
+    protocolFeeRecipient(opt?: IOption): any;
     renounceOwnership(opt?: IOption): Promise<any>;
     hashOrder_(addrs: string[], uints: BigNumber[], feeMethod: number | BigNumber, side: number | BigNumber, saleKind: number | BigNumber, howToCall: number | BigNumber, calldata: string, replacementPattern: string, staticExtradata: string, opt?: IOption): Promise<any>;
-    ordersCanMatch_(addrs: string[], uints: BigNumber[], feeMethodsSidesKindsHowToCalls: Array<number | BigNumber>, calldataBuy: string, calldataSell: string, replacementPatternBuy: string, replacementPatternSell: string, staticExtradataBuy: string, staticExtradataSell: string): any;
+    ordersCanMatch_(addrs: string[], uints: BigNumber[], feeMethodsSidesKindsHowToCalls: Array<number | BigNumber>, calldataBuy: string, calldataSell: string, replacementPatternBuy: string, replacementPatternSell: string, staticExtradataBuy: string, staticExtradataSell: string, opt?: IOption): any;
     approveOrder_(addrs: string[], uints: BigNumber[], feeMethod: number | BigNumber, side: number | BigNumber, saleKind: number | BigNumber, howToCall: number | BigNumber, calldata: string, replacementPattern: string, staticExtradata: string, orderbookInclusionDesired: boolean, opt?: IOption): Promise<any>;
-    registry(): any;
-    minimumMakerProtocolFee(): any;
+    registry(opt?: IOption): any;
+    minimumMakerProtocolFee(opt?: IOption): any;
     hashToSign_(addrs: string[], uints: BigNumber[], feeMethod: number | BigNumber, side: number | BigNumber, saleKind: number | BigNumber, howToCall: number | BigNumber, calldata: string, replacementPattern: string, staticExtradata: string, opt?: IOption): Promise<any>;
-    cancelledOrFinalized(index_0: string): any;
-    owner(): any;
-    exchangeToken(): any;
+    cancelledOrFinalized(index_0: string, opt?: IOption): any;
+    owner(opt?: IOption): any;
+    exchangeToken(opt?: IOption): any;
     cancelOrder_(addrs: string[], uints: BigNumber[], feeMethod: number | BigNumber, side: number | BigNumber, saleKind: number | BigNumber, howToCall: number | BigNumber, calldata: string, replacementPattern: string, staticExtradata: string, v: number | BigNumber, r: string, s: string, opt?: IOption): Promise<any>;
     atomicMatch_(addrs: string[], uints: BigNumber[], feeMethodsSidesKindsHowToCalls: Array<number | BigNumber>, calldataBuy: string, calldataSell: string, replacementPatternBuy: string, replacementPatternSell: string, staticExtradataBuy: string, staticExtradataSell: string, vs: Array<number | BigNumber>, rssMetadata: string[], opt?: IOption): Promise<any>;
-    validateOrderParameters_(addrs: string[], uints: BigNumber[], feeMethod: number | BigNumber, side: number | BigNumber, saleKind: number | BigNumber, howToCall: number | BigNumber, calldata: string, replacementPattern: string, staticExtradata: string): any;
-    INVERSE_BASIS_POINT(): any;
-    calculateMatchPrice_(addrs: string[], uints: BigNumber[], feeMethodsSidesKindsHowToCalls: Array<number | BigNumber>, calldataBuy: string, calldataSell: string, replacementPatternBuy: string, replacementPatternSell: string, staticExtradataBuy: string, staticExtradataSell: string): any;
-    approvedOrders(index_0: string): any;
+    validateOrderParameters_(addrs: string[], uints: BigNumber[], feeMethod: number | BigNumber, side: number | BigNumber, saleKind: number | BigNumber, howToCall: number | BigNumber, calldata: string, replacementPattern: string, staticExtradata: string, opt?: IOption): any;
+    INVERSE_BASIS_POINT(opt?: IOption): any;
+    calculateMatchPrice_(addrs: string[], uints: BigNumber[], feeMethodsSidesKindsHowToCalls: Array<number | BigNumber>, calldataBuy: string, calldataSell: string, replacementPatternBuy: string, replacementPatternSell: string, staticExtradataBuy: string, staticExtradataSell: string, opt?: IOption): any;
+    approvedOrders(index_0: string, opt?: IOption): any;
     transferOwnership(newOwner: string, opt?: IOption): Promise<any>;
 }
-export {};

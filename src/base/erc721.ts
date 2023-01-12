@@ -1,12 +1,6 @@
-import ContractAbstract from "web3-contract/dist/contract/ContractAbstract.js";
+import ContractAbstract, {BigNumber, IOption} from "web3-contract/dist/contract/ContractAbstract.js";
 import ERC721Abi from '../abis/ERC721.json'
 
-type BigNumber = any 
-interface IOption {
-	gasLimit?: Number
-	from?: string 
-	value?: string 
-} 
 
 export class ERC721Contract extends ContractAbstract {
     public static contractName = 'ERC721Contract';
@@ -16,8 +10,9 @@ export class ERC721Contract extends ContractAbstract {
 		}
 	  public async approve(to:string,tokenId:BigNumber,opt?: IOption){
 
-			const signer = this.getContractSigner(this.address)
-			const _opt = opt || {}
+			const [address, rest] = this.parseOption(opt)
+			const signer = this.getContractSigner(address)
+			const _opt = rest
 			const gasLimit = await signer.estimateGas.approve(to,tokenId,_opt)
 
 			const options = Object.assign({
@@ -26,70 +21,81 @@ export class ERC721Contract extends ContractAbstract {
 			return signer.approve(to,tokenId,options)
 
 		};
-	  public balanceOf(owner:string){
+	  public balanceOf(owner:string,opt?: IOption){
 
-			const provider = this.getContractProvider(this.address)
+			const [address] = this.parseOption(opt)
+			const provider = this.getContractProvider(address)
 			return provider.balanceOf(owner)
 
 		};
-	  public getApproved(tokenId:BigNumber){
+	  public getApproved(tokenId:BigNumber,opt?: IOption){
 
-			const provider = this.getContractProvider(this.address)
+			const [address] = this.parseOption(opt)
+			const provider = this.getContractProvider(address)
 			return provider.getApproved(tokenId)
 
 		};
-	  public getStage(_stage:BigNumber){
+	  public getStage(_stage:BigNumber,opt?: IOption){
 
-			const provider = this.getContractProvider(this.address)
+			const [address] = this.parseOption(opt)
+			const provider = this.getContractProvider(address)
 			return provider.getStage(_stage)
 
 		};
-	  public getSystemAddress(){
+	  public getSystemAddress(opt?: IOption){
 
-			const provider = this.getContractProvider(this.address)
+			const [address] = this.parseOption(opt)
+			const provider = this.getContractProvider(address)
 			return provider.getSystemAddress()
 
 		};
-	  public hashToSign(sender:string,stage:BigNumber,quantity:BigNumber,price:BigNumber,max:BigNumber){
+	  public hashToSign(sender:string,stage:BigNumber,quantity:BigNumber,price:BigNumber,max:BigNumber,opt?: IOption){
 
-			const provider = this.getContractProvider(this.address)
+			const [address] = this.parseOption(opt)
+			const provider = this.getContractProvider(address)
 			return provider.hashToSign(sender,stage,quantity,price,max)
 
 		};
-	  public isApprovedForAll(owner:string,operator:string){
+	  public isApprovedForAll(owner:string,operator:string,opt?: IOption){
 
-			const provider = this.getContractProvider(this.address)
+			const [address] = this.parseOption(opt)
+			const provider = this.getContractProvider(address)
 			return provider.isApprovedForAll(owner,operator)
 
 		};
-	  public nextOwnerToExplicitlySet(){
+	  public nextOwnerToExplicitlySet(opt?: IOption){
 
-			const provider = this.getContractProvider(this.address)
+			const [address] = this.parseOption(opt)
+			const provider = this.getContractProvider(address)
 			return provider.nextOwnerToExplicitlySet()
 
 		};
-	  public numberMinted(stage:number|BigNumber,owner:string){
+	  public numberMinted(stage:number|BigNumber,owner:string,opt?: IOption){
 
-			const provider = this.getContractProvider(this.address)
+			const [address] = this.parseOption(opt)
+			const provider = this.getContractProvider(address)
 			return provider.numberMinted(stage,owner)
 
 		};
-	  public owner(){
+	  public owner(opt?: IOption){
 
-			const provider = this.getContractProvider(this.address)
+			const [address] = this.parseOption(opt)
+			const provider = this.getContractProvider(address)
 			return provider.owner()
 
 		};
-	  public ownerOf(tokenId:BigNumber){
+	  public ownerOf(tokenId:BigNumber,opt?: IOption){
 
-			const provider = this.getContractProvider(this.address)
+			const [address] = this.parseOption(opt)
+			const provider = this.getContractProvider(address)
 			return provider.ownerOf(tokenId)
 
 		};
 	  public async renounceOwnership(opt?: IOption){
 
-			const signer = this.getContractSigner(this.address)
-			const _opt = opt || {}
+			const [address, rest] = this.parseOption(opt)
+			const signer = this.getContractSigner(address)
+			const _opt = rest
 			const gasLimit = await signer.estimateGas.renounceOwnership(_opt)
 
 			const options = Object.assign({
@@ -100,8 +106,9 @@ export class ERC721Contract extends ContractAbstract {
 		};
 	  public async safeTransferFrom1(from:string,to:string,tokenId:BigNumber,opt?: IOption){
 
-			const signer = this.getContractSigner(this.address)
-			const _opt = opt || {}
+			const [address, rest] = this.parseOption(opt)
+			const signer = this.getContractSigner(address)
+			const _opt = rest
 			const gasLimit = await signer.estimateGas.safeTransferFrom1(from,to,tokenId,_opt)
 
 			const options = Object.assign({
@@ -112,8 +119,9 @@ export class ERC721Contract extends ContractAbstract {
 		};
 	  public async safeTransferFrom2(from:string,to:string,tokenId:BigNumber,_data:string,opt?: IOption){
 
-			const signer = this.getContractSigner(this.address)
-			const _opt = opt || {}
+			const [address, rest] = this.parseOption(opt)
+			const signer = this.getContractSigner(address)
+			const _opt = rest
 			const gasLimit = await signer.estimateGas.safeTransferFrom2(from,to,tokenId,_data,_opt)
 
 			const options = Object.assign({
@@ -124,8 +132,9 @@ export class ERC721Contract extends ContractAbstract {
 		};
 	  public async saleMint(stage:BigNumber,quantity:BigNumber,price:BigNumber,max:BigNumber,hash:string,signature:string,opt?: IOption){
 
-			const signer = this.getContractSigner(this.address)
-			const _opt = opt || {}
+			const [address, rest] = this.parseOption(opt)
+			const signer = this.getContractSigner(address)
+			const _opt = rest
 			const gasLimit = await signer.estimateGas.saleMint(stage,quantity,price,max,hash,signature,_opt)
 
 			const options = Object.assign({
@@ -136,8 +145,9 @@ export class ERC721Contract extends ContractAbstract {
 		};
 	  public async setApprovalForAll(operator:string,approved:boolean,opt?: IOption){
 
-			const signer = this.getContractSigner(this.address)
-			const _opt = opt || {}
+			const [address, rest] = this.parseOption(opt)
+			const signer = this.getContractSigner(address)
+			const _opt = rest
 			const gasLimit = await signer.estimateGas.setApprovalForAll(operator,approved,_opt)
 
 			const options = Object.assign({
@@ -148,8 +158,9 @@ export class ERC721Contract extends ContractAbstract {
 		};
 	  public async setStage(_stage:BigNumber,_startTime:BigNumber,_endTime:BigNumber,_price:BigNumber,opt?: IOption){
 
-			const signer = this.getContractSigner(this.address)
-			const _opt = opt || {}
+			const [address, rest] = this.parseOption(opt)
+			const signer = this.getContractSigner(address)
+			const _opt = rest
 			const gasLimit = await signer.estimateGas.setStage(_stage,_startTime,_endTime,_price,_opt)
 
 			const options = Object.assign({
@@ -160,8 +171,9 @@ export class ERC721Contract extends ContractAbstract {
 		};
 	  public async setSystemAddress(_address:string,opt?: IOption){
 
-			const signer = this.getContractSigner(this.address)
-			const _opt = opt || {}
+			const [address, rest] = this.parseOption(opt)
+			const signer = this.getContractSigner(address)
+			const _opt = rest
 			const gasLimit = await signer.estimateGas.setSystemAddress(_address,_opt)
 
 			const options = Object.assign({
@@ -170,46 +182,53 @@ export class ERC721Contract extends ContractAbstract {
 			return signer.setSystemAddress(_address,options)
 
 		};
-	  public supportsInterface(interfaceId:string){
+	  public supportsInterface(interfaceId:string,opt?: IOption){
 
-			const provider = this.getContractProvider(this.address)
+			const [address] = this.parseOption(opt)
+			const provider = this.getContractProvider(address)
 			return provider.supportsInterface(interfaceId)
 
 		};
-	  public symbol(){
+	  public symbol(opt?: IOption){
 
-			const provider = this.getContractProvider(this.address)
+			const [address] = this.parseOption(opt)
+			const provider = this.getContractProvider(address)
 			return provider.symbol()
 
 		};
-	  public tokenByIndex(index:BigNumber){
+	  public tokenByIndex(index:BigNumber,opt?: IOption){
 
-			const provider = this.getContractProvider(this.address)
+			const [address] = this.parseOption(opt)
+			const provider = this.getContractProvider(address)
 			return provider.tokenByIndex(index)
 
 		};
-	  public tokenOfOwnerByIndex(owner:string,index:BigNumber){
+	  public tokenOfOwnerByIndex(owner:string,index:BigNumber,opt?: IOption){
 
-			const provider = this.getContractProvider(this.address)
+			const [address] = this.parseOption(opt)
+			const provider = this.getContractProvider(address)
 			return provider.tokenOfOwnerByIndex(owner,index)
 
 		};
-	  public tokenURI(tokenId:BigNumber){
+	  public tokenURI(tokenId:BigNumber,opt?: IOption){
 
-			const provider = this.getContractProvider(this.address)
+			const [address] = this.parseOption(opt)
+			const provider = this.getContractProvider(address)
 			return provider.tokenURI(tokenId)
 
 		};
-	  public totalSupply(){
+	  public totalSupply(opt?: IOption){
 
-			const provider = this.getContractProvider(this.address)
+			const [address] = this.parseOption(opt)
+			const provider = this.getContractProvider(address)
 			return provider.totalSupply()
 
 		};
 	  public async transferFrom(from:string,to:string,tokenId:BigNumber,opt?: IOption){
 
-			const signer = this.getContractSigner(this.address)
-			const _opt = opt || {}
+			const [address, rest] = this.parseOption(opt)
+			const signer = this.getContractSigner(address)
+			const _opt = rest
 			const gasLimit = await signer.estimateGas.transferFrom(from,to,tokenId,_opt)
 
 			const options = Object.assign({
@@ -220,8 +239,9 @@ export class ERC721Contract extends ContractAbstract {
 		};
 	  public async transferOwnership(newOwner:string,opt?: IOption){
 
-			const signer = this.getContractSigner(this.address)
-			const _opt = opt || {}
+			const [address, rest] = this.parseOption(opt)
+			const signer = this.getContractSigner(address)
+			const _opt = rest
 			const gasLimit = await signer.estimateGas.transferOwnership(newOwner,_opt)
 
 			const options = Object.assign({

@@ -1,9 +1,4 @@
-import ContractAbstract from "web3-contract/dist/contract/ContractAbstract.js";
-interface IOption {
-    gasLimit?: Number;
-    from?: string;
-    value?: string;
-}
+import ContractAbstract, { IOption } from "web3-contract/dist/contract/ContractAbstract.js";
 export declare class NftProxyContract extends ContractAbstract {
     static contractName: string;
     Abi: ({
@@ -45,19 +40,18 @@ export declare class NftProxyContract extends ContractAbstract {
         stateMutability?: undefined;
     })[];
     constructor(props: any);
-    initialAddressSet(): any;
+    initialAddressSet(opt?: IOption): any;
     endGrantAuthentication(addr: string, opt?: IOption): Promise<any>;
     revokeAuthentication(addr: string, opt?: IOption): Promise<any>;
-    pending(index_0: string): any;
-    contracts(index_0: string): any;
+    pending(index_0: string, opt?: IOption): any;
+    contracts(index_0: string, opt?: IOption): any;
     renounceOwnership(opt?: IOption): Promise<any>;
-    owner(): any;
-    delegateProxyImplementation(): any;
-    proxies(index_0: string): any;
+    owner(opt?: IOption): any;
+    delegateProxyImplementation(opt?: IOption): any;
+    proxies(index_0: string, opt?: IOption): any;
     startGrantAuthentication(addr: string, opt?: IOption): Promise<any>;
     registerProxy(opt?: IOption): Promise<any>;
-    DELAY_PERIOD(): any;
+    DELAY_PERIOD(opt?: IOption): any;
     transferOwnership(_newOwner: string, opt?: IOption): Promise<any>;
     grantInitialAuthentication(authAddress: string, opt?: IOption): Promise<any>;
 }
-export {};

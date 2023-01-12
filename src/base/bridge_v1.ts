@@ -1,12 +1,6 @@
-import ContractAbstract from "web3-contract/dist/contract/ContractAbstract.js";
+import ContractAbstract, {BigNumber, IOption} from "web3-contract/dist/contract/ContractAbstract.js";
 import BridgeV1Abi from '../abis/BridgeV1.json'
 
-type BigNumber = any 
-interface IOption {
-	gasLimit?: Number
-	from?: string 
-	value?: string 
-} 
 
 export class BridgeV1Contract extends ContractAbstract {
     public static contractName = 'BridgeV1Contract';
@@ -14,112 +8,130 @@ export class BridgeV1Contract extends ContractAbstract {
 		constructor(props: any) {
 			super(props)
 		}
-	  public DEFAULT_ADMIN_ROLE(){
+	  public DEFAULT_ADMIN_ROLE(opt?: IOption){
 
-			const provider = this.getContractProvider(this.address)
+			const [address] = this.parseOption(opt)
+			const provider = this.getContractProvider(address)
 			return provider.DEFAULT_ADMIN_ROLE()
 
 		};
-	  public RELAYER_ROLE(){
+	  public RELAYER_ROLE(opt?: IOption){
 
-			const provider = this.getContractProvider(this.address)
+			const [address] = this.parseOption(opt)
+			const provider = this.getContractProvider(address)
 			return provider.RELAYER_ROLE()
 
 		};
-	  public _chainID(){
+	  public _chainID(opt?: IOption){
 
-			const provider = this.getContractProvider(this.address)
+			const [address] = this.parseOption(opt)
+			const provider = this.getContractProvider(address)
 			return provider._chainID()
 
 		};
-	  public _depositCounts(index_0:number|BigNumber){
+	  public _depositCounts(index_0:number|BigNumber,opt?: IOption){
 
-			const provider = this.getContractProvider(this.address)
+			const [address] = this.parseOption(opt)
+			const provider = this.getContractProvider(address)
 			return provider._depositCounts(index_0)
 
 		};
-	  public _depositRecords(index_0:BigNumber,index_1:number|BigNumber){
+	  public _depositRecords(index_0:BigNumber,index_1:number|BigNumber,opt?: IOption){
 
-			const provider = this.getContractProvider(this.address)
+			const [address] = this.parseOption(opt)
+			const provider = this.getContractProvider(address)
 			return provider._depositRecords(index_0,index_1)
 
 		};
-	  public _expiry(){
+	  public _expiry(opt?: IOption){
 
-			const provider = this.getContractProvider(this.address)
+			const [address] = this.parseOption(opt)
+			const provider = this.getContractProvider(address)
 			return provider._expiry()
 
 		};
-	  public _gasExecute(){
+	  public _gasExecute(opt?: IOption){
 
-			const provider = this.getContractProvider(this.address)
+			const [address] = this.parseOption(opt)
+			const provider = this.getContractProvider(address)
 			return provider._gasExecute()
 
 		};
-	  public _gasPrice(index_0:BigNumber){
+	  public _gasPrice(index_0:BigNumber,opt?: IOption){
 
-			const provider = this.getContractProvider(this.address)
+			const [address] = this.parseOption(opt)
+			const provider = this.getContractProvider(address)
 			return provider._gasPrice(index_0)
 
 		};
-	  public _gasVote(){
+	  public _gasVote(opt?: IOption){
 
-			const provider = this.getContractProvider(this.address)
+			const [address] = this.parseOption(opt)
+			const provider = this.getContractProvider(address)
 			return provider._gasVote()
 
 		};
-	  public _handlerDepositRecords(index_0:string,index_1:number|BigNumber,index_2:BigNumber){
+	  public _handlerDepositRecords(index_0:string,index_1:number|BigNumber,index_2:BigNumber,opt?: IOption){
 
-			const provider = this.getContractProvider(this.address)
+			const [address] = this.parseOption(opt)
+			const provider = this.getContractProvider(address)
 			return provider._handlerDepositRecords(index_0,index_1,index_2)
 
 		};
-	  public _hasVotedOnProposal(index_0:BigNumber,index_1:string,index_2:string){
+	  public _hasVotedOnProposal(index_0:BigNumber,index_1:string,index_2:string,opt?: IOption){
 
-			const provider = this.getContractProvider(this.address)
+			const [address] = this.parseOption(opt)
+			const provider = this.getContractProvider(address)
 			return provider._hasVotedOnProposal(index_0,index_1,index_2)
 
 		};
-	  public _proposals(index_0:BigNumber,index_1:string){
+	  public _proposals(index_0:BigNumber,index_1:string,opt?: IOption){
 
-			const provider = this.getContractProvider(this.address)
+			const [address] = this.parseOption(opt)
+			const provider = this.getContractProvider(address)
 			return provider._proposals(index_0,index_1)
 
 		};
-	  public _relayerThreshold(){
+	  public _relayerThreshold(opt?: IOption){
 
-			const provider = this.getContractProvider(this.address)
+			const [address] = this.parseOption(opt)
+			const provider = this.getContractProvider(address)
 			return provider._relayerThreshold()
 
 		};
-	  public _resourceIDToHandlerAddress(index_0:string){
+	  public _resourceIDToHandlerAddress(index_0:string,opt?: IOption){
 
-			const provider = this.getContractProvider(this.address)
+			const [address] = this.parseOption(opt)
+			const provider = this.getContractProvider(address)
 			return provider._resourceIDToHandlerAddress(index_0)
 
 		};
-	  public _tokenPrice(index_0:BigNumber){
+	  public _tokenPrice(index_0:BigNumber,opt?: IOption){
 
-			const provider = this.getContractProvider(this.address)
+			const [address] = this.parseOption(opt)
+			const provider = this.getContractProvider(address)
 			return provider._tokenPrice(index_0)
 
 		};
-	  public _totalProposals(){
+	  public _totalProposals(opt?: IOption){
 
-			const provider = this.getContractProvider(this.address)
+			const [address] = this.parseOption(opt)
+			const provider = this.getContractProvider(address)
 			return provider._totalProposals()
 
 		};
-	  public _totalRelayers(){
+	  public _totalRelayers(opt?: IOption){
 
-			const provider = this.getContractProvider(this.address)
+			const [address] = this.parseOption(opt)
+			const provider = this.getContractProvider(address)
 			return provider._totalRelayers()
 
 		};
 	  public async adminAddRelayer(relayerAddress:string,opt?: IOption){
 
-			const signer = this.getContractSigner(this.address)
-			const _opt = opt || {}
+			const [address, rest] = this.parseOption(opt)
+			const signer = this.getContractSigner(address)
+			const _opt = rest
 			const gasLimit = await signer.estimateGas.adminAddRelayer(relayerAddress,_opt)
 
 			const options = Object.assign({
@@ -130,8 +142,9 @@ export class BridgeV1Contract extends ContractAbstract {
 		};
 	  public async adminChangeRelayerThreshold(newThreshold:BigNumber,opt?: IOption){
 
-			const signer = this.getContractSigner(this.address)
-			const _opt = opt || {}
+			const [address, rest] = this.parseOption(opt)
+			const signer = this.getContractSigner(address)
+			const _opt = rest
 			const gasLimit = await signer.estimateGas.adminChangeRelayerThreshold(newThreshold,_opt)
 
 			const options = Object.assign({
@@ -142,8 +155,9 @@ export class BridgeV1Contract extends ContractAbstract {
 		};
 	  public async adminPauseTransfers(opt?: IOption){
 
-			const signer = this.getContractSigner(this.address)
-			const _opt = opt || {}
+			const [address, rest] = this.parseOption(opt)
+			const signer = this.getContractSigner(address)
+			const _opt = rest
 			const gasLimit = await signer.estimateGas.adminPauseTransfers(_opt)
 
 			const options = Object.assign({
@@ -154,8 +168,9 @@ export class BridgeV1Contract extends ContractAbstract {
 		};
 	  public async adminRemoveRelayer(relayerAddress:string,opt?: IOption){
 
-			const signer = this.getContractSigner(this.address)
-			const _opt = opt || {}
+			const [address, rest] = this.parseOption(opt)
+			const signer = this.getContractSigner(address)
+			const _opt = rest
 			const gasLimit = await signer.estimateGas.adminRemoveRelayer(relayerAddress,_opt)
 
 			const options = Object.assign({
@@ -166,8 +181,9 @@ export class BridgeV1Contract extends ContractAbstract {
 		};
 	  public async adminSetBurnable(handlerAddress:string,tokenAddress:string,opt?: IOption){
 
-			const signer = this.getContractSigner(this.address)
-			const _opt = opt || {}
+			const [address, rest] = this.parseOption(opt)
+			const signer = this.getContractSigner(address)
+			const _opt = rest
 			const gasLimit = await signer.estimateGas.adminSetBurnable(handlerAddress,tokenAddress,_opt)
 
 			const options = Object.assign({
@@ -178,8 +194,9 @@ export class BridgeV1Contract extends ContractAbstract {
 		};
 	  public async adminSetGasPrice(chainIds:BigNumber[],prices:BigNumber[],opt?: IOption){
 
-			const signer = this.getContractSigner(this.address)
-			const _opt = opt || {}
+			const [address, rest] = this.parseOption(opt)
+			const signer = this.getContractSigner(address)
+			const _opt = rest
 			const gasLimit = await signer.estimateGas.adminSetGasPrice(chainIds,prices,_opt)
 
 			const options = Object.assign({
@@ -190,8 +207,9 @@ export class BridgeV1Contract extends ContractAbstract {
 		};
 	  public async adminSetGenericResource(handlerAddress:string,resourceID:string,contractAddress:string,depositFunctionSig:string,executeFunctionSig:string,opt?: IOption){
 
-			const signer = this.getContractSigner(this.address)
-			const _opt = opt || {}
+			const [address, rest] = this.parseOption(opt)
+			const signer = this.getContractSigner(address)
+			const _opt = rest
 			const gasLimit = await signer.estimateGas.adminSetGenericResource(handlerAddress,resourceID,contractAddress,depositFunctionSig,executeFunctionSig,_opt)
 
 			const options = Object.assign({
@@ -202,8 +220,9 @@ export class BridgeV1Contract extends ContractAbstract {
 		};
 	  public async adminSetResource(handlerAddress:string,resourceID:string,tokenAddress:string,opt?: IOption){
 
-			const signer = this.getContractSigner(this.address)
-			const _opt = opt || {}
+			const [address, rest] = this.parseOption(opt)
+			const signer = this.getContractSigner(address)
+			const _opt = rest
 			const gasLimit = await signer.estimateGas.adminSetResource(handlerAddress,resourceID,tokenAddress,_opt)
 
 			const options = Object.assign({
@@ -214,8 +233,9 @@ export class BridgeV1Contract extends ContractAbstract {
 		};
 	  public async adminSetTokenPrice(chainIds:BigNumber[],prices:BigNumber[],opt?: IOption){
 
-			const signer = this.getContractSigner(this.address)
-			const _opt = opt || {}
+			const [address, rest] = this.parseOption(opt)
+			const signer = this.getContractSigner(address)
+			const _opt = rest
 			const gasLimit = await signer.estimateGas.adminSetTokenPrice(chainIds,prices,_opt)
 
 			const options = Object.assign({
@@ -226,8 +246,9 @@ export class BridgeV1Contract extends ContractAbstract {
 		};
 	  public async adminUnpauseTransfers(opt?: IOption){
 
-			const signer = this.getContractSigner(this.address)
-			const _opt = opt || {}
+			const [address, rest] = this.parseOption(opt)
+			const signer = this.getContractSigner(address)
+			const _opt = rest
 			const gasLimit = await signer.estimateGas.adminUnpauseTransfers(_opt)
 
 			const options = Object.assign({
@@ -238,8 +259,9 @@ export class BridgeV1Contract extends ContractAbstract {
 		};
 	  public async adminWithdraw(handlerAddress:string,tokenAddress:string,recipient:string,amountOrTokenID:BigNumber,opt?: IOption){
 
-			const signer = this.getContractSigner(this.address)
-			const _opt = opt || {}
+			const [address, rest] = this.parseOption(opt)
+			const signer = this.getContractSigner(address)
+			const _opt = rest
 			const gasLimit = await signer.estimateGas.adminWithdraw(handlerAddress,tokenAddress,recipient,amountOrTokenID,_opt)
 
 			const options = Object.assign({
@@ -250,8 +272,9 @@ export class BridgeV1Contract extends ContractAbstract {
 		};
 	  public async cancelProposal(chainID:number|BigNumber,depositNonce:BigNumber,dataHash:string,opt?: IOption){
 
-			const signer = this.getContractSigner(this.address)
-			const _opt = opt || {}
+			const [address, rest] = this.parseOption(opt)
+			const signer = this.getContractSigner(address)
+			const _opt = rest
 			const gasLimit = await signer.estimateGas.cancelProposal(chainID,depositNonce,dataHash,_opt)
 
 			const options = Object.assign({
@@ -262,8 +285,9 @@ export class BridgeV1Contract extends ContractAbstract {
 		};
 	  public async deposit(destinationChainID:number|BigNumber,resourceID:string,data:string,opt?: IOption){
 
-			const signer = this.getContractSigner(this.address)
-			const _opt = opt || {}
+			const [address, rest] = this.parseOption(opt)
+			const signer = this.getContractSigner(address)
+			const _opt = rest
 			const gasLimit = await signer.estimateGas.deposit(destinationChainID,resourceID,data,_opt)
 
 			const options = Object.assign({
@@ -274,8 +298,9 @@ export class BridgeV1Contract extends ContractAbstract {
 		};
 	  public async depositEventAgain(destinationChainID:number|BigNumber,resourceID:string,depositNonce:BigNumber,opt?: IOption){
 
-			const signer = this.getContractSigner(this.address)
-			const _opt = opt || {}
+			const [address, rest] = this.parseOption(opt)
+			const signer = this.getContractSigner(address)
+			const _opt = rest
 			const gasLimit = await signer.estimateGas.depositEventAgain(destinationChainID,resourceID,depositNonce,_opt)
 
 			const options = Object.assign({
@@ -286,8 +311,9 @@ export class BridgeV1Contract extends ContractAbstract {
 		};
 	  public async executeProposal(chainID:number|BigNumber,depositNonce:BigNumber,data:string,resourceID:string,opt?: IOption){
 
-			const signer = this.getContractSigner(this.address)
-			const _opt = opt || {}
+			const [address, rest] = this.parseOption(opt)
+			const signer = this.getContractSigner(address)
+			const _opt = rest
 			const gasLimit = await signer.estimateGas.executeProposal(chainID,depositNonce,data,resourceID,_opt)
 
 			const options = Object.assign({
@@ -296,40 +322,46 @@ export class BridgeV1Contract extends ContractAbstract {
 			return signer.executeProposal(chainID,depositNonce,data,resourceID,options)
 
 		};
-	  public getFee(chainIdIn:BigNumber,chainIdOut:BigNumber){
+	  public getFee(chainIdIn:BigNumber,chainIdOut:BigNumber,opt?: IOption){
 
-			const provider = this.getContractProvider(this.address)
+			const [address] = this.parseOption(opt)
+			const provider = this.getContractProvider(address)
 			return provider.getFee(chainIdIn,chainIdOut)
 
 		};
-	  public getProposal(originChainID:number|BigNumber,depositNonce:BigNumber,dataHash:string){
+	  public getProposal(originChainID:number|BigNumber,depositNonce:BigNumber,dataHash:string,opt?: IOption){
 
-			const provider = this.getContractProvider(this.address)
+			const [address] = this.parseOption(opt)
+			const provider = this.getContractProvider(address)
 			return provider.getProposal(originChainID,depositNonce,dataHash)
 
 		};
-	  public getRoleAdmin(role:string){
+	  public getRoleAdmin(role:string,opt?: IOption){
 
-			const provider = this.getContractProvider(this.address)
+			const [address] = this.parseOption(opt)
+			const provider = this.getContractProvider(address)
 			return provider.getRoleAdmin(role)
 
 		};
-	  public getRoleMember(role:string,index:BigNumber){
+	  public getRoleMember(role:string,index:BigNumber,opt?: IOption){
 
-			const provider = this.getContractProvider(this.address)
+			const [address] = this.parseOption(opt)
+			const provider = this.getContractProvider(address)
 			return provider.getRoleMember(role,index)
 
 		};
-	  public getRoleMemberCount(role:string){
+	  public getRoleMemberCount(role:string,opt?: IOption){
 
-			const provider = this.getContractProvider(this.address)
+			const [address] = this.parseOption(opt)
+			const provider = this.getContractProvider(address)
 			return provider.getRoleMemberCount(role)
 
 		};
 	  public async grantRole(role:string,account:string,opt?: IOption){
 
-			const signer = this.getContractSigner(this.address)
-			const _opt = opt || {}
+			const [address, rest] = this.parseOption(opt)
+			const signer = this.getContractSigner(address)
+			const _opt = rest
 			const gasLimit = await signer.estimateGas.grantRole(role,account,_opt)
 
 			const options = Object.assign({
@@ -338,28 +370,32 @@ export class BridgeV1Contract extends ContractAbstract {
 			return signer.grantRole(role,account,options)
 
 		};
-	  public hasRole(role:string,account:string){
+	  public hasRole(role:string,account:string,opt?: IOption){
 
-			const provider = this.getContractProvider(this.address)
+			const [address] = this.parseOption(opt)
+			const provider = this.getContractProvider(address)
 			return provider.hasRole(role,account)
 
 		};
-	  public isRelayer(relayer:string){
+	  public isRelayer(relayer:string,opt?: IOption){
 
-			const provider = this.getContractProvider(this.address)
+			const [address] = this.parseOption(opt)
+			const provider = this.getContractProvider(address)
 			return provider.isRelayer(relayer)
 
 		};
-	  public paused(){
+	  public paused(opt?: IOption){
 
-			const provider = this.getContractProvider(this.address)
+			const [address] = this.parseOption(opt)
+			const provider = this.getContractProvider(address)
 			return provider.paused()
 
 		};
 	  public async renounceAdmin(newAdmin:string,opt?: IOption){
 
-			const signer = this.getContractSigner(this.address)
-			const _opt = opt || {}
+			const [address, rest] = this.parseOption(opt)
+			const signer = this.getContractSigner(address)
+			const _opt = rest
 			const gasLimit = await signer.estimateGas.renounceAdmin(newAdmin,_opt)
 
 			const options = Object.assign({
@@ -370,8 +406,9 @@ export class BridgeV1Contract extends ContractAbstract {
 		};
 	  public async renounceRole(role:string,account:string,opt?: IOption){
 
-			const signer = this.getContractSigner(this.address)
-			const _opt = opt || {}
+			const [address, rest] = this.parseOption(opt)
+			const signer = this.getContractSigner(address)
+			const _opt = rest
 			const gasLimit = await signer.estimateGas.renounceRole(role,account,_opt)
 
 			const options = Object.assign({
@@ -382,8 +419,9 @@ export class BridgeV1Contract extends ContractAbstract {
 		};
 	  public async revokeRole(role:string,account:string,opt?: IOption){
 
-			const signer = this.getContractSigner(this.address)
-			const _opt = opt || {}
+			const [address, rest] = this.parseOption(opt)
+			const signer = this.getContractSigner(address)
+			const _opt = rest
 			const gasLimit = await signer.estimateGas.revokeRole(role,account,_opt)
 
 			const options = Object.assign({
@@ -394,8 +432,9 @@ export class BridgeV1Contract extends ContractAbstract {
 		};
 	  public async transferFunds(addrs:string[],amounts:BigNumber[],opt?: IOption){
 
-			const signer = this.getContractSigner(this.address)
-			const _opt = opt || {}
+			const [address, rest] = this.parseOption(opt)
+			const signer = this.getContractSigner(address)
+			const _opt = rest
 			const gasLimit = await signer.estimateGas.transferFunds(addrs,amounts,_opt)
 
 			const options = Object.assign({
@@ -406,8 +445,9 @@ export class BridgeV1Contract extends ContractAbstract {
 		};
 	  public async voteProposal(chainID:number|BigNumber,depositNonce:BigNumber,resourceID:string,dataHash:string,opt?: IOption){
 
-			const signer = this.getContractSigner(this.address)
-			const _opt = opt || {}
+			const [address, rest] = this.parseOption(opt)
+			const signer = this.getContractSigner(address)
+			const _opt = rest
 			const gasLimit = await signer.estimateGas.voteProposal(chainID,depositNonce,resourceID,dataHash,_opt)
 
 			const options = Object.assign({
