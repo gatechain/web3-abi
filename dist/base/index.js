@@ -18,6 +18,7 @@ __exportStar(require("./bridge_v1"), exports);
 __exportStar(require("./erc1155"), exports);
 __exportStar(require("./erc20"), exports);
 __exportStar(require("./erc721"), exports);
+__exportStar(require("./hipo_cross_and_swap"), exports);
 __exportStar(require("./hipo_n_f_t_swap_v2"), exports);
 __exportStar(require("./nft_exchange"), exports);
 __exportStar(require("./nft_proxy"), exports);
