@@ -17,8 +17,8 @@
     "abigen": "https://github.com/gatechain/abigen#1.0.3",
     "ethers": "^5.7.2",
     "fs-extra": "^11.1.0",
-    "web3-contract": "https://github.com/gatechain/web3-contract#3.0.0",
-    "typescript": "^4.9.4"
+    "typescript": "^4.9.4",
+    "web3-contract": "https://github.com/gatechain/web3-contract#3.0.0"
   },
   "peerDependencies": {
     "web3-contract": "https://github.com/gatechain/web3-contract#3.0.0"

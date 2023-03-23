@@ -29,26 +29,26 @@ class NftProxyContract extends ContractAbstract_js_1.default {
     endGrantAuthentication(addr, opt) {
         return __awaiter(this, void 0, void 0, function* () {
             const [address, rest] = this.parseOption(opt);
-            const signer = this.getContractSigner(address);
+            const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield signer.estimateGas.endGrantAuthentication(addr, _opt);
+            const gasLimit = yield __signer.estimateGas.endGrantAuthentication(addr, _opt);
             const options = Object.assign({
                 gasLimit
             }, _opt);
-            return signer.endGrantAuthentication(addr, options);
+            return __signer.endGrantAuthentication(addr, options);
         });
     }
     ;
     revokeAuthentication(addr, opt) {
         return __awaiter(this, void 0, void 0, function* () {
             const [address, rest] = this.parseOption(opt);
-            const signer = this.getContractSigner(address);
+            const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield signer.estimateGas.revokeAuthentication(addr, _opt);
+            const gasLimit = yield __signer.estimateGas.revokeAuthentication(addr, _opt);
             const options = Object.assign({
                 gasLimit
             }, _opt);
-            return signer.revokeAuthentication(addr, options);
+            return __signer.revokeAuthentication(addr, options);
         });
     }
     ;
@@ -67,13 +67,13 @@ class NftProxyContract extends ContractAbstract_js_1.default {
     renounceOwnership(opt) {
         return __awaiter(this, void 0, void 0, function* () {
             const [address, rest] = this.parseOption(opt);
-            const signer = this.getContractSigner(address);
+            const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield signer.estimateGas.renounceOwnership(_opt);
+            const gasLimit = yield __signer.estimateGas.renounceOwnership(_opt);
             const options = Object.assign({
                 gasLimit
             }, _opt);
-            return signer.renounceOwnership(options);
+            return __signer.renounceOwnership(options);
         });
     }
     ;
@@ -98,26 +98,26 @@ class NftProxyContract extends ContractAbstract_js_1.default {
     startGrantAuthentication(addr, opt) {
         return __awaiter(this, void 0, void 0, function* () {
             const [address, rest] = this.parseOption(opt);
-            const signer = this.getContractSigner(address);
+            const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield signer.estimateGas.startGrantAuthentication(addr, _opt);
+            const gasLimit = yield __signer.estimateGas.startGrantAuthentication(addr, _opt);
             const options = Object.assign({
                 gasLimit
             }, _opt);
-            return signer.startGrantAuthentication(addr, options);
+            return __signer.startGrantAuthentication(addr, options);
         });
     }
     ;
     registerProxy(opt) {
         return __awaiter(this, void 0, void 0, function* () {
             const [address, rest] = this.parseOption(opt);
-            const signer = this.getContractSigner(address);
+            const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield signer.estimateGas.registerProxy(_opt);
+            const gasLimit = yield __signer.estimateGas.registerProxy(_opt);
             const options = Object.assign({
                 gasLimit
             }, _opt);
-            return signer.registerProxy(options);
+            return __signer.registerProxy(options);
         });
     }
     ;
@@ -130,26 +130,26 @@ class NftProxyContract extends ContractAbstract_js_1.default {
     transferOwnership(_newOwner, opt) {
         return __awaiter(this, void 0, void 0, function* () {
             const [address, rest] = this.parseOption(opt);
-            const signer = this.getContractSigner(address);
+            const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield signer.estimateGas.transferOwnership(_newOwner, _opt);
+            const gasLimit = yield __signer.estimateGas.transferOwnership(_newOwner, _opt);
             const options = Object.assign({
                 gasLimit
             }, _opt);
-            return signer.transferOwnership(_newOwner, options);
+            return __signer.transferOwnership(_newOwner, options);
         });
     }
     ;
     grantInitialAuthentication(authAddress, opt) {
         return __awaiter(this, void 0, void 0, function* () {
             const [address, rest] = this.parseOption(opt);
-            const signer = this.getContractSigner(address);
+            const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield signer.estimateGas.grantInitialAuthentication(authAddress, _opt);
+            const gasLimit = yield __signer.estimateGas.grantInitialAuthentication(authAddress, _opt);
             const options = Object.assign({
                 gasLimit
             }, _opt);
-            return signer.grantInitialAuthentication(authAddress, options);
+            return __signer.grantInitialAuthentication(authAddress, options);
         });
     }
     ;

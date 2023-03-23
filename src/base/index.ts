@@ -6,4 +6,5 @@ export * from './hipo_cross_and_swap';
 export * from './hipo_n_f_t_swap_v2';
 export * from './nft_exchange';
 export * from './nft_proxy';
+export * from './sea_drop';
 export * from './wgt';

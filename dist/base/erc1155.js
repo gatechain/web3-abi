@@ -53,26 +53,26 @@ class ERC1155Contract extends ContractAbstract_js_1.default {
     burn(account, id, value, opt) {
         return __awaiter(this, void 0, void 0, function* () {
             const [address, rest] = this.parseOption(opt);
-            const signer = this.getContractSigner(address);
+            const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield signer.estimateGas.burn(account, id, value, _opt);
+            const gasLimit = yield __signer.estimateGas.burn(account, id, value, _opt);
             const options = Object.assign({
                 gasLimit
             }, _opt);
-            return signer.burn(account, id, value, options);
+            return __signer.burn(account, id, value, options);
         });
     }
     ;
     burnBatch(account, ids, values, opt) {
         return __awaiter(this, void 0, void 0, function* () {
             const [address, rest] = this.parseOption(opt);
-            const signer = this.getContractSigner(address);
+            const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield signer.estimateGas.burnBatch(account, ids, values, _opt);
+            const gasLimit = yield __signer.estimateGas.burnBatch(account, ids, values, _opt);
             const options = Object.assign({
                 gasLimit
             }, _opt);
-            return signer.burnBatch(account, ids, values, options);
+            return __signer.burnBatch(account, ids, values, options);
         });
     }
     ;
@@ -97,13 +97,13 @@ class ERC1155Contract extends ContractAbstract_js_1.default {
     grantRole(role, account, opt) {
         return __awaiter(this, void 0, void 0, function* () {
             const [address, rest] = this.parseOption(opt);
-            const signer = this.getContractSigner(address);
+            const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield signer.estimateGas.grantRole(role, account, _opt);
+            const gasLimit = yield __signer.estimateGas.grantRole(role, account, _opt);
             const options = Object.assign({
                 gasLimit
             }, _opt);
-            return signer.grantRole(role, account, options);
+            return __signer.grantRole(role, account, options);
         });
     }
     ;
@@ -122,39 +122,39 @@ class ERC1155Contract extends ContractAbstract_js_1.default {
     mint(to, id, amount, data, opt) {
         return __awaiter(this, void 0, void 0, function* () {
             const [address, rest] = this.parseOption(opt);
-            const signer = this.getContractSigner(address);
+            const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield signer.estimateGas.mint(to, id, amount, data, _opt);
+            const gasLimit = yield __signer.estimateGas.mint(to, id, amount, data, _opt);
             const options = Object.assign({
                 gasLimit
             }, _opt);
-            return signer.mint(to, id, amount, data, options);
+            return __signer.mint(to, id, amount, data, options);
         });
     }
     ;
     mintBatch(to, ids, amounts, data, opt) {
         return __awaiter(this, void 0, void 0, function* () {
             const [address, rest] = this.parseOption(opt);
-            const signer = this.getContractSigner(address);
+            const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield signer.estimateGas.mintBatch(to, ids, amounts, data, _opt);
+            const gasLimit = yield __signer.estimateGas.mintBatch(to, ids, amounts, data, _opt);
             const options = Object.assign({
                 gasLimit
             }, _opt);
-            return signer.mintBatch(to, ids, amounts, data, options);
+            return __signer.mintBatch(to, ids, amounts, data, options);
         });
     }
     ;
     pause(opt) {
         return __awaiter(this, void 0, void 0, function* () {
             const [address, rest] = this.parseOption(opt);
-            const signer = this.getContractSigner(address);
+            const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield signer.estimateGas.pause(_opt);
+            const gasLimit = yield __signer.estimateGas.pause(_opt);
             const options = Object.assign({
                 gasLimit
             }, _opt);
-            return signer.pause(options);
+            return __signer.pause(options);
         });
     }
     ;
@@ -167,65 +167,65 @@ class ERC1155Contract extends ContractAbstract_js_1.default {
     renounceRole(role, account, opt) {
         return __awaiter(this, void 0, void 0, function* () {
             const [address, rest] = this.parseOption(opt);
-            const signer = this.getContractSigner(address);
+            const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield signer.estimateGas.renounceRole(role, account, _opt);
+            const gasLimit = yield __signer.estimateGas.renounceRole(role, account, _opt);
             const options = Object.assign({
                 gasLimit
             }, _opt);
-            return signer.renounceRole(role, account, options);
+            return __signer.renounceRole(role, account, options);
         });
     }
     ;
     revokeRole(role, account, opt) {
         return __awaiter(this, void 0, void 0, function* () {
             const [address, rest] = this.parseOption(opt);
-            const signer = this.getContractSigner(address);
+            const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield signer.estimateGas.revokeRole(role, account, _opt);
+            const gasLimit = yield __signer.estimateGas.revokeRole(role, account, _opt);
             const options = Object.assign({
                 gasLimit
             }, _opt);
-            return signer.revokeRole(role, account, options);
+            return __signer.revokeRole(role, account, options);
         });
     }
     ;
     safeBatchTransferFrom(from, to, ids, amounts, data, opt) {
         return __awaiter(this, void 0, void 0, function* () {
             const [address, rest] = this.parseOption(opt);
-            const signer = this.getContractSigner(address);
+            const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield signer.estimateGas.safeBatchTransferFrom(from, to, ids, amounts, data, _opt);
+            const gasLimit = yield __signer.estimateGas.safeBatchTransferFrom(from, to, ids, amounts, data, _opt);
             const options = Object.assign({
                 gasLimit
             }, _opt);
-            return signer.safeBatchTransferFrom(from, to, ids, amounts, data, options);
+            return __signer.safeBatchTransferFrom(from, to, ids, amounts, data, options);
         });
     }
     ;
     safeTransferFrom(from, to, id, amount, data, opt) {
         return __awaiter(this, void 0, void 0, function* () {
             const [address, rest] = this.parseOption(opt);
-            const signer = this.getContractSigner(address);
+            const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield signer.estimateGas.safeTransferFrom(from, to, id, amount, data, _opt);
+            const gasLimit = yield __signer.estimateGas.safeTransferFrom(from, to, id, amount, data, _opt);
             const options = Object.assign({
                 gasLimit
             }, _opt);
-            return signer.safeTransferFrom(from, to, id, amount, data, options);
+            return __signer.safeTransferFrom(from, to, id, amount, data, options);
         });
     }
     ;
     setApprovalForAll(operator, approved, opt) {
         return __awaiter(this, void 0, void 0, function* () {
             const [address, rest] = this.parseOption(opt);
-            const signer = this.getContractSigner(address);
+            const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield signer.estimateGas.setApprovalForAll(operator, approved, _opt);
+            const gasLimit = yield __signer.estimateGas.setApprovalForAll(operator, approved, _opt);
             const options = Object.assign({
                 gasLimit
             }, _opt);
-            return signer.setApprovalForAll(operator, approved, options);
+            return __signer.setApprovalForAll(operator, approved, options);
         });
     }
     ;
@@ -238,13 +238,13 @@ class ERC1155Contract extends ContractAbstract_js_1.default {
     unpause(opt) {
         return __awaiter(this, void 0, void 0, function* () {
             const [address, rest] = this.parseOption(opt);
-            const signer = this.getContractSigner(address);
+            const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield signer.estimateGas.unpause(_opt);
+            const gasLimit = yield __signer.estimateGas.unpause(_opt);
             const options = Object.assign({
                 gasLimit
             }, _opt);
-            return signer.unpause(options);
+            return __signer.unpause(options);
         });
     }
     ;

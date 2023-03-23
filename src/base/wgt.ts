@@ -11,14 +11,14 @@ export class WGTContract extends ContractAbstract {
 	  public async approve(guy:string,wad:BigNumber,opt?: IOption){
 
 			const [address, rest] = this.parseOption(opt)
-			const signer = this.getContractSigner(address)
+			const __signer = this.getContractSigner(address)
 			const _opt = rest
-			const gasLimit = await signer.estimateGas.approve(guy,wad,_opt)
+			const gasLimit = await __signer.estimateGas.approve(guy,wad,_opt)
 
 			const options = Object.assign({
 				gasLimit
 			}, _opt)
-			return signer.approve(guy,wad,options)
+			return __signer.approve(guy,wad,options)
 
 		};
 	  public totalSupply(opt?: IOption){
@@ -31,27 +31,27 @@ export class WGTContract extends ContractAbstract {
 	  public async transferFrom(src:string,dst:string,wad:BigNumber,opt?: IOption){
 
 			const [address, rest] = this.parseOption(opt)
-			const signer = this.getContractSigner(address)
+			const __signer = this.getContractSigner(address)
 			const _opt = rest
-			const gasLimit = await signer.estimateGas.transferFrom(src,dst,wad,_opt)
+			const gasLimit = await __signer.estimateGas.transferFrom(src,dst,wad,_opt)
 
 			const options = Object.assign({
 				gasLimit
 			}, _opt)
-			return signer.transferFrom(src,dst,wad,options)
+			return __signer.transferFrom(src,dst,wad,options)
 
 		};
 	  public async withdraw(wad:BigNumber,opt?: IOption){
 
 			const [address, rest] = this.parseOption(opt)
-			const signer = this.getContractSigner(address)
+			const __signer = this.getContractSigner(address)
 			const _opt = rest
-			const gasLimit = await signer.estimateGas.withdraw(wad,_opt)
+			const gasLimit = await __signer.estimateGas.withdraw(wad,_opt)
 
 			const options = Object.assign({
 				gasLimit
 			}, _opt)
-			return signer.withdraw(wad,options)
+			return __signer.withdraw(wad,options)
 
 		};
 	  public decimals(opt?: IOption){
@@ -78,27 +78,27 @@ export class WGTContract extends ContractAbstract {
 	  public async transfer(dst:string,wad:BigNumber,opt?: IOption){
 
 			const [address, rest] = this.parseOption(opt)
-			const signer = this.getContractSigner(address)
+			const __signer = this.getContractSigner(address)
 			const _opt = rest
-			const gasLimit = await signer.estimateGas.transfer(dst,wad,_opt)
+			const gasLimit = await __signer.estimateGas.transfer(dst,wad,_opt)
 
 			const options = Object.assign({
 				gasLimit
 			}, _opt)
-			return signer.transfer(dst,wad,options)
+			return __signer.transfer(dst,wad,options)
 
 		};
 	  public async deposit(opt?: IOption){
 
 			const [address, rest] = this.parseOption(opt)
-			const signer = this.getContractSigner(address)
+			const __signer = this.getContractSigner(address)
 			const _opt = rest
-			const gasLimit = await signer.estimateGas.deposit(_opt)
+			const gasLimit = await __signer.estimateGas.deposit(_opt)
 
 			const options = Object.assign({
 				gasLimit
 			}, _opt)
-			return signer.deposit(options)
+			return __signer.deposit(options)
 
 		};
 	  public allowance(index_0:string,index_1:string,opt?: IOption){

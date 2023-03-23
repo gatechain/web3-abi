@@ -46,27 +46,27 @@ export class ERC1155Contract extends ContractAbstract {
 	  public async burn(account:string,id:BigNumber,value:BigNumber,opt?: IOption){
 
 			const [address, rest] = this.parseOption(opt)
-			const signer = this.getContractSigner(address)
+			const __signer = this.getContractSigner(address)
 			const _opt = rest
-			const gasLimit = await signer.estimateGas.burn(account,id,value,_opt)
+			const gasLimit = await __signer.estimateGas.burn(account,id,value,_opt)
 
 			const options = Object.assign({
 				gasLimit
 			}, _opt)
-			return signer.burn(account,id,value,options)
+			return __signer.burn(account,id,value,options)
 
 		};
 	  public async burnBatch(account:string,ids:BigNumber[],values:BigNumber[],opt?: IOption){
 
 			const [address, rest] = this.parseOption(opt)
-			const signer = this.getContractSigner(address)
+			const __signer = this.getContractSigner(address)
 			const _opt = rest
-			const gasLimit = await signer.estimateGas.burnBatch(account,ids,values,_opt)
+			const gasLimit = await __signer.estimateGas.burnBatch(account,ids,values,_opt)
 
 			const options = Object.assign({
 				gasLimit
 			}, _opt)
-			return signer.burnBatch(account,ids,values,options)
+			return __signer.burnBatch(account,ids,values,options)
 
 		};
 	  public getRoleAdmin(role:string,opt?: IOption){
@@ -93,14 +93,14 @@ export class ERC1155Contract extends ContractAbstract {
 	  public async grantRole(role:string,account:string,opt?: IOption){
 
 			const [address, rest] = this.parseOption(opt)
-			const signer = this.getContractSigner(address)
+			const __signer = this.getContractSigner(address)
 			const _opt = rest
-			const gasLimit = await signer.estimateGas.grantRole(role,account,_opt)
+			const gasLimit = await __signer.estimateGas.grantRole(role,account,_opt)
 
 			const options = Object.assign({
 				gasLimit
 			}, _opt)
-			return signer.grantRole(role,account,options)
+			return __signer.grantRole(role,account,options)
 
 		};
 	  public hasRole(role:string,account:string,opt?: IOption){
@@ -120,40 +120,40 @@ export class ERC1155Contract extends ContractAbstract {
 	  public async mint(to:string,id:BigNumber,amount:BigNumber,data:string,opt?: IOption){
 
 			const [address, rest] = this.parseOption(opt)
-			const signer = this.getContractSigner(address)
+			const __signer = this.getContractSigner(address)
 			const _opt = rest
-			const gasLimit = await signer.estimateGas.mint(to,id,amount,data,_opt)
+			const gasLimit = await __signer.estimateGas.mint(to,id,amount,data,_opt)
 
 			const options = Object.assign({
 				gasLimit
 			}, _opt)
-			return signer.mint(to,id,amount,data,options)
+			return __signer.mint(to,id,amount,data,options)
 
 		};
 	  public async mintBatch(to:string,ids:BigNumber[],amounts:BigNumber[],data:string,opt?: IOption){
 
 			const [address, rest] = this.parseOption(opt)
-			const signer = this.getContractSigner(address)
+			const __signer = this.getContractSigner(address)
 			const _opt = rest
-			const gasLimit = await signer.estimateGas.mintBatch(to,ids,amounts,data,_opt)
+			const gasLimit = await __signer.estimateGas.mintBatch(to,ids,amounts,data,_opt)
 
 			const options = Object.assign({
 				gasLimit
 			}, _opt)
-			return signer.mintBatch(to,ids,amounts,data,options)
+			return __signer.mintBatch(to,ids,amounts,data,options)
 
 		};
 	  public async pause(opt?: IOption){
 
 			const [address, rest] = this.parseOption(opt)
-			const signer = this.getContractSigner(address)
+			const __signer = this.getContractSigner(address)
 			const _opt = rest
-			const gasLimit = await signer.estimateGas.pause(_opt)
+			const gasLimit = await __signer.estimateGas.pause(_opt)
 
 			const options = Object.assign({
 				gasLimit
 			}, _opt)
-			return signer.pause(options)
+			return __signer.pause(options)
 
 		};
 	  public paused(opt?: IOption){
@@ -166,66 +166,66 @@ export class ERC1155Contract extends ContractAbstract {
 	  public async renounceRole(role:string,account:string,opt?: IOption){
 
 			const [address, rest] = this.parseOption(opt)
-			const signer = this.getContractSigner(address)
+			const __signer = this.getContractSigner(address)
 			const _opt = rest
-			const gasLimit = await signer.estimateGas.renounceRole(role,account,_opt)
+			const gasLimit = await __signer.estimateGas.renounceRole(role,account,_opt)
 
 			const options = Object.assign({
 				gasLimit
 			}, _opt)
-			return signer.renounceRole(role,account,options)
+			return __signer.renounceRole(role,account,options)
 
 		};
 	  public async revokeRole(role:string,account:string,opt?: IOption){
 
 			const [address, rest] = this.parseOption(opt)
-			const signer = this.getContractSigner(address)
+			const __signer = this.getContractSigner(address)
 			const _opt = rest
-			const gasLimit = await signer.estimateGas.revokeRole(role,account,_opt)
+			const gasLimit = await __signer.estimateGas.revokeRole(role,account,_opt)
 
 			const options = Object.assign({
 				gasLimit
 			}, _opt)
-			return signer.revokeRole(role,account,options)
+			return __signer.revokeRole(role,account,options)
 
 		};
 	  public async safeBatchTransferFrom(from:string,to:string,ids:BigNumber[],amounts:BigNumber[],data:string,opt?: IOption){
 
 			const [address, rest] = this.parseOption(opt)
-			const signer = this.getContractSigner(address)
+			const __signer = this.getContractSigner(address)
 			const _opt = rest
-			const gasLimit = await signer.estimateGas.safeBatchTransferFrom(from,to,ids,amounts,data,_opt)
+			const gasLimit = await __signer.estimateGas.safeBatchTransferFrom(from,to,ids,amounts,data,_opt)
 
 			const options = Object.assign({
 				gasLimit
 			}, _opt)
-			return signer.safeBatchTransferFrom(from,to,ids,amounts,data,options)
+			return __signer.safeBatchTransferFrom(from,to,ids,amounts,data,options)
 
 		};
 	  public async safeTransferFrom(from:string,to:string,id:BigNumber,amount:BigNumber,data:string,opt?: IOption){
 
 			const [address, rest] = this.parseOption(opt)
-			const signer = this.getContractSigner(address)
+			const __signer = this.getContractSigner(address)
 			const _opt = rest
-			const gasLimit = await signer.estimateGas.safeTransferFrom(from,to,id,amount,data,_opt)
+			const gasLimit = await __signer.estimateGas.safeTransferFrom(from,to,id,amount,data,_opt)
 
 			const options = Object.assign({
 				gasLimit
 			}, _opt)
-			return signer.safeTransferFrom(from,to,id,amount,data,options)
+			return __signer.safeTransferFrom(from,to,id,amount,data,options)
 
 		};
 	  public async setApprovalForAll(operator:string,approved:boolean,opt?: IOption){
 
 			const [address, rest] = this.parseOption(opt)
-			const signer = this.getContractSigner(address)
+			const __signer = this.getContractSigner(address)
 			const _opt = rest
-			const gasLimit = await signer.estimateGas.setApprovalForAll(operator,approved,_opt)
+			const gasLimit = await __signer.estimateGas.setApprovalForAll(operator,approved,_opt)
 
 			const options = Object.assign({
 				gasLimit
 			}, _opt)
-			return signer.setApprovalForAll(operator,approved,options)
+			return __signer.setApprovalForAll(operator,approved,options)
 
 		};
 	  public supportsInterface(interfaceId:string,opt?: IOption){
@@ -238,14 +238,14 @@ export class ERC1155Contract extends ContractAbstract {
 	  public async unpause(opt?: IOption){
 
 			const [address, rest] = this.parseOption(opt)
-			const signer = this.getContractSigner(address)
+			const __signer = this.getContractSigner(address)
 			const _opt = rest
-			const gasLimit = await signer.estimateGas.unpause(_opt)
+			const gasLimit = await __signer.estimateGas.unpause(_opt)
 
 			const options = Object.assign({
 				gasLimit
 			}, _opt)
-			return signer.unpause(options)
+			return __signer.unpause(options)
 
 		};
 	  public uri(index_0:BigNumber,opt?: IOption){

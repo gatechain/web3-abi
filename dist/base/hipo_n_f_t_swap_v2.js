@@ -23,91 +23,91 @@ class HipoNFTSwapV2Contract extends ContractAbstract_js_1.default {
     approveERC20(token, operator, amount, opt) {
         return __awaiter(this, void 0, void 0, function* () {
             const [address, rest] = this.parseOption(opt);
-            const signer = this.getContractSigner(address);
+            const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield signer.estimateGas.approveERC20(token, operator, amount, _opt);
+            const gasLimit = yield __signer.estimateGas.approveERC20(token, operator, amount, _opt);
             const options = Object.assign({
                 gasLimit
             }, _opt);
-            return signer.approveERC20(token, operator, amount, options);
+            return __signer.approveERC20(token, operator, amount, options);
         });
     }
     ;
     batchBuyWithERC20s(erc20Pairs, tradeBytes, dustTokens, opt) {
         return __awaiter(this, void 0, void 0, function* () {
             const [address, rest] = this.parseOption(opt);
-            const signer = this.getContractSigner(address);
+            const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield signer.estimateGas.batchBuyWithERC20s(erc20Pairs, tradeBytes, dustTokens, _opt);
+            const gasLimit = yield __signer.estimateGas.batchBuyWithERC20s(erc20Pairs, tradeBytes, dustTokens, _opt);
             const options = Object.assign({
                 gasLimit
             }, _opt);
-            return signer.batchBuyWithERC20s(erc20Pairs, tradeBytes, dustTokens, options);
+            return __signer.batchBuyWithERC20s(erc20Pairs, tradeBytes, dustTokens, options);
         });
     }
     ;
     batchBuyWithETH(tradeBytes, opt) {
         return __awaiter(this, void 0, void 0, function* () {
             const [address, rest] = this.parseOption(opt);
-            const signer = this.getContractSigner(address);
+            const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield signer.estimateGas.batchBuyWithETH(tradeBytes, _opt);
+            const gasLimit = yield __signer.estimateGas.batchBuyWithETH(tradeBytes, _opt);
             const options = Object.assign({
                 gasLimit
             }, _opt);
-            return signer.batchBuyWithETH(tradeBytes, options);
+            return __signer.batchBuyWithETH(tradeBytes, options);
         });
     }
     ;
     onERC1155BatchReceived(index_0, index_1, index_2, index_3, index_4, opt) {
         return __awaiter(this, void 0, void 0, function* () {
             const [address, rest] = this.parseOption(opt);
-            const signer = this.getContractSigner(address);
+            const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield signer.estimateGas.onERC1155BatchReceived(index_0, index_1, index_2, index_3, index_4, _opt);
+            const gasLimit = yield __signer.estimateGas.onERC1155BatchReceived(index_0, index_1, index_2, index_3, index_4, _opt);
             const options = Object.assign({
                 gasLimit
             }, _opt);
-            return signer.onERC1155BatchReceived(index_0, index_1, index_2, index_3, index_4, options);
+            return __signer.onERC1155BatchReceived(index_0, index_1, index_2, index_3, index_4, options);
         });
     }
     ;
     onERC1155Received(index_0, index_1, index_2, index_3, index_4, opt) {
         return __awaiter(this, void 0, void 0, function* () {
             const [address, rest] = this.parseOption(opt);
-            const signer = this.getContractSigner(address);
+            const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield signer.estimateGas.onERC1155Received(index_0, index_1, index_2, index_3, index_4, _opt);
+            const gasLimit = yield __signer.estimateGas.onERC1155Received(index_0, index_1, index_2, index_3, index_4, _opt);
             const options = Object.assign({
                 gasLimit
             }, _opt);
-            return signer.onERC1155Received(index_0, index_1, index_2, index_3, index_4, options);
+            return __signer.onERC1155Received(index_0, index_1, index_2, index_3, index_4, options);
         });
     }
     ;
     onERC721Received1(index_0, index_1, index_2, index_3, opt) {
         return __awaiter(this, void 0, void 0, function* () {
             const [address, rest] = this.parseOption(opt);
-            const signer = this.getContractSigner(address);
+            const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield signer.estimateGas.onERC721Received1(index_0, index_1, index_2, index_3, _opt);
+            const gasLimit = yield __signer.estimateGas.onERC721Received1(index_0, index_1, index_2, index_3, _opt);
             const options = Object.assign({
                 gasLimit
             }, _opt);
-            return signer.onERC721Received1(index_0, index_1, index_2, index_3, options);
+            return __signer.onERC721Received1(index_0, index_1, index_2, index_3, options);
         });
     }
     ;
     onERC721Received2(index_0, index_1, index_2, opt) {
         return __awaiter(this, void 0, void 0, function* () {
             const [address, rest] = this.parseOption(opt);
-            const signer = this.getContractSigner(address);
+            const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield signer.estimateGas.onERC721Received2(index_0, index_1, index_2, _opt);
+            const gasLimit = yield __signer.estimateGas.onERC721Received2(index_0, index_1, index_2, _opt);
             const options = Object.assign({
                 gasLimit
             }, _opt);
-            return signer.onERC721Received2(index_0, index_1, index_2, options);
+            return __signer.onERC721Received2(index_0, index_1, index_2, options);
         });
     }
     ;
@@ -120,104 +120,104 @@ class HipoNFTSwapV2Contract extends ContractAbstract_js_1.default {
     registerFeature(feature, opt) {
         return __awaiter(this, void 0, void 0, function* () {
             const [address, rest] = this.parseOption(opt);
-            const signer = this.getContractSigner(address);
+            const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield signer.estimateGas.registerFeature(feature, _opt);
+            const gasLimit = yield __signer.estimateGas.registerFeature(feature, _opt);
             const options = Object.assign({
                 gasLimit
             }, _opt);
-            return signer.registerFeature(feature, options);
+            return __signer.registerFeature(feature, options);
         });
     }
     ;
     registerFeatures(features, opt) {
         return __awaiter(this, void 0, void 0, function* () {
             const [address, rest] = this.parseOption(opt);
-            const signer = this.getContractSigner(address);
+            const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield signer.estimateGas.registerFeatures(features, _opt);
+            const gasLimit = yield __signer.estimateGas.registerFeatures(features, _opt);
             const options = Object.assign({
                 gasLimit
             }, _opt);
-            return signer.registerFeatures(features, options);
+            return __signer.registerFeatures(features, options);
         });
     }
     ;
     rescueERC20(asset, recipient, opt) {
         return __awaiter(this, void 0, void 0, function* () {
             const [address, rest] = this.parseOption(opt);
-            const signer = this.getContractSigner(address);
+            const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield signer.estimateGas.rescueERC20(asset, recipient, _opt);
+            const gasLimit = yield __signer.estimateGas.rescueERC20(asset, recipient, _opt);
             const options = Object.assign({
                 gasLimit
             }, _opt);
-            return signer.rescueERC20(asset, recipient, options);
+            return __signer.rescueERC20(asset, recipient, options);
         });
     }
     ;
     rescueERC721(asset, ids, recipient, opt) {
         return __awaiter(this, void 0, void 0, function* () {
             const [address, rest] = this.parseOption(opt);
-            const signer = this.getContractSigner(address);
+            const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield signer.estimateGas.rescueERC721(asset, ids, recipient, _opt);
+            const gasLimit = yield __signer.estimateGas.rescueERC721(asset, ids, recipient, _opt);
             const options = Object.assign({
                 gasLimit
             }, _opt);
-            return signer.rescueERC721(asset, ids, recipient, options);
+            return __signer.rescueERC721(asset, ids, recipient, options);
         });
     }
     ;
     rescueETH(recipient, opt) {
         return __awaiter(this, void 0, void 0, function* () {
             const [address, rest] = this.parseOption(opt);
-            const signer = this.getContractSigner(address);
+            const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield signer.estimateGas.rescueETH(recipient, _opt);
+            const gasLimit = yield __signer.estimateGas.rescueETH(recipient, _opt);
             const options = Object.assign({
                 gasLimit
             }, _opt);
-            return signer.rescueETH(recipient, options);
+            return __signer.rescueETH(recipient, options);
         });
     }
     ;
     supportsInterface(interfaceId, opt) {
         return __awaiter(this, void 0, void 0, function* () {
             const [address, rest] = this.parseOption(opt);
-            const signer = this.getContractSigner(address);
+            const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield signer.estimateGas.supportsInterface(interfaceId, _opt);
+            const gasLimit = yield __signer.estimateGas.supportsInterface(interfaceId, _opt);
             const options = Object.assign({
                 gasLimit
             }, _opt);
-            return signer.supportsInterface(interfaceId, options);
+            return __signer.supportsInterface(interfaceId, options);
         });
     }
     ;
     transferOwnership(newOwner, opt) {
         return __awaiter(this, void 0, void 0, function* () {
             const [address, rest] = this.parseOption(opt);
-            const signer = this.getContractSigner(address);
+            const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield signer.estimateGas.transferOwnership(newOwner, _opt);
+            const gasLimit = yield __signer.estimateGas.transferOwnership(newOwner, _opt);
             const options = Object.assign({
                 gasLimit
             }, _opt);
-            return signer.transferOwnership(newOwner, options);
+            return __signer.transferOwnership(newOwner, options);
         });
     }
     ;
     unregister(methodIDs, opt) {
         return __awaiter(this, void 0, void 0, function* () {
             const [address, rest] = this.parseOption(opt);
-            const signer = this.getContractSigner(address);
+            const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield signer.estimateGas.unregister(methodIDs, _opt);
+            const gasLimit = yield __signer.estimateGas.unregister(methodIDs, _opt);
             const options = Object.assign({
                 gasLimit
             }, _opt);
-            return signer.unregister(methodIDs, options);
+            return __signer.unregister(methodIDs, options);
         });
     }
     ;

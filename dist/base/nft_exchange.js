@@ -35,39 +35,39 @@ class NftExchangeContract extends ContractAbstract_js_1.default {
     changeMinimumMakerProtocolFee(newMinimumMakerProtocolFee, opt) {
         return __awaiter(this, void 0, void 0, function* () {
             const [address, rest] = this.parseOption(opt);
-            const signer = this.getContractSigner(address);
+            const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield signer.estimateGas.changeMinimumMakerProtocolFee(newMinimumMakerProtocolFee, _opt);
+            const gasLimit = yield __signer.estimateGas.changeMinimumMakerProtocolFee(newMinimumMakerProtocolFee, _opt);
             const options = Object.assign({
                 gasLimit
             }, _opt);
-            return signer.changeMinimumMakerProtocolFee(newMinimumMakerProtocolFee, options);
+            return __signer.changeMinimumMakerProtocolFee(newMinimumMakerProtocolFee, options);
         });
     }
     ;
     changeMinimumTakerProtocolFee(newMinimumTakerProtocolFee, opt) {
         return __awaiter(this, void 0, void 0, function* () {
             const [address, rest] = this.parseOption(opt);
-            const signer = this.getContractSigner(address);
+            const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield signer.estimateGas.changeMinimumTakerProtocolFee(newMinimumTakerProtocolFee, _opt);
+            const gasLimit = yield __signer.estimateGas.changeMinimumTakerProtocolFee(newMinimumTakerProtocolFee, _opt);
             const options = Object.assign({
                 gasLimit
             }, _opt);
-            return signer.changeMinimumTakerProtocolFee(newMinimumTakerProtocolFee, options);
+            return __signer.changeMinimumTakerProtocolFee(newMinimumTakerProtocolFee, options);
         });
     }
     ;
     guardedArrayReplace(array, desired, mask, opt) {
         return __awaiter(this, void 0, void 0, function* () {
             const [address, rest] = this.parseOption(opt);
-            const signer = this.getContractSigner(address);
+            const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield signer.estimateGas.guardedArrayReplace(array, desired, mask, _opt);
+            const gasLimit = yield __signer.estimateGas.guardedArrayReplace(array, desired, mask, _opt);
             const options = Object.assign({
                 gasLimit
             }, _opt);
-            return signer.guardedArrayReplace(array, desired, mask, options);
+            return __signer.guardedArrayReplace(array, desired, mask, options);
         });
     }
     ;
@@ -86,26 +86,26 @@ class NftExchangeContract extends ContractAbstract_js_1.default {
     testCopyAddress(addr, opt) {
         return __awaiter(this, void 0, void 0, function* () {
             const [address, rest] = this.parseOption(opt);
-            const signer = this.getContractSigner(address);
+            const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield signer.estimateGas.testCopyAddress(addr, _opt);
+            const gasLimit = yield __signer.estimateGas.testCopyAddress(addr, _opt);
             const options = Object.assign({
                 gasLimit
             }, _opt);
-            return signer.testCopyAddress(addr, options);
+            return __signer.testCopyAddress(addr, options);
         });
     }
     ;
     testCopy(arrToCopy, opt) {
         return __awaiter(this, void 0, void 0, function* () {
             const [address, rest] = this.parseOption(opt);
-            const signer = this.getContractSigner(address);
+            const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield signer.estimateGas.testCopy(arrToCopy, _opt);
+            const gasLimit = yield __signer.estimateGas.testCopy(arrToCopy, _opt);
             const options = Object.assign({
                 gasLimit
             }, _opt);
-            return signer.testCopy(arrToCopy, options);
+            return __signer.testCopy(arrToCopy, options);
         });
     }
     ;
@@ -118,13 +118,13 @@ class NftExchangeContract extends ContractAbstract_js_1.default {
     changeProtocolFeeRecipient(newProtocolFeeRecipient, opt) {
         return __awaiter(this, void 0, void 0, function* () {
             const [address, rest] = this.parseOption(opt);
-            const signer = this.getContractSigner(address);
+            const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield signer.estimateGas.changeProtocolFeeRecipient(newProtocolFeeRecipient, _opt);
+            const gasLimit = yield __signer.estimateGas.changeProtocolFeeRecipient(newProtocolFeeRecipient, _opt);
             const options = Object.assign({
                 gasLimit
             }, _opt);
-            return signer.changeProtocolFeeRecipient(newProtocolFeeRecipient, options);
+            return __signer.changeProtocolFeeRecipient(newProtocolFeeRecipient, options);
         });
     }
     ;
@@ -137,13 +137,13 @@ class NftExchangeContract extends ContractAbstract_js_1.default {
     orderCalldataCanMatch(buyCalldata, buyReplacementPattern, sellCalldata, sellReplacementPattern, opt) {
         return __awaiter(this, void 0, void 0, function* () {
             const [address, rest] = this.parseOption(opt);
-            const signer = this.getContractSigner(address);
+            const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield signer.estimateGas.orderCalldataCanMatch(buyCalldata, buyReplacementPattern, sellCalldata, sellReplacementPattern, _opt);
+            const gasLimit = yield __signer.estimateGas.orderCalldataCanMatch(buyCalldata, buyReplacementPattern, sellCalldata, sellReplacementPattern, _opt);
             const options = Object.assign({
                 gasLimit
             }, _opt);
-            return signer.orderCalldataCanMatch(buyCalldata, buyReplacementPattern, sellCalldata, sellReplacementPattern, options);
+            return __signer.orderCalldataCanMatch(buyCalldata, buyReplacementPattern, sellCalldata, sellReplacementPattern, options);
         });
     }
     ;
@@ -168,26 +168,26 @@ class NftExchangeContract extends ContractAbstract_js_1.default {
     renounceOwnership(opt) {
         return __awaiter(this, void 0, void 0, function* () {
             const [address, rest] = this.parseOption(opt);
-            const signer = this.getContractSigner(address);
+            const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield signer.estimateGas.renounceOwnership(_opt);
+            const gasLimit = yield __signer.estimateGas.renounceOwnership(_opt);
             const options = Object.assign({
                 gasLimit
             }, _opt);
-            return signer.renounceOwnership(options);
+            return __signer.renounceOwnership(options);
         });
     }
     ;
     hashOrder_(addrs, uints, feeMethod, side, saleKind, howToCall, calldata, replacementPattern, staticExtradata, opt) {
         return __awaiter(this, void 0, void 0, function* () {
             const [address, rest] = this.parseOption(opt);
-            const signer = this.getContractSigner(address);
+            const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield signer.estimateGas.hashOrder_(addrs, uints, feeMethod, side, saleKind, howToCall, calldata, replacementPattern, staticExtradata, _opt);
+            const gasLimit = yield __signer.estimateGas.hashOrder_(addrs, uints, feeMethod, side, saleKind, howToCall, calldata, replacementPattern, staticExtradata, _opt);
             const options = Object.assign({
                 gasLimit
             }, _opt);
-            return signer.hashOrder_(addrs, uints, feeMethod, side, saleKind, howToCall, calldata, replacementPattern, staticExtradata, options);
+            return __signer.hashOrder_(addrs, uints, feeMethod, side, saleKind, howToCall, calldata, replacementPattern, staticExtradata, options);
         });
     }
     ;
@@ -200,13 +200,13 @@ class NftExchangeContract extends ContractAbstract_js_1.default {
     approveOrder_(addrs, uints, feeMethod, side, saleKind, howToCall, calldata, replacementPattern, staticExtradata, orderbookInclusionDesired, opt) {
         return __awaiter(this, void 0, void 0, function* () {
             const [address, rest] = this.parseOption(opt);
-            const signer = this.getContractSigner(address);
+            const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield signer.estimateGas.approveOrder_(addrs, uints, feeMethod, side, saleKind, howToCall, calldata, replacementPattern, staticExtradata, orderbookInclusionDesired, _opt);
+            const gasLimit = yield __signer.estimateGas.approveOrder_(addrs, uints, feeMethod, side, saleKind, howToCall, calldata, replacementPattern, staticExtradata, orderbookInclusionDesired, _opt);
             const options = Object.assign({
                 gasLimit
             }, _opt);
-            return signer.approveOrder_(addrs, uints, feeMethod, side, saleKind, howToCall, calldata, replacementPattern, staticExtradata, orderbookInclusionDesired, options);
+            return __signer.approveOrder_(addrs, uints, feeMethod, side, saleKind, howToCall, calldata, replacementPattern, staticExtradata, orderbookInclusionDesired, options);
         });
     }
     ;
@@ -225,13 +225,13 @@ class NftExchangeContract extends ContractAbstract_js_1.default {
     hashToSign_(addrs, uints, feeMethod, side, saleKind, howToCall, calldata, replacementPattern, staticExtradata, opt) {
         return __awaiter(this, void 0, void 0, function* () {
             const [address, rest] = this.parseOption(opt);
-            const signer = this.getContractSigner(address);
+            const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield signer.estimateGas.hashToSign_(addrs, uints, feeMethod, side, saleKind, howToCall, calldata, replacementPattern, staticExtradata, _opt);
+            const gasLimit = yield __signer.estimateGas.hashToSign_(addrs, uints, feeMethod, side, saleKind, howToCall, calldata, replacementPattern, staticExtradata, _opt);
             const options = Object.assign({
                 gasLimit
             }, _opt);
-            return signer.hashToSign_(addrs, uints, feeMethod, side, saleKind, howToCall, calldata, replacementPattern, staticExtradata, options);
+            return __signer.hashToSign_(addrs, uints, feeMethod, side, saleKind, howToCall, calldata, replacementPattern, staticExtradata, options);
         });
     }
     ;
@@ -256,26 +256,26 @@ class NftExchangeContract extends ContractAbstract_js_1.default {
     cancelOrder_(addrs, uints, feeMethod, side, saleKind, howToCall, calldata, replacementPattern, staticExtradata, v, r, s, opt) {
         return __awaiter(this, void 0, void 0, function* () {
             const [address, rest] = this.parseOption(opt);
-            const signer = this.getContractSigner(address);
+            const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield signer.estimateGas.cancelOrder_(addrs, uints, feeMethod, side, saleKind, howToCall, calldata, replacementPattern, staticExtradata, v, r, s, _opt);
+            const gasLimit = yield __signer.estimateGas.cancelOrder_(addrs, uints, feeMethod, side, saleKind, howToCall, calldata, replacementPattern, staticExtradata, v, r, s, _opt);
             const options = Object.assign({
                 gasLimit
             }, _opt);
-            return signer.cancelOrder_(addrs, uints, feeMethod, side, saleKind, howToCall, calldata, replacementPattern, staticExtradata, v, r, s, options);
+            return __signer.cancelOrder_(addrs, uints, feeMethod, side, saleKind, howToCall, calldata, replacementPattern, staticExtradata, v, r, s, options);
         });
     }
     ;
     atomicMatch_(addrs, uints, feeMethodsSidesKindsHowToCalls, calldataBuy, calldataSell, replacementPatternBuy, replacementPatternSell, staticExtradataBuy, staticExtradataSell, vs, rssMetadata, opt) {
         return __awaiter(this, void 0, void 0, function* () {
             const [address, rest] = this.parseOption(opt);
-            const signer = this.getContractSigner(address);
+            const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield signer.estimateGas.atomicMatch_(addrs, uints, feeMethodsSidesKindsHowToCalls, calldataBuy, calldataSell, replacementPatternBuy, replacementPatternSell, staticExtradataBuy, staticExtradataSell, vs, rssMetadata, _opt);
+            const gasLimit = yield __signer.estimateGas.atomicMatch_(addrs, uints, feeMethodsSidesKindsHowToCalls, calldataBuy, calldataSell, replacementPatternBuy, replacementPatternSell, staticExtradataBuy, staticExtradataSell, vs, rssMetadata, _opt);
             const options = Object.assign({
                 gasLimit
             }, _opt);
-            return signer.atomicMatch_(addrs, uints, feeMethodsSidesKindsHowToCalls, calldataBuy, calldataSell, replacementPatternBuy, replacementPatternSell, staticExtradataBuy, staticExtradataSell, vs, rssMetadata, options);
+            return __signer.atomicMatch_(addrs, uints, feeMethodsSidesKindsHowToCalls, calldataBuy, calldataSell, replacementPatternBuy, replacementPatternSell, staticExtradataBuy, staticExtradataSell, vs, rssMetadata, options);
         });
     }
     ;
@@ -306,13 +306,13 @@ class NftExchangeContract extends ContractAbstract_js_1.default {
     transferOwnership(newOwner, opt) {
         return __awaiter(this, void 0, void 0, function* () {
             const [address, rest] = this.parseOption(opt);
-            const signer = this.getContractSigner(address);
+            const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield signer.estimateGas.transferOwnership(newOwner, _opt);
+            const gasLimit = yield __signer.estimateGas.transferOwnership(newOwner, _opt);
             const options = Object.assign({
                 gasLimit
             }, _opt);
-            return signer.transferOwnership(newOwner, options);
+            return __signer.transferOwnership(newOwner, options);
         });
     }
     ;

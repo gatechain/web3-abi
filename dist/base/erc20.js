@@ -41,13 +41,13 @@ class ERC20Contract extends ContractAbstract_js_1.default {
     approve(spender, value, opt) {
         return __awaiter(this, void 0, void 0, function* () {
             const [address, rest] = this.parseOption(opt);
-            const signer = this.getContractSigner(address);
+            const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield signer.estimateGas.approve(spender, value, _opt);
+            const gasLimit = yield __signer.estimateGas.approve(spender, value, _opt);
             const options = Object.assign({
                 gasLimit
             }, _opt);
-            return signer.approve(spender, value, options);
+            return __signer.approve(spender, value, options);
         });
     }
     ;
@@ -72,13 +72,13 @@ class ERC20Contract extends ContractAbstract_js_1.default {
     permit(owner, spender, value, deadline, v, r, s, opt) {
         return __awaiter(this, void 0, void 0, function* () {
             const [address, rest] = this.parseOption(opt);
-            const signer = this.getContractSigner(address);
+            const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield signer.estimateGas.permit(owner, spender, value, deadline, v, r, s, _opt);
+            const gasLimit = yield __signer.estimateGas.permit(owner, spender, value, deadline, v, r, s, _opt);
             const options = Object.assign({
                 gasLimit
             }, _opt);
-            return signer.permit(owner, spender, value, deadline, v, r, s, options);
+            return __signer.permit(owner, spender, value, deadline, v, r, s, options);
         });
     }
     ;
@@ -97,26 +97,26 @@ class ERC20Contract extends ContractAbstract_js_1.default {
     transfer(to, value, opt) {
         return __awaiter(this, void 0, void 0, function* () {
             const [address, rest] = this.parseOption(opt);
-            const signer = this.getContractSigner(address);
+            const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield signer.estimateGas.transfer(to, value, _opt);
+            const gasLimit = yield __signer.estimateGas.transfer(to, value, _opt);
             const options = Object.assign({
                 gasLimit
             }, _opt);
-            return signer.transfer(to, value, options);
+            return __signer.transfer(to, value, options);
         });
     }
     ;
     transferFrom(from, to, value, opt) {
         return __awaiter(this, void 0, void 0, function* () {
             const [address, rest] = this.parseOption(opt);
-            const signer = this.getContractSigner(address);
+            const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield signer.estimateGas.transferFrom(from, to, value, _opt);
+            const gasLimit = yield __signer.estimateGas.transferFrom(from, to, value, _opt);
             const options = Object.assign({
                 gasLimit
             }, _opt);
-            return signer.transferFrom(from, to, value, options);
+            return __signer.transferFrom(from, to, value, options);
         });
     }
     ;

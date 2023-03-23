@@ -23,13 +23,13 @@ class WGTContract extends ContractAbstract_js_1.default {
     approve(guy, wad, opt) {
         return __awaiter(this, void 0, void 0, function* () {
             const [address, rest] = this.parseOption(opt);
-            const signer = this.getContractSigner(address);
+            const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield signer.estimateGas.approve(guy, wad, _opt);
+            const gasLimit = yield __signer.estimateGas.approve(guy, wad, _opt);
             const options = Object.assign({
                 gasLimit
             }, _opt);
-            return signer.approve(guy, wad, options);
+            return __signer.approve(guy, wad, options);
         });
     }
     ;
@@ -42,26 +42,26 @@ class WGTContract extends ContractAbstract_js_1.default {
     transferFrom(src, dst, wad, opt) {
         return __awaiter(this, void 0, void 0, function* () {
             const [address, rest] = this.parseOption(opt);
-            const signer = this.getContractSigner(address);
+            const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield signer.estimateGas.transferFrom(src, dst, wad, _opt);
+            const gasLimit = yield __signer.estimateGas.transferFrom(src, dst, wad, _opt);
             const options = Object.assign({
                 gasLimit
             }, _opt);
-            return signer.transferFrom(src, dst, wad, options);
+            return __signer.transferFrom(src, dst, wad, options);
         });
     }
     ;
     withdraw(wad, opt) {
         return __awaiter(this, void 0, void 0, function* () {
             const [address, rest] = this.parseOption(opt);
-            const signer = this.getContractSigner(address);
+            const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield signer.estimateGas.withdraw(wad, _opt);
+            const gasLimit = yield __signer.estimateGas.withdraw(wad, _opt);
             const options = Object.assign({
                 gasLimit
             }, _opt);
-            return signer.withdraw(wad, options);
+            return __signer.withdraw(wad, options);
         });
     }
     ;
@@ -86,26 +86,26 @@ class WGTContract extends ContractAbstract_js_1.default {
     transfer(dst, wad, opt) {
         return __awaiter(this, void 0, void 0, function* () {
             const [address, rest] = this.parseOption(opt);
-            const signer = this.getContractSigner(address);
+            const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield signer.estimateGas.transfer(dst, wad, _opt);
+            const gasLimit = yield __signer.estimateGas.transfer(dst, wad, _opt);
             const options = Object.assign({
                 gasLimit
             }, _opt);
-            return signer.transfer(dst, wad, options);
+            return __signer.transfer(dst, wad, options);
         });
     }
     ;
     deposit(opt) {
         return __awaiter(this, void 0, void 0, function* () {
             const [address, rest] = this.parseOption(opt);
-            const signer = this.getContractSigner(address);
+            const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield signer.estimateGas.deposit(_opt);
+            const gasLimit = yield __signer.estimateGas.deposit(_opt);
             const options = Object.assign({
                 gasLimit
             }, _opt);
-            return signer.deposit(options);
+            return __signer.deposit(options);
         });
     }
     ;

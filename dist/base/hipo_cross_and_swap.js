@@ -23,65 +23,65 @@ class HipoCrossAndSwapContract extends ContractAbstract_js_1.default {
     executeMessage2(_sender, _srcChainId, _message, _executor, opt) {
         return __awaiter(this, void 0, void 0, function* () {
             const [address, rest] = this.parseOption(opt);
-            const signer = this.getContractSigner(address);
+            const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield signer.estimateGas.executeMessage2(_sender, _srcChainId, _message, _executor, _opt);
+            const gasLimit = yield __signer.estimateGas.executeMessage2(_sender, _srcChainId, _message, _executor, _opt);
             const options = Object.assign({
                 gasLimit
             }, _opt);
-            return signer.executeMessage2(_sender, _srcChainId, _message, _executor, options);
+            return __signer.executeMessage2(_sender, _srcChainId, _message, _executor, options);
         });
     }
     ;
     executeMessage1(_sender, _srcChainId, _message, _executor, opt) {
         return __awaiter(this, void 0, void 0, function* () {
             const [address, rest] = this.parseOption(opt);
-            const signer = this.getContractSigner(address);
+            const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield signer.estimateGas.executeMessage1(_sender, _srcChainId, _message, _executor, _opt);
+            const gasLimit = yield __signer.estimateGas.executeMessage1(_sender, _srcChainId, _message, _executor, _opt);
             const options = Object.assign({
                 gasLimit
             }, _opt);
-            return signer.executeMessage1(_sender, _srcChainId, _message, _executor, options);
+            return __signer.executeMessage1(_sender, _srcChainId, _message, _executor, options);
         });
     }
     ;
     executeMessageWithTransfer(index_0, _token, _amount, _srcChainId, _message, index_5, opt) {
         return __awaiter(this, void 0, void 0, function* () {
             const [address, rest] = this.parseOption(opt);
-            const signer = this.getContractSigner(address);
+            const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield signer.estimateGas.executeMessageWithTransfer(index_0, _token, _amount, _srcChainId, _message, index_5, _opt);
+            const gasLimit = yield __signer.estimateGas.executeMessageWithTransfer(index_0, _token, _amount, _srcChainId, _message, index_5, _opt);
             const options = Object.assign({
                 gasLimit
             }, _opt);
-            return signer.executeMessageWithTransfer(index_0, _token, _amount, _srcChainId, _message, index_5, options);
+            return __signer.executeMessageWithTransfer(index_0, _token, _amount, _srcChainId, _message, index_5, options);
         });
     }
     ;
     executeMessageWithTransferFallback(index_0, index_1, index_2, _srcChainId, _message, index_5, opt) {
         return __awaiter(this, void 0, void 0, function* () {
             const [address, rest] = this.parseOption(opt);
-            const signer = this.getContractSigner(address);
+            const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield signer.estimateGas.executeMessageWithTransferFallback(index_0, index_1, index_2, _srcChainId, _message, index_5, _opt);
+            const gasLimit = yield __signer.estimateGas.executeMessageWithTransferFallback(index_0, index_1, index_2, _srcChainId, _message, index_5, _opt);
             const options = Object.assign({
                 gasLimit
             }, _opt);
-            return signer.executeMessageWithTransferFallback(index_0, index_1, index_2, _srcChainId, _message, index_5, options);
+            return __signer.executeMessageWithTransferFallback(index_0, index_1, index_2, _srcChainId, _message, index_5, options);
         });
     }
     ;
     executeMessageWithTransferRefund(_token, _amount, _message, _executor, opt) {
         return __awaiter(this, void 0, void 0, function* () {
             const [address, rest] = this.parseOption(opt);
-            const signer = this.getContractSigner(address);
+            const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield signer.estimateGas.executeMessageWithTransferRefund(_token, _amount, _message, _executor, _opt);
+            const gasLimit = yield __signer.estimateGas.executeMessageWithTransferRefund(_token, _amount, _message, _executor, _opt);
             const options = Object.assign({
                 gasLimit
             }, _opt);
-            return signer.executeMessageWithTransferRefund(_token, _amount, _message, _executor, options);
+            return __signer.executeMessageWithTransferRefund(_token, _amount, _message, _executor, options);
         });
     }
     ;
@@ -112,13 +112,13 @@ class HipoCrossAndSwapContract extends ContractAbstract_js_1.default {
     outboundTransferTo(_from, _to, _data, opt) {
         return __awaiter(this, void 0, void 0, function* () {
             const [address, rest] = this.parseOption(opt);
-            const signer = this.getContractSigner(address);
+            const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield signer.estimateGas.outboundTransferTo(_from, _to, _data, _opt);
+            const gasLimit = yield __signer.estimateGas.outboundTransferTo(_from, _to, _data, _opt);
             const options = Object.assign({
                 gasLimit
             }, _opt);
-            return signer.outboundTransferTo(_from, _to, _data, options);
+            return __signer.outboundTransferTo(_from, _to, _data, options);
         });
     }
     ;
@@ -131,117 +131,117 @@ class HipoCrossAndSwapContract extends ContractAbstract_js_1.default {
     rescueFunds(token, userAddress, amount, opt) {
         return __awaiter(this, void 0, void 0, function* () {
             const [address, rest] = this.parseOption(opt);
-            const signer = this.getContractSigner(address);
+            const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield signer.estimateGas.rescueFunds(token, userAddress, amount, _opt);
+            const gasLimit = yield __signer.estimateGas.rescueFunds(token, userAddress, amount, _opt);
             const options = Object.assign({
                 gasLimit
             }, _opt);
-            return signer.rescueFunds(token, userAddress, amount, options);
+            return __signer.rescueFunds(token, userAddress, amount, options);
         });
     }
     ;
     setMessageBus(_messageBus, opt) {
         return __awaiter(this, void 0, void 0, function* () {
             const [address, rest] = this.parseOption(opt);
-            const signer = this.getContractSigner(address);
+            const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield signer.estimateGas.setMessageBus(_messageBus, _opt);
+            const gasLimit = yield __signer.estimateGas.setMessageBus(_messageBus, _opt);
             const options = Object.assign({
                 gasLimit
             }, _opt);
-            return signer.setMessageBus(_messageBus, options);
+            return __signer.setMessageBus(_messageBus, options);
         });
     }
     ;
     setMinSwapAmount(_token, _minSwapAmount, opt) {
         return __awaiter(this, void 0, void 0, function* () {
             const [address, rest] = this.parseOption(opt);
-            const signer = this.getContractSigner(address);
+            const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield signer.estimateGas.setMinSwapAmount(_token, _minSwapAmount, _opt);
+            const gasLimit = yield __signer.estimateGas.setMinSwapAmount(_token, _minSwapAmount, _opt);
             const options = Object.assign({
                 gasLimit
             }, _opt);
-            return signer.setMinSwapAmount(_token, _minSwapAmount, options);
+            return __signer.setMinSwapAmount(_token, _minSwapAmount, options);
         });
     }
     ;
     setNativeWrap(_nativeWrap, opt) {
         return __awaiter(this, void 0, void 0, function* () {
             const [address, rest] = this.parseOption(opt);
-            const signer = this.getContractSigner(address);
+            const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield signer.estimateGas.setNativeWrap(_nativeWrap, _opt);
+            const gasLimit = yield __signer.estimateGas.setNativeWrap(_nativeWrap, _opt);
             const options = Object.assign({
                 gasLimit
             }, _opt);
-            return signer.setNativeWrap(_nativeWrap, options);
+            return __signer.setNativeWrap(_nativeWrap, options);
         });
     }
     ;
     setOOSwap(_ooSwap, opt) {
         return __awaiter(this, void 0, void 0, function* () {
             const [address, rest] = this.parseOption(opt);
-            const signer = this.getContractSigner(address);
+            const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield signer.estimateGas.setOOSwap(_ooSwap, _opt);
+            const gasLimit = yield __signer.estimateGas.setOOSwap(_ooSwap, _opt);
             const options = Object.assign({
                 gasLimit
             }, _opt);
-            return signer.setOOSwap(_ooSwap, options);
+            return __signer.setOOSwap(_ooSwap, options);
         });
     }
     ;
     transferOwnership(newOwner, opt) {
         return __awaiter(this, void 0, void 0, function* () {
             const [address, rest] = this.parseOption(opt);
-            const signer = this.getContractSigner(address);
+            const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield signer.estimateGas.transferOwnership(newOwner, _opt);
+            const gasLimit = yield __signer.estimateGas.transferOwnership(newOwner, _opt);
             const options = Object.assign({
                 gasLimit
             }, _opt);
-            return signer.transferOwnership(newOwner, options);
+            return __signer.transferOwnership(newOwner, options);
         });
     }
     ;
     transferWithSwap(_from, _tokenReceiver, _tws, opt) {
         return __awaiter(this, void 0, void 0, function* () {
             const [address, rest] = this.parseOption(opt);
-            const signer = this.getContractSigner(address);
+            const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield signer.estimateGas.transferWithSwap(_from, _tokenReceiver, _tws, _opt);
+            const gasLimit = yield __signer.estimateGas.transferWithSwap(_from, _tokenReceiver, _tws, _opt);
             const options = Object.assign({
                 gasLimit
             }, _opt);
-            return signer.transferWithSwap(_from, _tokenReceiver, _tws, options);
+            return __signer.transferWithSwap(_from, _tokenReceiver, _tws, options);
         });
     }
     ;
     transferWithSwapNative(_tokenReceiver, _tws, opt) {
         return __awaiter(this, void 0, void 0, function* () {
             const [address, rest] = this.parseOption(opt);
-            const signer = this.getContractSigner(address);
+            const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield signer.estimateGas.transferWithSwapNative(_tokenReceiver, _tws, _opt);
+            const gasLimit = yield __signer.estimateGas.transferWithSwapNative(_tokenReceiver, _tws, _opt);
             const options = Object.assign({
                 gasLimit
             }, _opt);
-            return signer.transferWithSwapNative(_tokenReceiver, _tws, options);
+            return __signer.transferWithSwapNative(_tokenReceiver, _tws, options);
         });
     }
     ;
     withdrewNative(opt) {
         return __awaiter(this, void 0, void 0, function* () {
             const [address, rest] = this.parseOption(opt);
-            const signer = this.getContractSigner(address);
+            const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield signer.estimateGas.withdrewNative(_opt);
+            const gasLimit = yield __signer.estimateGas.withdrewNative(_opt);
             const options = Object.assign({
                 gasLimit
             }, _opt);
-            return signer.withdrewNative(options);
+            return __signer.withdrewNative(options);
         });
     }
     ;
