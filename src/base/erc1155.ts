@@ -48,11 +48,16 @@ export class ERC1155Contract extends ContractAbstract {
 			const [address, rest] = this.parseOption(opt)
 			const __signer = this.getContractSigner(address)
 			const _opt = rest
-			const gasLimit = await __signer.estimateGas.burn(account,id,value,_opt)
-
+			let  gasLimit: any = null
+			try {
+				gasLimit = await __signer.estimateGas.burn(account,id,value,_opt)
+			} catch (error) {
+			console.log(error)
+			}
 			const options = Object.assign({
 				gasLimit
 			}, _opt)
+
 			return __signer.burn(account,id,value,options)
 
 		};
@@ -61,11 +66,16 @@ export class ERC1155Contract extends ContractAbstract {
 			const [address, rest] = this.parseOption(opt)
 			const __signer = this.getContractSigner(address)
 			const _opt = rest
-			const gasLimit = await __signer.estimateGas.burnBatch(account,ids,values,_opt)
-
+			let  gasLimit: any = null
+			try {
+				gasLimit = await __signer.estimateGas.burnBatch(account,ids,values,_opt)
+			} catch (error) {
+			console.log(error)
+			}
 			const options = Object.assign({
 				gasLimit
 			}, _opt)
+
 			return __signer.burnBatch(account,ids,values,options)
 
 		};
@@ -95,11 +105,16 @@ export class ERC1155Contract extends ContractAbstract {
 			const [address, rest] = this.parseOption(opt)
 			const __signer = this.getContractSigner(address)
 			const _opt = rest
-			const gasLimit = await __signer.estimateGas.grantRole(role,account,_opt)
-
+			let  gasLimit: any = null
+			try {
+				gasLimit = await __signer.estimateGas.grantRole(role,account,_opt)
+			} catch (error) {
+			console.log(error)
+			}
 			const options = Object.assign({
 				gasLimit
 			}, _opt)
+
 			return __signer.grantRole(role,account,options)
 
 		};
@@ -122,11 +137,16 @@ export class ERC1155Contract extends ContractAbstract {
 			const [address, rest] = this.parseOption(opt)
 			const __signer = this.getContractSigner(address)
 			const _opt = rest
-			const gasLimit = await __signer.estimateGas.mint(to,id,amount,data,_opt)
-
+			let  gasLimit: any = null
+			try {
+				gasLimit = await __signer.estimateGas.mint(to,id,amount,data,_opt)
+			} catch (error) {
+			console.log(error)
+			}
 			const options = Object.assign({
 				gasLimit
 			}, _opt)
+
 			return __signer.mint(to,id,amount,data,options)
 
 		};
@@ -135,11 +155,16 @@ export class ERC1155Contract extends ContractAbstract {
 			const [address, rest] = this.parseOption(opt)
 			const __signer = this.getContractSigner(address)
 			const _opt = rest
-			const gasLimit = await __signer.estimateGas.mintBatch(to,ids,amounts,data,_opt)
-
+			let  gasLimit: any = null
+			try {
+				gasLimit = await __signer.estimateGas.mintBatch(to,ids,amounts,data,_opt)
+			} catch (error) {
+			console.log(error)
+			}
 			const options = Object.assign({
 				gasLimit
 			}, _opt)
+
 			return __signer.mintBatch(to,ids,amounts,data,options)
 
 		};
@@ -148,11 +173,16 @@ export class ERC1155Contract extends ContractAbstract {
 			const [address, rest] = this.parseOption(opt)
 			const __signer = this.getContractSigner(address)
 			const _opt = rest
-			const gasLimit = await __signer.estimateGas.pause(_opt)
-
+			let  gasLimit: any = null
+			try {
+				gasLimit = await __signer.estimateGas.pause(_opt)
+			} catch (error) {
+			console.log(error)
+			}
 			const options = Object.assign({
 				gasLimit
 			}, _opt)
+
 			return __signer.pause(options)
 
 		};
@@ -168,11 +198,16 @@ export class ERC1155Contract extends ContractAbstract {
 			const [address, rest] = this.parseOption(opt)
 			const __signer = this.getContractSigner(address)
 			const _opt = rest
-			const gasLimit = await __signer.estimateGas.renounceRole(role,account,_opt)
-
+			let  gasLimit: any = null
+			try {
+				gasLimit = await __signer.estimateGas.renounceRole(role,account,_opt)
+			} catch (error) {
+			console.log(error)
+			}
 			const options = Object.assign({
 				gasLimit
 			}, _opt)
+
 			return __signer.renounceRole(role,account,options)
 
 		};
@@ -181,11 +216,16 @@ export class ERC1155Contract extends ContractAbstract {
 			const [address, rest] = this.parseOption(opt)
 			const __signer = this.getContractSigner(address)
 			const _opt = rest
-			const gasLimit = await __signer.estimateGas.revokeRole(role,account,_opt)
-
+			let  gasLimit: any = null
+			try {
+				gasLimit = await __signer.estimateGas.revokeRole(role,account,_opt)
+			} catch (error) {
+			console.log(error)
+			}
 			const options = Object.assign({
 				gasLimit
 			}, _opt)
+
 			return __signer.revokeRole(role,account,options)
 
 		};
@@ -194,11 +234,16 @@ export class ERC1155Contract extends ContractAbstract {
 			const [address, rest] = this.parseOption(opt)
 			const __signer = this.getContractSigner(address)
 			const _opt = rest
-			const gasLimit = await __signer.estimateGas.safeBatchTransferFrom(from,to,ids,amounts,data,_opt)
-
+			let  gasLimit: any = null
+			try {
+				gasLimit = await __signer.estimateGas.safeBatchTransferFrom(from,to,ids,amounts,data,_opt)
+			} catch (error) {
+			console.log(error)
+			}
 			const options = Object.assign({
 				gasLimit
 			}, _opt)
+
 			return __signer.safeBatchTransferFrom(from,to,ids,amounts,data,options)
 
 		};
@@ -207,11 +252,16 @@ export class ERC1155Contract extends ContractAbstract {
 			const [address, rest] = this.parseOption(opt)
 			const __signer = this.getContractSigner(address)
 			const _opt = rest
-			const gasLimit = await __signer.estimateGas.safeTransferFrom(from,to,id,amount,data,_opt)
-
+			let  gasLimit: any = null
+			try {
+				gasLimit = await __signer.estimateGas.safeTransferFrom(from,to,id,amount,data,_opt)
+			} catch (error) {
+			console.log(error)
+			}
 			const options = Object.assign({
 				gasLimit
 			}, _opt)
+
 			return __signer.safeTransferFrom(from,to,id,amount,data,options)
 
 		};
@@ -220,11 +270,16 @@ export class ERC1155Contract extends ContractAbstract {
 			const [address, rest] = this.parseOption(opt)
 			const __signer = this.getContractSigner(address)
 			const _opt = rest
-			const gasLimit = await __signer.estimateGas.setApprovalForAll(operator,approved,_opt)
-
+			let  gasLimit: any = null
+			try {
+				gasLimit = await __signer.estimateGas.setApprovalForAll(operator,approved,_opt)
+			} catch (error) {
+			console.log(error)
+			}
 			const options = Object.assign({
 				gasLimit
 			}, _opt)
+
 			return __signer.setApprovalForAll(operator,approved,options)
 
 		};
@@ -240,11 +295,16 @@ export class ERC1155Contract extends ContractAbstract {
 			const [address, rest] = this.parseOption(opt)
 			const __signer = this.getContractSigner(address)
 			const _opt = rest
-			const gasLimit = await __signer.estimateGas.unpause(_opt)
-
+			let  gasLimit: any = null
+			try {
+				gasLimit = await __signer.estimateGas.unpause(_opt)
+			} catch (error) {
+			console.log(error)
+			}
 			const options = Object.assign({
 				gasLimit
 			}, _opt)
+
 			return __signer.unpause(options)
 
 		};

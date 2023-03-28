@@ -97,11 +97,16 @@ export class SeaDropContract extends ContractAbstract {
 			const [address, rest] = this.parseOption(opt)
 			const __signer = this.getContractSigner(address)
 			const _opt = rest
-			const gasLimit = await __signer.estimateGas.mintAllowList(nftContract,feeRecipient,minterIfNotPayer,quantity,mintParams,proof,_opt)
-
+			let  gasLimit: any = null
+			try {
+				gasLimit = await __signer.estimateGas.mintAllowList(nftContract,feeRecipient,minterIfNotPayer,quantity,mintParams,proof,_opt)
+			} catch (error) {
+			console.log(error)
+			}
 			const options = Object.assign({
 				gasLimit
 			}, _opt)
+
 			return __signer.mintAllowList(nftContract,feeRecipient,minterIfNotPayer,quantity,mintParams,proof,options)
 
 		};
@@ -110,11 +115,16 @@ export class SeaDropContract extends ContractAbstract {
 			const [address, rest] = this.parseOption(opt)
 			const __signer = this.getContractSigner(address)
 			const _opt = rest
-			const gasLimit = await __signer.estimateGas.mintAllowedTokenHolder(nftContract,feeRecipient,minterIfNotPayer,mintParams,_opt)
-
+			let  gasLimit: any = null
+			try {
+				gasLimit = await __signer.estimateGas.mintAllowedTokenHolder(nftContract,feeRecipient,minterIfNotPayer,mintParams,_opt)
+			} catch (error) {
+			console.log(error)
+			}
 			const options = Object.assign({
 				gasLimit
 			}, _opt)
+
 			return __signer.mintAllowedTokenHolder(nftContract,feeRecipient,minterIfNotPayer,mintParams,options)
 
 		};
@@ -123,11 +133,16 @@ export class SeaDropContract extends ContractAbstract {
 			const [address, rest] = this.parseOption(opt)
 			const __signer = this.getContractSigner(address)
 			const _opt = rest
-			const gasLimit = await __signer.estimateGas.mintPublic(nftContract,feeRecipient,minterIfNotPayer,quantity,_opt)
-
+			let  gasLimit: any = null
+			try {
+				gasLimit = await __signer.estimateGas.mintPublic(nftContract,feeRecipient,minterIfNotPayer,quantity,_opt)
+			} catch (error) {
+			console.log(error)
+			}
 			const options = Object.assign({
 				gasLimit
 			}, _opt)
+
 			return __signer.mintPublic(nftContract,feeRecipient,minterIfNotPayer,quantity,options)
 
 		};
@@ -136,11 +151,16 @@ export class SeaDropContract extends ContractAbstract {
 			const [address, rest] = this.parseOption(opt)
 			const __signer = this.getContractSigner(address)
 			const _opt = rest
-			const gasLimit = await __signer.estimateGas.mintSigned(nftContract,feeRecipient,minterIfNotPayer,quantity,mintParams,salt,signature,_opt)
-
+			let  gasLimit: any = null
+			try {
+				gasLimit = await __signer.estimateGas.mintSigned(nftContract,feeRecipient,minterIfNotPayer,quantity,mintParams,salt,signature,_opt)
+			} catch (error) {
+			console.log(error)
+			}
 			const options = Object.assign({
 				gasLimit
 			}, _opt)
+
 			return __signer.mintSigned(nftContract,feeRecipient,minterIfNotPayer,quantity,mintParams,salt,signature,options)
 
 		};
@@ -149,11 +169,16 @@ export class SeaDropContract extends ContractAbstract {
 			const [address, rest] = this.parseOption(opt)
 			const __signer = this.getContractSigner(address)
 			const _opt = rest
-			const gasLimit = await __signer.estimateGas.updateAllowList(allowListData,_opt)
-
+			let  gasLimit: any = null
+			try {
+				gasLimit = await __signer.estimateGas.updateAllowList(allowListData,_opt)
+			} catch (error) {
+			console.log(error)
+			}
 			const options = Object.assign({
 				gasLimit
 			}, _opt)
+
 			return __signer.updateAllowList(allowListData,options)
 
 		};
@@ -162,11 +187,16 @@ export class SeaDropContract extends ContractAbstract {
 			const [address, rest] = this.parseOption(opt)
 			const __signer = this.getContractSigner(address)
 			const _opt = rest
-			const gasLimit = await __signer.estimateGas.updateAllowedFeeRecipient(feeRecipient,allowed,_opt)
-
+			let  gasLimit: any = null
+			try {
+				gasLimit = await __signer.estimateGas.updateAllowedFeeRecipient(feeRecipient,allowed,_opt)
+			} catch (error) {
+			console.log(error)
+			}
 			const options = Object.assign({
 				gasLimit
 			}, _opt)
+
 			return __signer.updateAllowedFeeRecipient(feeRecipient,allowed,options)
 
 		};
@@ -175,11 +205,16 @@ export class SeaDropContract extends ContractAbstract {
 			const [address, rest] = this.parseOption(opt)
 			const __signer = this.getContractSigner(address)
 			const _opt = rest
-			const gasLimit = await __signer.estimateGas.updateCreatorPayoutAddress(_payoutAddress,_opt)
-
+			let  gasLimit: any = null
+			try {
+				gasLimit = await __signer.estimateGas.updateCreatorPayoutAddress(_payoutAddress,_opt)
+			} catch (error) {
+			console.log(error)
+			}
 			const options = Object.assign({
 				gasLimit
 			}, _opt)
+
 			return __signer.updateCreatorPayoutAddress(_payoutAddress,options)
 
 		};
@@ -188,11 +223,16 @@ export class SeaDropContract extends ContractAbstract {
 			const [address, rest] = this.parseOption(opt)
 			const __signer = this.getContractSigner(address)
 			const _opt = rest
-			const gasLimit = await __signer.estimateGas.updateDropURI(dropURI,_opt)
-
+			let  gasLimit: any = null
+			try {
+				gasLimit = await __signer.estimateGas.updateDropURI(dropURI,_opt)
+			} catch (error) {
+			console.log(error)
+			}
 			const options = Object.assign({
 				gasLimit
 			}, _opt)
+
 			return __signer.updateDropURI(dropURI,options)
 
 		};
@@ -201,11 +241,16 @@ export class SeaDropContract extends ContractAbstract {
 			const [address, rest] = this.parseOption(opt)
 			const __signer = this.getContractSigner(address)
 			const _opt = rest
-			const gasLimit = await __signer.estimateGas.updatePayer(payer,allowed,_opt)
-
+			let  gasLimit: any = null
+			try {
+				gasLimit = await __signer.estimateGas.updatePayer(payer,allowed,_opt)
+			} catch (error) {
+			console.log(error)
+			}
 			const options = Object.assign({
 				gasLimit
 			}, _opt)
+
 			return __signer.updatePayer(payer,allowed,options)
 
 		};
@@ -214,11 +259,16 @@ export class SeaDropContract extends ContractAbstract {
 			const [address, rest] = this.parseOption(opt)
 			const __signer = this.getContractSigner(address)
 			const _opt = rest
-			const gasLimit = await __signer.estimateGas.updatePublicDrop(publicDrop,_opt)
-
+			let  gasLimit: any = null
+			try {
+				gasLimit = await __signer.estimateGas.updatePublicDrop(publicDrop,_opt)
+			} catch (error) {
+			console.log(error)
+			}
 			const options = Object.assign({
 				gasLimit
 			}, _opt)
+
 			return __signer.updatePublicDrop(publicDrop,options)
 
 		};
@@ -227,11 +277,16 @@ export class SeaDropContract extends ContractAbstract {
 			const [address, rest] = this.parseOption(opt)
 			const __signer = this.getContractSigner(address)
 			const _opt = rest
-			const gasLimit = await __signer.estimateGas.updateSignedMintValidationParams(signer,signedMintValidationParams,_opt)
-
+			let  gasLimit: any = null
+			try {
+				gasLimit = await __signer.estimateGas.updateSignedMintValidationParams(signer,signedMintValidationParams,_opt)
+			} catch (error) {
+			console.log(error)
+			}
 			const options = Object.assign({
 				gasLimit
 			}, _opt)
+
 			return __signer.updateSignedMintValidationParams(signer,signedMintValidationParams,options)
 
 		};
@@ -240,11 +295,16 @@ export class SeaDropContract extends ContractAbstract {
 			const [address, rest] = this.parseOption(opt)
 			const __signer = this.getContractSigner(address)
 			const _opt = rest
-			const gasLimit = await __signer.estimateGas.updateTokenGatedDrop(allowedNftToken,dropStage,_opt)
-
+			let  gasLimit: any = null
+			try {
+				gasLimit = await __signer.estimateGas.updateTokenGatedDrop(allowedNftToken,dropStage,_opt)
+			} catch (error) {
+			console.log(error)
+			}
 			const options = Object.assign({
 				gasLimit
 			}, _opt)
+
 			return __signer.updateTokenGatedDrop(allowedNftToken,dropStage,options)
 
 		};

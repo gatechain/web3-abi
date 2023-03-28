@@ -13,11 +13,16 @@ export class WGTContract extends ContractAbstract {
 			const [address, rest] = this.parseOption(opt)
 			const __signer = this.getContractSigner(address)
 			const _opt = rest
-			const gasLimit = await __signer.estimateGas.approve(guy,wad,_opt)
-
+			let  gasLimit: any = null
+			try {
+				gasLimit = await __signer.estimateGas.approve(guy,wad,_opt)
+			} catch (error) {
+			console.log(error)
+			}
 			const options = Object.assign({
 				gasLimit
 			}, _opt)
+
 			return __signer.approve(guy,wad,options)
 
 		};
@@ -33,11 +38,16 @@ export class WGTContract extends ContractAbstract {
 			const [address, rest] = this.parseOption(opt)
 			const __signer = this.getContractSigner(address)
 			const _opt = rest
-			const gasLimit = await __signer.estimateGas.transferFrom(src,dst,wad,_opt)
-
+			let  gasLimit: any = null
+			try {
+				gasLimit = await __signer.estimateGas.transferFrom(src,dst,wad,_opt)
+			} catch (error) {
+			console.log(error)
+			}
 			const options = Object.assign({
 				gasLimit
 			}, _opt)
+
 			return __signer.transferFrom(src,dst,wad,options)
 
 		};
@@ -46,11 +56,16 @@ export class WGTContract extends ContractAbstract {
 			const [address, rest] = this.parseOption(opt)
 			const __signer = this.getContractSigner(address)
 			const _opt = rest
-			const gasLimit = await __signer.estimateGas.withdraw(wad,_opt)
-
+			let  gasLimit: any = null
+			try {
+				gasLimit = await __signer.estimateGas.withdraw(wad,_opt)
+			} catch (error) {
+			console.log(error)
+			}
 			const options = Object.assign({
 				gasLimit
 			}, _opt)
+
 			return __signer.withdraw(wad,options)
 
 		};
@@ -80,11 +95,16 @@ export class WGTContract extends ContractAbstract {
 			const [address, rest] = this.parseOption(opt)
 			const __signer = this.getContractSigner(address)
 			const _opt = rest
-			const gasLimit = await __signer.estimateGas.transfer(dst,wad,_opt)
-
+			let  gasLimit: any = null
+			try {
+				gasLimit = await __signer.estimateGas.transfer(dst,wad,_opt)
+			} catch (error) {
+			console.log(error)
+			}
 			const options = Object.assign({
 				gasLimit
 			}, _opt)
+
 			return __signer.transfer(dst,wad,options)
 
 		};
@@ -93,11 +113,16 @@ export class WGTContract extends ContractAbstract {
 			const [address, rest] = this.parseOption(opt)
 			const __signer = this.getContractSigner(address)
 			const _opt = rest
-			const gasLimit = await __signer.estimateGas.deposit(_opt)
-
+			let  gasLimit: any = null
+			try {
+				gasLimit = await __signer.estimateGas.deposit(_opt)
+			} catch (error) {
+			console.log(error)
+			}
 			const options = Object.assign({
 				gasLimit
 			}, _opt)
+
 			return __signer.deposit(options)
 
 		};

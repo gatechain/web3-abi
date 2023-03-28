@@ -31,7 +31,13 @@ class NftProxyContract extends ContractAbstract_js_1.default {
             const [address, rest] = this.parseOption(opt);
             const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield __signer.estimateGas.endGrantAuthentication(addr, _opt);
+            let gasLimit = null;
+            try {
+                gasLimit = yield __signer.estimateGas.endGrantAuthentication(addr, _opt);
+            }
+            catch (error) {
+                console.log(error);
+            }
             const options = Object.assign({
                 gasLimit
             }, _opt);
@@ -44,7 +50,13 @@ class NftProxyContract extends ContractAbstract_js_1.default {
             const [address, rest] = this.parseOption(opt);
             const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield __signer.estimateGas.revokeAuthentication(addr, _opt);
+            let gasLimit = null;
+            try {
+                gasLimit = yield __signer.estimateGas.revokeAuthentication(addr, _opt);
+            }
+            catch (error) {
+                console.log(error);
+            }
             const options = Object.assign({
                 gasLimit
             }, _opt);
@@ -69,7 +81,13 @@ class NftProxyContract extends ContractAbstract_js_1.default {
             const [address, rest] = this.parseOption(opt);
             const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield __signer.estimateGas.renounceOwnership(_opt);
+            let gasLimit = null;
+            try {
+                gasLimit = yield __signer.estimateGas.renounceOwnership(_opt);
+            }
+            catch (error) {
+                console.log(error);
+            }
             const options = Object.assign({
                 gasLimit
             }, _opt);
@@ -100,7 +118,13 @@ class NftProxyContract extends ContractAbstract_js_1.default {
             const [address, rest] = this.parseOption(opt);
             const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield __signer.estimateGas.startGrantAuthentication(addr, _opt);
+            let gasLimit = null;
+            try {
+                gasLimit = yield __signer.estimateGas.startGrantAuthentication(addr, _opt);
+            }
+            catch (error) {
+                console.log(error);
+            }
             const options = Object.assign({
                 gasLimit
             }, _opt);
@@ -113,7 +137,13 @@ class NftProxyContract extends ContractAbstract_js_1.default {
             const [address, rest] = this.parseOption(opt);
             const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield __signer.estimateGas.registerProxy(_opt);
+            let gasLimit = null;
+            try {
+                gasLimit = yield __signer.estimateGas.registerProxy(_opt);
+            }
+            catch (error) {
+                console.log(error);
+            }
             const options = Object.assign({
                 gasLimit
             }, _opt);
@@ -132,7 +162,13 @@ class NftProxyContract extends ContractAbstract_js_1.default {
             const [address, rest] = this.parseOption(opt);
             const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield __signer.estimateGas.transferOwnership(_newOwner, _opt);
+            let gasLimit = null;
+            try {
+                gasLimit = yield __signer.estimateGas.transferOwnership(_newOwner, _opt);
+            }
+            catch (error) {
+                console.log(error);
+            }
             const options = Object.assign({
                 gasLimit
             }, _opt);
@@ -145,7 +181,13 @@ class NftProxyContract extends ContractAbstract_js_1.default {
             const [address, rest] = this.parseOption(opt);
             const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield __signer.estimateGas.grantInitialAuthentication(authAddress, _opt);
+            let gasLimit = null;
+            try {
+                gasLimit = yield __signer.estimateGas.grantInitialAuthentication(authAddress, _opt);
+            }
+            catch (error) {
+                console.log(error);
+            }
             const options = Object.assign({
                 gasLimit
             }, _opt);

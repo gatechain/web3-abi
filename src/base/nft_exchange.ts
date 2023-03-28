@@ -27,11 +27,16 @@ export class NftExchangeContract extends ContractAbstract {
 			const [address, rest] = this.parseOption(opt)
 			const __signer = this.getContractSigner(address)
 			const _opt = rest
-			const gasLimit = await __signer.estimateGas.changeMinimumMakerProtocolFee(newMinimumMakerProtocolFee,_opt)
-
+			let  gasLimit: any = null
+			try {
+				gasLimit = await __signer.estimateGas.changeMinimumMakerProtocolFee(newMinimumMakerProtocolFee,_opt)
+			} catch (error) {
+			console.log(error)
+			}
 			const options = Object.assign({
 				gasLimit
 			}, _opt)
+
 			return __signer.changeMinimumMakerProtocolFee(newMinimumMakerProtocolFee,options)
 
 		};
@@ -40,11 +45,16 @@ export class NftExchangeContract extends ContractAbstract {
 			const [address, rest] = this.parseOption(opt)
 			const __signer = this.getContractSigner(address)
 			const _opt = rest
-			const gasLimit = await __signer.estimateGas.changeMinimumTakerProtocolFee(newMinimumTakerProtocolFee,_opt)
-
+			let  gasLimit: any = null
+			try {
+				gasLimit = await __signer.estimateGas.changeMinimumTakerProtocolFee(newMinimumTakerProtocolFee,_opt)
+			} catch (error) {
+			console.log(error)
+			}
 			const options = Object.assign({
 				gasLimit
 			}, _opt)
+
 			return __signer.changeMinimumTakerProtocolFee(newMinimumTakerProtocolFee,options)
 
 		};
@@ -53,11 +63,16 @@ export class NftExchangeContract extends ContractAbstract {
 			const [address, rest] = this.parseOption(opt)
 			const __signer = this.getContractSigner(address)
 			const _opt = rest
-			const gasLimit = await __signer.estimateGas.guardedArrayReplace(array,desired,mask,_opt)
-
+			let  gasLimit: any = null
+			try {
+				gasLimit = await __signer.estimateGas.guardedArrayReplace(array,desired,mask,_opt)
+			} catch (error) {
+			console.log(error)
+			}
 			const options = Object.assign({
 				gasLimit
 			}, _opt)
+
 			return __signer.guardedArrayReplace(array,desired,mask,options)
 
 		};
@@ -80,11 +95,16 @@ export class NftExchangeContract extends ContractAbstract {
 			const [address, rest] = this.parseOption(opt)
 			const __signer = this.getContractSigner(address)
 			const _opt = rest
-			const gasLimit = await __signer.estimateGas.testCopyAddress(addr,_opt)
-
+			let  gasLimit: any = null
+			try {
+				gasLimit = await __signer.estimateGas.testCopyAddress(addr,_opt)
+			} catch (error) {
+			console.log(error)
+			}
 			const options = Object.assign({
 				gasLimit
 			}, _opt)
+
 			return __signer.testCopyAddress(addr,options)
 
 		};
@@ -93,11 +113,16 @@ export class NftExchangeContract extends ContractAbstract {
 			const [address, rest] = this.parseOption(opt)
 			const __signer = this.getContractSigner(address)
 			const _opt = rest
-			const gasLimit = await __signer.estimateGas.testCopy(arrToCopy,_opt)
-
+			let  gasLimit: any = null
+			try {
+				gasLimit = await __signer.estimateGas.testCopy(arrToCopy,_opt)
+			} catch (error) {
+			console.log(error)
+			}
 			const options = Object.assign({
 				gasLimit
 			}, _opt)
+
 			return __signer.testCopy(arrToCopy,options)
 
 		};
@@ -113,11 +138,16 @@ export class NftExchangeContract extends ContractAbstract {
 			const [address, rest] = this.parseOption(opt)
 			const __signer = this.getContractSigner(address)
 			const _opt = rest
-			const gasLimit = await __signer.estimateGas.changeProtocolFeeRecipient(newProtocolFeeRecipient,_opt)
-
+			let  gasLimit: any = null
+			try {
+				gasLimit = await __signer.estimateGas.changeProtocolFeeRecipient(newProtocolFeeRecipient,_opt)
+			} catch (error) {
+			console.log(error)
+			}
 			const options = Object.assign({
 				gasLimit
 			}, _opt)
+
 			return __signer.changeProtocolFeeRecipient(newProtocolFeeRecipient,options)
 
 		};
@@ -133,11 +163,16 @@ export class NftExchangeContract extends ContractAbstract {
 			const [address, rest] = this.parseOption(opt)
 			const __signer = this.getContractSigner(address)
 			const _opt = rest
-			const gasLimit = await __signer.estimateGas.orderCalldataCanMatch(buyCalldata,buyReplacementPattern,sellCalldata,sellReplacementPattern,_opt)
-
+			let  gasLimit: any = null
+			try {
+				gasLimit = await __signer.estimateGas.orderCalldataCanMatch(buyCalldata,buyReplacementPattern,sellCalldata,sellReplacementPattern,_opt)
+			} catch (error) {
+			console.log(error)
+			}
 			const options = Object.assign({
 				gasLimit
 			}, _opt)
+
 			return __signer.orderCalldataCanMatch(buyCalldata,buyReplacementPattern,sellCalldata,sellReplacementPattern,options)
 
 		};
@@ -167,11 +202,16 @@ export class NftExchangeContract extends ContractAbstract {
 			const [address, rest] = this.parseOption(opt)
 			const __signer = this.getContractSigner(address)
 			const _opt = rest
-			const gasLimit = await __signer.estimateGas.renounceOwnership(_opt)
-
+			let  gasLimit: any = null
+			try {
+				gasLimit = await __signer.estimateGas.renounceOwnership(_opt)
+			} catch (error) {
+			console.log(error)
+			}
 			const options = Object.assign({
 				gasLimit
 			}, _opt)
+
 			return __signer.renounceOwnership(options)
 
 		};
@@ -180,11 +220,16 @@ export class NftExchangeContract extends ContractAbstract {
 			const [address, rest] = this.parseOption(opt)
 			const __signer = this.getContractSigner(address)
 			const _opt = rest
-			const gasLimit = await __signer.estimateGas.hashOrder_(addrs,uints,feeMethod,side,saleKind,howToCall,calldata,replacementPattern,staticExtradata,_opt)
-
+			let  gasLimit: any = null
+			try {
+				gasLimit = await __signer.estimateGas.hashOrder_(addrs,uints,feeMethod,side,saleKind,howToCall,calldata,replacementPattern,staticExtradata,_opt)
+			} catch (error) {
+			console.log(error)
+			}
 			const options = Object.assign({
 				gasLimit
 			}, _opt)
+
 			return __signer.hashOrder_(addrs,uints,feeMethod,side,saleKind,howToCall,calldata,replacementPattern,staticExtradata,options)
 
 		};
@@ -200,11 +245,16 @@ export class NftExchangeContract extends ContractAbstract {
 			const [address, rest] = this.parseOption(opt)
 			const __signer = this.getContractSigner(address)
 			const _opt = rest
-			const gasLimit = await __signer.estimateGas.approveOrder_(addrs,uints,feeMethod,side,saleKind,howToCall,calldata,replacementPattern,staticExtradata,orderbookInclusionDesired,_opt)
-
+			let  gasLimit: any = null
+			try {
+				gasLimit = await __signer.estimateGas.approveOrder_(addrs,uints,feeMethod,side,saleKind,howToCall,calldata,replacementPattern,staticExtradata,orderbookInclusionDesired,_opt)
+			} catch (error) {
+			console.log(error)
+			}
 			const options = Object.assign({
 				gasLimit
 			}, _opt)
+
 			return __signer.approveOrder_(addrs,uints,feeMethod,side,saleKind,howToCall,calldata,replacementPattern,staticExtradata,orderbookInclusionDesired,options)
 
 		};
@@ -227,11 +277,16 @@ export class NftExchangeContract extends ContractAbstract {
 			const [address, rest] = this.parseOption(opt)
 			const __signer = this.getContractSigner(address)
 			const _opt = rest
-			const gasLimit = await __signer.estimateGas.hashToSign_(addrs,uints,feeMethod,side,saleKind,howToCall,calldata,replacementPattern,staticExtradata,_opt)
-
+			let  gasLimit: any = null
+			try {
+				gasLimit = await __signer.estimateGas.hashToSign_(addrs,uints,feeMethod,side,saleKind,howToCall,calldata,replacementPattern,staticExtradata,_opt)
+			} catch (error) {
+			console.log(error)
+			}
 			const options = Object.assign({
 				gasLimit
 			}, _opt)
+
 			return __signer.hashToSign_(addrs,uints,feeMethod,side,saleKind,howToCall,calldata,replacementPattern,staticExtradata,options)
 
 		};
@@ -261,11 +316,16 @@ export class NftExchangeContract extends ContractAbstract {
 			const [address, rest] = this.parseOption(opt)
 			const __signer = this.getContractSigner(address)
 			const _opt = rest
-			const gasLimit = await __signer.estimateGas.cancelOrder_(addrs,uints,feeMethod,side,saleKind,howToCall,calldata,replacementPattern,staticExtradata,v,r,s,_opt)
-
+			let  gasLimit: any = null
+			try {
+				gasLimit = await __signer.estimateGas.cancelOrder_(addrs,uints,feeMethod,side,saleKind,howToCall,calldata,replacementPattern,staticExtradata,v,r,s,_opt)
+			} catch (error) {
+			console.log(error)
+			}
 			const options = Object.assign({
 				gasLimit
 			}, _opt)
+
 			return __signer.cancelOrder_(addrs,uints,feeMethod,side,saleKind,howToCall,calldata,replacementPattern,staticExtradata,v,r,s,options)
 
 		};
@@ -274,11 +334,16 @@ export class NftExchangeContract extends ContractAbstract {
 			const [address, rest] = this.parseOption(opt)
 			const __signer = this.getContractSigner(address)
 			const _opt = rest
-			const gasLimit = await __signer.estimateGas.atomicMatch_(addrs,uints,feeMethodsSidesKindsHowToCalls,calldataBuy,calldataSell,replacementPatternBuy,replacementPatternSell,staticExtradataBuy,staticExtradataSell,vs,rssMetadata,_opt)
-
+			let  gasLimit: any = null
+			try {
+				gasLimit = await __signer.estimateGas.atomicMatch_(addrs,uints,feeMethodsSidesKindsHowToCalls,calldataBuy,calldataSell,replacementPatternBuy,replacementPatternSell,staticExtradataBuy,staticExtradataSell,vs,rssMetadata,_opt)
+			} catch (error) {
+			console.log(error)
+			}
 			const options = Object.assign({
 				gasLimit
 			}, _opt)
+
 			return __signer.atomicMatch_(addrs,uints,feeMethodsSidesKindsHowToCalls,calldataBuy,calldataSell,replacementPatternBuy,replacementPatternSell,staticExtradataBuy,staticExtradataSell,vs,rssMetadata,options)
 
 		};
@@ -315,11 +380,16 @@ export class NftExchangeContract extends ContractAbstract {
 			const [address, rest] = this.parseOption(opt)
 			const __signer = this.getContractSigner(address)
 			const _opt = rest
-			const gasLimit = await __signer.estimateGas.transferOwnership(newOwner,_opt)
-
+			let  gasLimit: any = null
+			try {
+				gasLimit = await __signer.estimateGas.transferOwnership(newOwner,_opt)
+			} catch (error) {
+			console.log(error)
+			}
 			const options = Object.assign({
 				gasLimit
 			}, _opt)
+
 			return __signer.transferOwnership(newOwner,options)
 
 		};

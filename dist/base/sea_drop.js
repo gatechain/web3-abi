@@ -97,7 +97,13 @@ class SeaDropContract extends ContractAbstract_js_1.default {
             const [address, rest] = this.parseOption(opt);
             const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield __signer.estimateGas.mintAllowList(nftContract, feeRecipient, minterIfNotPayer, quantity, mintParams, proof, _opt);
+            let gasLimit = null;
+            try {
+                gasLimit = yield __signer.estimateGas.mintAllowList(nftContract, feeRecipient, minterIfNotPayer, quantity, mintParams, proof, _opt);
+            }
+            catch (error) {
+                console.log(error);
+            }
             const options = Object.assign({
                 gasLimit
             }, _opt);
@@ -110,7 +116,13 @@ class SeaDropContract extends ContractAbstract_js_1.default {
             const [address, rest] = this.parseOption(opt);
             const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield __signer.estimateGas.mintAllowedTokenHolder(nftContract, feeRecipient, minterIfNotPayer, mintParams, _opt);
+            let gasLimit = null;
+            try {
+                gasLimit = yield __signer.estimateGas.mintAllowedTokenHolder(nftContract, feeRecipient, minterIfNotPayer, mintParams, _opt);
+            }
+            catch (error) {
+                console.log(error);
+            }
             const options = Object.assign({
                 gasLimit
             }, _opt);
@@ -123,7 +135,13 @@ class SeaDropContract extends ContractAbstract_js_1.default {
             const [address, rest] = this.parseOption(opt);
             const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield __signer.estimateGas.mintPublic(nftContract, feeRecipient, minterIfNotPayer, quantity, _opt);
+            let gasLimit = null;
+            try {
+                gasLimit = yield __signer.estimateGas.mintPublic(nftContract, feeRecipient, minterIfNotPayer, quantity, _opt);
+            }
+            catch (error) {
+                console.log(error);
+            }
             const options = Object.assign({
                 gasLimit
             }, _opt);
@@ -136,7 +154,13 @@ class SeaDropContract extends ContractAbstract_js_1.default {
             const [address, rest] = this.parseOption(opt);
             const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield __signer.estimateGas.mintSigned(nftContract, feeRecipient, minterIfNotPayer, quantity, mintParams, salt, signature, _opt);
+            let gasLimit = null;
+            try {
+                gasLimit = yield __signer.estimateGas.mintSigned(nftContract, feeRecipient, minterIfNotPayer, quantity, mintParams, salt, signature, _opt);
+            }
+            catch (error) {
+                console.log(error);
+            }
             const options = Object.assign({
                 gasLimit
             }, _opt);
@@ -149,7 +173,13 @@ class SeaDropContract extends ContractAbstract_js_1.default {
             const [address, rest] = this.parseOption(opt);
             const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield __signer.estimateGas.updateAllowList(allowListData, _opt);
+            let gasLimit = null;
+            try {
+                gasLimit = yield __signer.estimateGas.updateAllowList(allowListData, _opt);
+            }
+            catch (error) {
+                console.log(error);
+            }
             const options = Object.assign({
                 gasLimit
             }, _opt);
@@ -162,7 +192,13 @@ class SeaDropContract extends ContractAbstract_js_1.default {
             const [address, rest] = this.parseOption(opt);
             const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield __signer.estimateGas.updateAllowedFeeRecipient(feeRecipient, allowed, _opt);
+            let gasLimit = null;
+            try {
+                gasLimit = yield __signer.estimateGas.updateAllowedFeeRecipient(feeRecipient, allowed, _opt);
+            }
+            catch (error) {
+                console.log(error);
+            }
             const options = Object.assign({
                 gasLimit
             }, _opt);
@@ -175,7 +211,13 @@ class SeaDropContract extends ContractAbstract_js_1.default {
             const [address, rest] = this.parseOption(opt);
             const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield __signer.estimateGas.updateCreatorPayoutAddress(_payoutAddress, _opt);
+            let gasLimit = null;
+            try {
+                gasLimit = yield __signer.estimateGas.updateCreatorPayoutAddress(_payoutAddress, _opt);
+            }
+            catch (error) {
+                console.log(error);
+            }
             const options = Object.assign({
                 gasLimit
             }, _opt);
@@ -188,7 +230,13 @@ class SeaDropContract extends ContractAbstract_js_1.default {
             const [address, rest] = this.parseOption(opt);
             const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield __signer.estimateGas.updateDropURI(dropURI, _opt);
+            let gasLimit = null;
+            try {
+                gasLimit = yield __signer.estimateGas.updateDropURI(dropURI, _opt);
+            }
+            catch (error) {
+                console.log(error);
+            }
             const options = Object.assign({
                 gasLimit
             }, _opt);
@@ -201,7 +249,13 @@ class SeaDropContract extends ContractAbstract_js_1.default {
             const [address, rest] = this.parseOption(opt);
             const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield __signer.estimateGas.updatePayer(payer, allowed, _opt);
+            let gasLimit = null;
+            try {
+                gasLimit = yield __signer.estimateGas.updatePayer(payer, allowed, _opt);
+            }
+            catch (error) {
+                console.log(error);
+            }
             const options = Object.assign({
                 gasLimit
             }, _opt);
@@ -214,7 +268,13 @@ class SeaDropContract extends ContractAbstract_js_1.default {
             const [address, rest] = this.parseOption(opt);
             const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield __signer.estimateGas.updatePublicDrop(publicDrop, _opt);
+            let gasLimit = null;
+            try {
+                gasLimit = yield __signer.estimateGas.updatePublicDrop(publicDrop, _opt);
+            }
+            catch (error) {
+                console.log(error);
+            }
             const options = Object.assign({
                 gasLimit
             }, _opt);
@@ -227,7 +287,13 @@ class SeaDropContract extends ContractAbstract_js_1.default {
             const [address, rest] = this.parseOption(opt);
             const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield __signer.estimateGas.updateSignedMintValidationParams(signer, signedMintValidationParams, _opt);
+            let gasLimit = null;
+            try {
+                gasLimit = yield __signer.estimateGas.updateSignedMintValidationParams(signer, signedMintValidationParams, _opt);
+            }
+            catch (error) {
+                console.log(error);
+            }
             const options = Object.assign({
                 gasLimit
             }, _opt);
@@ -240,7 +306,13 @@ class SeaDropContract extends ContractAbstract_js_1.default {
             const [address, rest] = this.parseOption(opt);
             const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield __signer.estimateGas.updateTokenGatedDrop(allowedNftToken, dropStage, _opt);
+            let gasLimit = null;
+            try {
+                gasLimit = yield __signer.estimateGas.updateTokenGatedDrop(allowedNftToken, dropStage, _opt);
+            }
+            catch (error) {
+                console.log(error);
+            }
             const options = Object.assign({
                 gasLimit
             }, _opt);

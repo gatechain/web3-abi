@@ -13,11 +13,16 @@ export class HipoNFTSwapV2Contract extends ContractAbstract {
 			const [address, rest] = this.parseOption(opt)
 			const __signer = this.getContractSigner(address)
 			const _opt = rest
-			const gasLimit = await __signer.estimateGas.approveERC20(token,operator,amount,_opt)
-
+			let  gasLimit: any = null
+			try {
+				gasLimit = await __signer.estimateGas.approveERC20(token,operator,amount,_opt)
+			} catch (error) {
+			console.log(error)
+			}
 			const options = Object.assign({
 				gasLimit
 			}, _opt)
+
 			return __signer.approveERC20(token,operator,amount,options)
 
 		};
@@ -26,11 +31,16 @@ export class HipoNFTSwapV2Contract extends ContractAbstract {
 			const [address, rest] = this.parseOption(opt)
 			const __signer = this.getContractSigner(address)
 			const _opt = rest
-			const gasLimit = await __signer.estimateGas.batchBuyWithERC20s(erc20Pairs,tradeBytes,dustTokens,_opt)
-
+			let  gasLimit: any = null
+			try {
+				gasLimit = await __signer.estimateGas.batchBuyWithERC20s(erc20Pairs,tradeBytes,dustTokens,_opt)
+			} catch (error) {
+			console.log(error)
+			}
 			const options = Object.assign({
 				gasLimit
 			}, _opt)
+
 			return __signer.batchBuyWithERC20s(erc20Pairs,tradeBytes,dustTokens,options)
 
 		};
@@ -39,11 +49,16 @@ export class HipoNFTSwapV2Contract extends ContractAbstract {
 			const [address, rest] = this.parseOption(opt)
 			const __signer = this.getContractSigner(address)
 			const _opt = rest
-			const gasLimit = await __signer.estimateGas.batchBuyWithETH(tradeBytes,_opt)
-
+			let  gasLimit: any = null
+			try {
+				gasLimit = await __signer.estimateGas.batchBuyWithETH(tradeBytes,_opt)
+			} catch (error) {
+			console.log(error)
+			}
 			const options = Object.assign({
 				gasLimit
 			}, _opt)
+
 			return __signer.batchBuyWithETH(tradeBytes,options)
 
 		};
@@ -52,11 +67,16 @@ export class HipoNFTSwapV2Contract extends ContractAbstract {
 			const [address, rest] = this.parseOption(opt)
 			const __signer = this.getContractSigner(address)
 			const _opt = rest
-			const gasLimit = await __signer.estimateGas.onERC1155BatchReceived(index_0,index_1,index_2,index_3,index_4,_opt)
-
+			let  gasLimit: any = null
+			try {
+				gasLimit = await __signer.estimateGas.onERC1155BatchReceived(index_0,index_1,index_2,index_3,index_4,_opt)
+			} catch (error) {
+			console.log(error)
+			}
 			const options = Object.assign({
 				gasLimit
 			}, _opt)
+
 			return __signer.onERC1155BatchReceived(index_0,index_1,index_2,index_3,index_4,options)
 
 		};
@@ -65,11 +85,16 @@ export class HipoNFTSwapV2Contract extends ContractAbstract {
 			const [address, rest] = this.parseOption(opt)
 			const __signer = this.getContractSigner(address)
 			const _opt = rest
-			const gasLimit = await __signer.estimateGas.onERC1155Received(index_0,index_1,index_2,index_3,index_4,_opt)
-
+			let  gasLimit: any = null
+			try {
+				gasLimit = await __signer.estimateGas.onERC1155Received(index_0,index_1,index_2,index_3,index_4,_opt)
+			} catch (error) {
+			console.log(error)
+			}
 			const options = Object.assign({
 				gasLimit
 			}, _opt)
+
 			return __signer.onERC1155Received(index_0,index_1,index_2,index_3,index_4,options)
 
 		};
@@ -78,11 +103,16 @@ export class HipoNFTSwapV2Contract extends ContractAbstract {
 			const [address, rest] = this.parseOption(opt)
 			const __signer = this.getContractSigner(address)
 			const _opt = rest
-			const gasLimit = await __signer.estimateGas.onERC721Received1(index_0,index_1,index_2,index_3,_opt)
-
+			let  gasLimit: any = null
+			try {
+				gasLimit = await __signer.estimateGas.onERC721Received1(index_0,index_1,index_2,index_3,_opt)
+			} catch (error) {
+			console.log(error)
+			}
 			const options = Object.assign({
 				gasLimit
 			}, _opt)
+
 			return __signer.onERC721Received1(index_0,index_1,index_2,index_3,options)
 
 		};
@@ -91,11 +121,16 @@ export class HipoNFTSwapV2Contract extends ContractAbstract {
 			const [address, rest] = this.parseOption(opt)
 			const __signer = this.getContractSigner(address)
 			const _opt = rest
-			const gasLimit = await __signer.estimateGas.onERC721Received2(index_0,index_1,index_2,_opt)
-
+			let  gasLimit: any = null
+			try {
+				gasLimit = await __signer.estimateGas.onERC721Received2(index_0,index_1,index_2,_opt)
+			} catch (error) {
+			console.log(error)
+			}
 			const options = Object.assign({
 				gasLimit
 			}, _opt)
+
 			return __signer.onERC721Received2(index_0,index_1,index_2,options)
 
 		};
@@ -111,11 +146,16 @@ export class HipoNFTSwapV2Contract extends ContractAbstract {
 			const [address, rest] = this.parseOption(opt)
 			const __signer = this.getContractSigner(address)
 			const _opt = rest
-			const gasLimit = await __signer.estimateGas.registerFeature(feature,_opt)
-
+			let  gasLimit: any = null
+			try {
+				gasLimit = await __signer.estimateGas.registerFeature(feature,_opt)
+			} catch (error) {
+			console.log(error)
+			}
 			const options = Object.assign({
 				gasLimit
 			}, _opt)
+
 			return __signer.registerFeature(feature,options)
 
 		};
@@ -124,11 +164,16 @@ export class HipoNFTSwapV2Contract extends ContractAbstract {
 			const [address, rest] = this.parseOption(opt)
 			const __signer = this.getContractSigner(address)
 			const _opt = rest
-			const gasLimit = await __signer.estimateGas.registerFeatures(features,_opt)
-
+			let  gasLimit: any = null
+			try {
+				gasLimit = await __signer.estimateGas.registerFeatures(features,_opt)
+			} catch (error) {
+			console.log(error)
+			}
 			const options = Object.assign({
 				gasLimit
 			}, _opt)
+
 			return __signer.registerFeatures(features,options)
 
 		};
@@ -137,11 +182,16 @@ export class HipoNFTSwapV2Contract extends ContractAbstract {
 			const [address, rest] = this.parseOption(opt)
 			const __signer = this.getContractSigner(address)
 			const _opt = rest
-			const gasLimit = await __signer.estimateGas.rescueERC20(asset,recipient,_opt)
-
+			let  gasLimit: any = null
+			try {
+				gasLimit = await __signer.estimateGas.rescueERC20(asset,recipient,_opt)
+			} catch (error) {
+			console.log(error)
+			}
 			const options = Object.assign({
 				gasLimit
 			}, _opt)
+
 			return __signer.rescueERC20(asset,recipient,options)
 
 		};
@@ -150,11 +200,16 @@ export class HipoNFTSwapV2Contract extends ContractAbstract {
 			const [address, rest] = this.parseOption(opt)
 			const __signer = this.getContractSigner(address)
 			const _opt = rest
-			const gasLimit = await __signer.estimateGas.rescueERC721(asset,ids,recipient,_opt)
-
+			let  gasLimit: any = null
+			try {
+				gasLimit = await __signer.estimateGas.rescueERC721(asset,ids,recipient,_opt)
+			} catch (error) {
+			console.log(error)
+			}
 			const options = Object.assign({
 				gasLimit
 			}, _opt)
+
 			return __signer.rescueERC721(asset,ids,recipient,options)
 
 		};
@@ -163,11 +218,16 @@ export class HipoNFTSwapV2Contract extends ContractAbstract {
 			const [address, rest] = this.parseOption(opt)
 			const __signer = this.getContractSigner(address)
 			const _opt = rest
-			const gasLimit = await __signer.estimateGas.rescueETH(recipient,_opt)
-
+			let  gasLimit: any = null
+			try {
+				gasLimit = await __signer.estimateGas.rescueETH(recipient,_opt)
+			} catch (error) {
+			console.log(error)
+			}
 			const options = Object.assign({
 				gasLimit
 			}, _opt)
+
 			return __signer.rescueETH(recipient,options)
 
 		};
@@ -176,11 +236,16 @@ export class HipoNFTSwapV2Contract extends ContractAbstract {
 			const [address, rest] = this.parseOption(opt)
 			const __signer = this.getContractSigner(address)
 			const _opt = rest
-			const gasLimit = await __signer.estimateGas.supportsInterface(interfaceId,_opt)
-
+			let  gasLimit: any = null
+			try {
+				gasLimit = await __signer.estimateGas.supportsInterface(interfaceId,_opt)
+			} catch (error) {
+			console.log(error)
+			}
 			const options = Object.assign({
 				gasLimit
 			}, _opt)
+
 			return __signer.supportsInterface(interfaceId,options)
 
 		};
@@ -189,11 +254,16 @@ export class HipoNFTSwapV2Contract extends ContractAbstract {
 			const [address, rest] = this.parseOption(opt)
 			const __signer = this.getContractSigner(address)
 			const _opt = rest
-			const gasLimit = await __signer.estimateGas.transferOwnership(newOwner,_opt)
-
+			let  gasLimit: any = null
+			try {
+				gasLimit = await __signer.estimateGas.transferOwnership(newOwner,_opt)
+			} catch (error) {
+			console.log(error)
+			}
 			const options = Object.assign({
 				gasLimit
 			}, _opt)
+
 			return __signer.transferOwnership(newOwner,options)
 
 		};
@@ -202,11 +272,16 @@ export class HipoNFTSwapV2Contract extends ContractAbstract {
 			const [address, rest] = this.parseOption(opt)
 			const __signer = this.getContractSigner(address)
 			const _opt = rest
-			const gasLimit = await __signer.estimateGas.unregister(methodIDs,_opt)
-
+			let  gasLimit: any = null
+			try {
+				gasLimit = await __signer.estimateGas.unregister(methodIDs,_opt)
+			} catch (error) {
+			console.log(error)
+			}
 			const options = Object.assign({
 				gasLimit
 			}, _opt)
+
 			return __signer.unregister(methodIDs,options)
 
 		};

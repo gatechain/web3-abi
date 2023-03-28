@@ -127,7 +127,13 @@ class BridgeV1Contract extends ContractAbstract_js_1.default {
             const [address, rest] = this.parseOption(opt);
             const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield __signer.estimateGas.adminAddRelayer(relayerAddress, _opt);
+            let gasLimit = null;
+            try {
+                gasLimit = yield __signer.estimateGas.adminAddRelayer(relayerAddress, _opt);
+            }
+            catch (error) {
+                console.log(error);
+            }
             const options = Object.assign({
                 gasLimit
             }, _opt);
@@ -140,7 +146,13 @@ class BridgeV1Contract extends ContractAbstract_js_1.default {
             const [address, rest] = this.parseOption(opt);
             const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield __signer.estimateGas.adminChangeRelayerThreshold(newThreshold, _opt);
+            let gasLimit = null;
+            try {
+                gasLimit = yield __signer.estimateGas.adminChangeRelayerThreshold(newThreshold, _opt);
+            }
+            catch (error) {
+                console.log(error);
+            }
             const options = Object.assign({
                 gasLimit
             }, _opt);
@@ -153,7 +165,13 @@ class BridgeV1Contract extends ContractAbstract_js_1.default {
             const [address, rest] = this.parseOption(opt);
             const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield __signer.estimateGas.adminPauseTransfers(_opt);
+            let gasLimit = null;
+            try {
+                gasLimit = yield __signer.estimateGas.adminPauseTransfers(_opt);
+            }
+            catch (error) {
+                console.log(error);
+            }
             const options = Object.assign({
                 gasLimit
             }, _opt);
@@ -166,7 +184,13 @@ class BridgeV1Contract extends ContractAbstract_js_1.default {
             const [address, rest] = this.parseOption(opt);
             const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield __signer.estimateGas.adminRemoveRelayer(relayerAddress, _opt);
+            let gasLimit = null;
+            try {
+                gasLimit = yield __signer.estimateGas.adminRemoveRelayer(relayerAddress, _opt);
+            }
+            catch (error) {
+                console.log(error);
+            }
             const options = Object.assign({
                 gasLimit
             }, _opt);
@@ -179,7 +203,13 @@ class BridgeV1Contract extends ContractAbstract_js_1.default {
             const [address, rest] = this.parseOption(opt);
             const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield __signer.estimateGas.adminSetBurnable(handlerAddress, tokenAddress, _opt);
+            let gasLimit = null;
+            try {
+                gasLimit = yield __signer.estimateGas.adminSetBurnable(handlerAddress, tokenAddress, _opt);
+            }
+            catch (error) {
+                console.log(error);
+            }
             const options = Object.assign({
                 gasLimit
             }, _opt);
@@ -192,7 +222,13 @@ class BridgeV1Contract extends ContractAbstract_js_1.default {
             const [address, rest] = this.parseOption(opt);
             const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield __signer.estimateGas.adminSetGasPrice(chainIds, prices, _opt);
+            let gasLimit = null;
+            try {
+                gasLimit = yield __signer.estimateGas.adminSetGasPrice(chainIds, prices, _opt);
+            }
+            catch (error) {
+                console.log(error);
+            }
             const options = Object.assign({
                 gasLimit
             }, _opt);
@@ -205,7 +241,13 @@ class BridgeV1Contract extends ContractAbstract_js_1.default {
             const [address, rest] = this.parseOption(opt);
             const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield __signer.estimateGas.adminSetGenericResource(handlerAddress, resourceID, contractAddress, depositFunctionSig, executeFunctionSig, _opt);
+            let gasLimit = null;
+            try {
+                gasLimit = yield __signer.estimateGas.adminSetGenericResource(handlerAddress, resourceID, contractAddress, depositFunctionSig, executeFunctionSig, _opt);
+            }
+            catch (error) {
+                console.log(error);
+            }
             const options = Object.assign({
                 gasLimit
             }, _opt);
@@ -218,7 +260,13 @@ class BridgeV1Contract extends ContractAbstract_js_1.default {
             const [address, rest] = this.parseOption(opt);
             const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield __signer.estimateGas.adminSetResource(handlerAddress, resourceID, tokenAddress, _opt);
+            let gasLimit = null;
+            try {
+                gasLimit = yield __signer.estimateGas.adminSetResource(handlerAddress, resourceID, tokenAddress, _opt);
+            }
+            catch (error) {
+                console.log(error);
+            }
             const options = Object.assign({
                 gasLimit
             }, _opt);
@@ -231,7 +279,13 @@ class BridgeV1Contract extends ContractAbstract_js_1.default {
             const [address, rest] = this.parseOption(opt);
             const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield __signer.estimateGas.adminSetTokenPrice(chainIds, prices, _opt);
+            let gasLimit = null;
+            try {
+                gasLimit = yield __signer.estimateGas.adminSetTokenPrice(chainIds, prices, _opt);
+            }
+            catch (error) {
+                console.log(error);
+            }
             const options = Object.assign({
                 gasLimit
             }, _opt);
@@ -244,7 +298,13 @@ class BridgeV1Contract extends ContractAbstract_js_1.default {
             const [address, rest] = this.parseOption(opt);
             const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield __signer.estimateGas.adminUnpauseTransfers(_opt);
+            let gasLimit = null;
+            try {
+                gasLimit = yield __signer.estimateGas.adminUnpauseTransfers(_opt);
+            }
+            catch (error) {
+                console.log(error);
+            }
             const options = Object.assign({
                 gasLimit
             }, _opt);
@@ -257,7 +317,13 @@ class BridgeV1Contract extends ContractAbstract_js_1.default {
             const [address, rest] = this.parseOption(opt);
             const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield __signer.estimateGas.adminWithdraw(handlerAddress, tokenAddress, recipient, amountOrTokenID, _opt);
+            let gasLimit = null;
+            try {
+                gasLimit = yield __signer.estimateGas.adminWithdraw(handlerAddress, tokenAddress, recipient, amountOrTokenID, _opt);
+            }
+            catch (error) {
+                console.log(error);
+            }
             const options = Object.assign({
                 gasLimit
             }, _opt);
@@ -270,7 +336,13 @@ class BridgeV1Contract extends ContractAbstract_js_1.default {
             const [address, rest] = this.parseOption(opt);
             const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield __signer.estimateGas.cancelProposal(chainID, depositNonce, dataHash, _opt);
+            let gasLimit = null;
+            try {
+                gasLimit = yield __signer.estimateGas.cancelProposal(chainID, depositNonce, dataHash, _opt);
+            }
+            catch (error) {
+                console.log(error);
+            }
             const options = Object.assign({
                 gasLimit
             }, _opt);
@@ -283,7 +355,13 @@ class BridgeV1Contract extends ContractAbstract_js_1.default {
             const [address, rest] = this.parseOption(opt);
             const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield __signer.estimateGas.deposit(destinationChainID, resourceID, data, _opt);
+            let gasLimit = null;
+            try {
+                gasLimit = yield __signer.estimateGas.deposit(destinationChainID, resourceID, data, _opt);
+            }
+            catch (error) {
+                console.log(error);
+            }
             const options = Object.assign({
                 gasLimit
             }, _opt);
@@ -296,7 +374,13 @@ class BridgeV1Contract extends ContractAbstract_js_1.default {
             const [address, rest] = this.parseOption(opt);
             const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield __signer.estimateGas.depositEventAgain(destinationChainID, resourceID, depositNonce, _opt);
+            let gasLimit = null;
+            try {
+                gasLimit = yield __signer.estimateGas.depositEventAgain(destinationChainID, resourceID, depositNonce, _opt);
+            }
+            catch (error) {
+                console.log(error);
+            }
             const options = Object.assign({
                 gasLimit
             }, _opt);
@@ -309,7 +393,13 @@ class BridgeV1Contract extends ContractAbstract_js_1.default {
             const [address, rest] = this.parseOption(opt);
             const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield __signer.estimateGas.executeProposal(chainID, depositNonce, data, resourceID, _opt);
+            let gasLimit = null;
+            try {
+                gasLimit = yield __signer.estimateGas.executeProposal(chainID, depositNonce, data, resourceID, _opt);
+            }
+            catch (error) {
+                console.log(error);
+            }
             const options = Object.assign({
                 gasLimit
             }, _opt);
@@ -352,7 +442,13 @@ class BridgeV1Contract extends ContractAbstract_js_1.default {
             const [address, rest] = this.parseOption(opt);
             const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield __signer.estimateGas.grantRole(role, account, _opt);
+            let gasLimit = null;
+            try {
+                gasLimit = yield __signer.estimateGas.grantRole(role, account, _opt);
+            }
+            catch (error) {
+                console.log(error);
+            }
             const options = Object.assign({
                 gasLimit
             }, _opt);
@@ -383,7 +479,13 @@ class BridgeV1Contract extends ContractAbstract_js_1.default {
             const [address, rest] = this.parseOption(opt);
             const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield __signer.estimateGas.renounceAdmin(newAdmin, _opt);
+            let gasLimit = null;
+            try {
+                gasLimit = yield __signer.estimateGas.renounceAdmin(newAdmin, _opt);
+            }
+            catch (error) {
+                console.log(error);
+            }
             const options = Object.assign({
                 gasLimit
             }, _opt);
@@ -396,7 +498,13 @@ class BridgeV1Contract extends ContractAbstract_js_1.default {
             const [address, rest] = this.parseOption(opt);
             const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield __signer.estimateGas.renounceRole(role, account, _opt);
+            let gasLimit = null;
+            try {
+                gasLimit = yield __signer.estimateGas.renounceRole(role, account, _opt);
+            }
+            catch (error) {
+                console.log(error);
+            }
             const options = Object.assign({
                 gasLimit
             }, _opt);
@@ -409,7 +517,13 @@ class BridgeV1Contract extends ContractAbstract_js_1.default {
             const [address, rest] = this.parseOption(opt);
             const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield __signer.estimateGas.revokeRole(role, account, _opt);
+            let gasLimit = null;
+            try {
+                gasLimit = yield __signer.estimateGas.revokeRole(role, account, _opt);
+            }
+            catch (error) {
+                console.log(error);
+            }
             const options = Object.assign({
                 gasLimit
             }, _opt);
@@ -422,7 +536,13 @@ class BridgeV1Contract extends ContractAbstract_js_1.default {
             const [address, rest] = this.parseOption(opt);
             const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield __signer.estimateGas.transferFunds(addrs, amounts, _opt);
+            let gasLimit = null;
+            try {
+                gasLimit = yield __signer.estimateGas.transferFunds(addrs, amounts, _opt);
+            }
+            catch (error) {
+                console.log(error);
+            }
             const options = Object.assign({
                 gasLimit
             }, _opt);
@@ -435,7 +555,13 @@ class BridgeV1Contract extends ContractAbstract_js_1.default {
             const [address, rest] = this.parseOption(opt);
             const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield __signer.estimateGas.voteProposal(chainID, depositNonce, resourceID, dataHash, _opt);
+            let gasLimit = null;
+            try {
+                gasLimit = yield __signer.estimateGas.voteProposal(chainID, depositNonce, resourceID, dataHash, _opt);
+            }
+            catch (error) {
+                console.log(error);
+            }
             const options = Object.assign({
                 gasLimit
             }, _opt);

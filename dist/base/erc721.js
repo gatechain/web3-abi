@@ -25,7 +25,13 @@ class ERC721Contract extends ContractAbstract_js_1.default {
             const [address, rest] = this.parseOption(opt);
             const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield __signer.estimateGas.approve(to, tokenId, _opt);
+            let gasLimit = null;
+            try {
+                gasLimit = yield __signer.estimateGas.approve(to, tokenId, _opt);
+            }
+            catch (error) {
+                console.log(error);
+            }
             const options = Object.assign({
                 gasLimit
             }, _opt);
@@ -98,7 +104,13 @@ class ERC721Contract extends ContractAbstract_js_1.default {
             const [address, rest] = this.parseOption(opt);
             const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield __signer.estimateGas.renounceOwnership(_opt);
+            let gasLimit = null;
+            try {
+                gasLimit = yield __signer.estimateGas.renounceOwnership(_opt);
+            }
+            catch (error) {
+                console.log(error);
+            }
             const options = Object.assign({
                 gasLimit
             }, _opt);
@@ -111,7 +123,13 @@ class ERC721Contract extends ContractAbstract_js_1.default {
             const [address, rest] = this.parseOption(opt);
             const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield __signer.estimateGas.safeTransferFrom1(from, to, tokenId, _opt);
+            let gasLimit = null;
+            try {
+                gasLimit = yield __signer.estimateGas.safeTransferFrom1(from, to, tokenId, _opt);
+            }
+            catch (error) {
+                console.log(error);
+            }
             const options = Object.assign({
                 gasLimit
             }, _opt);
@@ -124,7 +142,13 @@ class ERC721Contract extends ContractAbstract_js_1.default {
             const [address, rest] = this.parseOption(opt);
             const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield __signer.estimateGas.safeTransferFrom2(from, to, tokenId, _data, _opt);
+            let gasLimit = null;
+            try {
+                gasLimit = yield __signer.estimateGas.safeTransferFrom2(from, to, tokenId, _data, _opt);
+            }
+            catch (error) {
+                console.log(error);
+            }
             const options = Object.assign({
                 gasLimit
             }, _opt);
@@ -137,7 +161,13 @@ class ERC721Contract extends ContractAbstract_js_1.default {
             const [address, rest] = this.parseOption(opt);
             const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield __signer.estimateGas.saleMint(stage, quantity, price, max, hash, signature, _opt);
+            let gasLimit = null;
+            try {
+                gasLimit = yield __signer.estimateGas.saleMint(stage, quantity, price, max, hash, signature, _opt);
+            }
+            catch (error) {
+                console.log(error);
+            }
             const options = Object.assign({
                 gasLimit
             }, _opt);
@@ -150,7 +180,13 @@ class ERC721Contract extends ContractAbstract_js_1.default {
             const [address, rest] = this.parseOption(opt);
             const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield __signer.estimateGas.setApprovalForAll(operator, approved, _opt);
+            let gasLimit = null;
+            try {
+                gasLimit = yield __signer.estimateGas.setApprovalForAll(operator, approved, _opt);
+            }
+            catch (error) {
+                console.log(error);
+            }
             const options = Object.assign({
                 gasLimit
             }, _opt);
@@ -163,7 +199,13 @@ class ERC721Contract extends ContractAbstract_js_1.default {
             const [address, rest] = this.parseOption(opt);
             const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield __signer.estimateGas.setStage(_stage, _startTime, _endTime, _price, _opt);
+            let gasLimit = null;
+            try {
+                gasLimit = yield __signer.estimateGas.setStage(_stage, _startTime, _endTime, _price, _opt);
+            }
+            catch (error) {
+                console.log(error);
+            }
             const options = Object.assign({
                 gasLimit
             }, _opt);
@@ -176,7 +218,13 @@ class ERC721Contract extends ContractAbstract_js_1.default {
             const [address, rest] = this.parseOption(opt);
             const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield __signer.estimateGas.setSystemAddress(_address, _opt);
+            let gasLimit = null;
+            try {
+                gasLimit = yield __signer.estimateGas.setSystemAddress(_address, _opt);
+            }
+            catch (error) {
+                console.log(error);
+            }
             const options = Object.assign({
                 gasLimit
             }, _opt);
@@ -225,7 +273,13 @@ class ERC721Contract extends ContractAbstract_js_1.default {
             const [address, rest] = this.parseOption(opt);
             const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield __signer.estimateGas.transferFrom(from, to, tokenId, _opt);
+            let gasLimit = null;
+            try {
+                gasLimit = yield __signer.estimateGas.transferFrom(from, to, tokenId, _opt);
+            }
+            catch (error) {
+                console.log(error);
+            }
             const options = Object.assign({
                 gasLimit
             }, _opt);
@@ -238,7 +292,13 @@ class ERC721Contract extends ContractAbstract_js_1.default {
             const [address, rest] = this.parseOption(opt);
             const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield __signer.estimateGas.transferOwnership(newOwner, _opt);
+            let gasLimit = null;
+            try {
+                gasLimit = yield __signer.estimateGas.transferOwnership(newOwner, _opt);
+            }
+            catch (error) {
+                console.log(error);
+            }
             const options = Object.assign({
                 gasLimit
             }, _opt);

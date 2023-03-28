@@ -25,7 +25,13 @@ class HipoCrossAndSwapContract extends ContractAbstract_js_1.default {
             const [address, rest] = this.parseOption(opt);
             const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield __signer.estimateGas.executeMessage2(_sender, _srcChainId, _message, _executor, _opt);
+            let gasLimit = null;
+            try {
+                gasLimit = yield __signer.estimateGas.executeMessage2(_sender, _srcChainId, _message, _executor, _opt);
+            }
+            catch (error) {
+                console.log(error);
+            }
             const options = Object.assign({
                 gasLimit
             }, _opt);
@@ -38,7 +44,13 @@ class HipoCrossAndSwapContract extends ContractAbstract_js_1.default {
             const [address, rest] = this.parseOption(opt);
             const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield __signer.estimateGas.executeMessage1(_sender, _srcChainId, _message, _executor, _opt);
+            let gasLimit = null;
+            try {
+                gasLimit = yield __signer.estimateGas.executeMessage1(_sender, _srcChainId, _message, _executor, _opt);
+            }
+            catch (error) {
+                console.log(error);
+            }
             const options = Object.assign({
                 gasLimit
             }, _opt);
@@ -51,7 +63,13 @@ class HipoCrossAndSwapContract extends ContractAbstract_js_1.default {
             const [address, rest] = this.parseOption(opt);
             const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield __signer.estimateGas.executeMessageWithTransfer(index_0, _token, _amount, _srcChainId, _message, index_5, _opt);
+            let gasLimit = null;
+            try {
+                gasLimit = yield __signer.estimateGas.executeMessageWithTransfer(index_0, _token, _amount, _srcChainId, _message, index_5, _opt);
+            }
+            catch (error) {
+                console.log(error);
+            }
             const options = Object.assign({
                 gasLimit
             }, _opt);
@@ -64,7 +82,13 @@ class HipoCrossAndSwapContract extends ContractAbstract_js_1.default {
             const [address, rest] = this.parseOption(opt);
             const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield __signer.estimateGas.executeMessageWithTransferFallback(index_0, index_1, index_2, _srcChainId, _message, index_5, _opt);
+            let gasLimit = null;
+            try {
+                gasLimit = yield __signer.estimateGas.executeMessageWithTransferFallback(index_0, index_1, index_2, _srcChainId, _message, index_5, _opt);
+            }
+            catch (error) {
+                console.log(error);
+            }
             const options = Object.assign({
                 gasLimit
             }, _opt);
@@ -77,7 +101,13 @@ class HipoCrossAndSwapContract extends ContractAbstract_js_1.default {
             const [address, rest] = this.parseOption(opt);
             const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield __signer.estimateGas.executeMessageWithTransferRefund(_token, _amount, _message, _executor, _opt);
+            let gasLimit = null;
+            try {
+                gasLimit = yield __signer.estimateGas.executeMessageWithTransferRefund(_token, _amount, _message, _executor, _opt);
+            }
+            catch (error) {
+                console.log(error);
+            }
             const options = Object.assign({
                 gasLimit
             }, _opt);
@@ -114,7 +144,13 @@ class HipoCrossAndSwapContract extends ContractAbstract_js_1.default {
             const [address, rest] = this.parseOption(opt);
             const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield __signer.estimateGas.outboundTransferTo(_from, _to, _data, _opt);
+            let gasLimit = null;
+            try {
+                gasLimit = yield __signer.estimateGas.outboundTransferTo(_from, _to, _data, _opt);
+            }
+            catch (error) {
+                console.log(error);
+            }
             const options = Object.assign({
                 gasLimit
             }, _opt);
@@ -133,7 +169,13 @@ class HipoCrossAndSwapContract extends ContractAbstract_js_1.default {
             const [address, rest] = this.parseOption(opt);
             const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield __signer.estimateGas.rescueFunds(token, userAddress, amount, _opt);
+            let gasLimit = null;
+            try {
+                gasLimit = yield __signer.estimateGas.rescueFunds(token, userAddress, amount, _opt);
+            }
+            catch (error) {
+                console.log(error);
+            }
             const options = Object.assign({
                 gasLimit
             }, _opt);
@@ -146,7 +188,13 @@ class HipoCrossAndSwapContract extends ContractAbstract_js_1.default {
             const [address, rest] = this.parseOption(opt);
             const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield __signer.estimateGas.setMessageBus(_messageBus, _opt);
+            let gasLimit = null;
+            try {
+                gasLimit = yield __signer.estimateGas.setMessageBus(_messageBus, _opt);
+            }
+            catch (error) {
+                console.log(error);
+            }
             const options = Object.assign({
                 gasLimit
             }, _opt);
@@ -159,7 +207,13 @@ class HipoCrossAndSwapContract extends ContractAbstract_js_1.default {
             const [address, rest] = this.parseOption(opt);
             const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield __signer.estimateGas.setMinSwapAmount(_token, _minSwapAmount, _opt);
+            let gasLimit = null;
+            try {
+                gasLimit = yield __signer.estimateGas.setMinSwapAmount(_token, _minSwapAmount, _opt);
+            }
+            catch (error) {
+                console.log(error);
+            }
             const options = Object.assign({
                 gasLimit
             }, _opt);
@@ -172,7 +226,13 @@ class HipoCrossAndSwapContract extends ContractAbstract_js_1.default {
             const [address, rest] = this.parseOption(opt);
             const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield __signer.estimateGas.setNativeWrap(_nativeWrap, _opt);
+            let gasLimit = null;
+            try {
+                gasLimit = yield __signer.estimateGas.setNativeWrap(_nativeWrap, _opt);
+            }
+            catch (error) {
+                console.log(error);
+            }
             const options = Object.assign({
                 gasLimit
             }, _opt);
@@ -185,7 +245,13 @@ class HipoCrossAndSwapContract extends ContractAbstract_js_1.default {
             const [address, rest] = this.parseOption(opt);
             const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield __signer.estimateGas.setOOSwap(_ooSwap, _opt);
+            let gasLimit = null;
+            try {
+                gasLimit = yield __signer.estimateGas.setOOSwap(_ooSwap, _opt);
+            }
+            catch (error) {
+                console.log(error);
+            }
             const options = Object.assign({
                 gasLimit
             }, _opt);
@@ -198,7 +264,13 @@ class HipoCrossAndSwapContract extends ContractAbstract_js_1.default {
             const [address, rest] = this.parseOption(opt);
             const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield __signer.estimateGas.transferOwnership(newOwner, _opt);
+            let gasLimit = null;
+            try {
+                gasLimit = yield __signer.estimateGas.transferOwnership(newOwner, _opt);
+            }
+            catch (error) {
+                console.log(error);
+            }
             const options = Object.assign({
                 gasLimit
             }, _opt);
@@ -211,7 +283,13 @@ class HipoCrossAndSwapContract extends ContractAbstract_js_1.default {
             const [address, rest] = this.parseOption(opt);
             const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield __signer.estimateGas.transferWithSwap(_from, _tokenReceiver, _tws, _opt);
+            let gasLimit = null;
+            try {
+                gasLimit = yield __signer.estimateGas.transferWithSwap(_from, _tokenReceiver, _tws, _opt);
+            }
+            catch (error) {
+                console.log(error);
+            }
             const options = Object.assign({
                 gasLimit
             }, _opt);
@@ -224,7 +302,13 @@ class HipoCrossAndSwapContract extends ContractAbstract_js_1.default {
             const [address, rest] = this.parseOption(opt);
             const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield __signer.estimateGas.transferWithSwapNative(_tokenReceiver, _tws, _opt);
+            let gasLimit = null;
+            try {
+                gasLimit = yield __signer.estimateGas.transferWithSwapNative(_tokenReceiver, _tws, _opt);
+            }
+            catch (error) {
+                console.log(error);
+            }
             const options = Object.assign({
                 gasLimit
             }, _opt);
@@ -237,7 +321,13 @@ class HipoCrossAndSwapContract extends ContractAbstract_js_1.default {
             const [address, rest] = this.parseOption(opt);
             const __signer = this.getContractSigner(address);
             const _opt = rest;
-            const gasLimit = yield __signer.estimateGas.withdrewNative(_opt);
+            let gasLimit = null;
+            try {
+                gasLimit = yield __signer.estimateGas.withdrewNative(_opt);
+            }
+            catch (error) {
+                console.log(error);
+            }
             const options = Object.assign({
                 gasLimit
             }, _opt);
