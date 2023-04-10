@@ -480,9 +480,9 @@
   resolved "https://registry.npmmirror.com/@types/toposort/-/toposort-2.0.3.tgz#dc490842b77c3e910c8d727ff0bdb2fb124cb41b"
   integrity sha512-jRtyvEu0Na/sy0oIxBW0f6wPQjidgVqlmCTJVHEGTNEUdL1f0YSvdPzHY7nX7MUWAZS6zcAa0KkqofHjy/xDZQ==
 
-"abigen@https://github.com/gatechain/abigen#1.0.3":
-  version "1.0.3"
-  resolved "https://github.com/gatechain/abigen#71b225b67994dcdd3c0803b61591123206a3663e"
+"abigen@https://github.com/gatechain/abigen#1.0.4":
+  version "1.0.4"
+  resolved "https://github.com/gatechain/abigen#d74cc2cbc9e1fccfd9203af1c7b358009e7761e4"
   dependencies:
     "@0x/abi-gen" "^5.8.1"
 

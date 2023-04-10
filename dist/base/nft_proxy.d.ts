@@ -1,6 +1,21 @@
 import ContractAbstract, { IOption } from "web3-contract/dist/contract/ContractAbstract.js";
 export declare class NftProxyContract extends ContractAbstract {
     static contractName: string;
+    constructor(props: any);
+    initialAddressSet(opt?: IOption): any;
+    endGrantAuthentication(addr: string, opt?: IOption): Promise<any>;
+    revokeAuthentication(addr: string, opt?: IOption): Promise<any>;
+    pending(index_0: string, opt?: IOption): any;
+    contracts(index_0: string, opt?: IOption): any;
+    renounceOwnership(opt?: IOption): Promise<any>;
+    owner(opt?: IOption): any;
+    delegateProxyImplementation(opt?: IOption): any;
+    proxies(index_0: string, opt?: IOption): any;
+    startGrantAuthentication(addr: string, opt?: IOption): Promise<any>;
+    registerProxy(opt?: IOption): Promise<any>;
+    DELAY_PERIOD(opt?: IOption): any;
+    transferOwnership(_newOwner: string, opt?: IOption): Promise<any>;
+    grantInitialAuthentication(authAddress: string, opt?: IOption): Promise<any>;
     Abi: ({
         constant: boolean;
         inputs: {
@@ -39,19 +54,4 @@ export declare class NftProxyContract extends ContractAbstract {
         payable?: undefined;
         stateMutability?: undefined;
     })[];
-    constructor(props: any);
-    initialAddressSet(opt?: IOption): any;
-    endGrantAuthentication(addr: string, opt?: IOption): Promise<any>;
-    revokeAuthentication(addr: string, opt?: IOption): Promise<any>;
-    pending(index_0: string, opt?: IOption): any;
-    contracts(index_0: string, opt?: IOption): any;
-    renounceOwnership(opt?: IOption): Promise<any>;
-    owner(opt?: IOption): any;
-    delegateProxyImplementation(opt?: IOption): any;
-    proxies(index_0: string, opt?: IOption): any;
-    startGrantAuthentication(addr: string, opt?: IOption): Promise<any>;
-    registerProxy(opt?: IOption): Promise<any>;
-    DELAY_PERIOD(opt?: IOption): any;
-    transferOwnership(_newOwner: string, opt?: IOption): Promise<any>;
-    grantInitialAuthentication(authAddress: string, opt?: IOption): Promise<any>;
 }
