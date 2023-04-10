@@ -1,6 +1,6 @@
 {
   "name": "web3-abi",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "main": "./dist/index.js",
   "license": "MIT",
   "scripts": {
