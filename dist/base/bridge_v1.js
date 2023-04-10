@@ -129,6 +129,7 @@ class BridgeV1Contract extends ContractAbstract_js_1.default {
             let gasLimit = null;
             try {
                 gasLimit = yield __signer.estimateGas.adminAddRelayer(relayerAddress, _opt);
+                gasLimit = gasLimit.mul(120).div(100);
             }
             catch (error) {
                 console.log(error);
@@ -148,6 +149,7 @@ class BridgeV1Contract extends ContractAbstract_js_1.default {
             let gasLimit = null;
             try {
                 gasLimit = yield __signer.estimateGas.adminChangeRelayerThreshold(newThreshold, _opt);
+                gasLimit = gasLimit.mul(120).div(100);
             }
             catch (error) {
                 console.log(error);
@@ -167,6 +169,7 @@ class BridgeV1Contract extends ContractAbstract_js_1.default {
             let gasLimit = null;
             try {
                 gasLimit = yield __signer.estimateGas.adminPauseTransfers(_opt);
+                gasLimit = gasLimit.mul(120).div(100);
             }
             catch (error) {
                 console.log(error);
@@ -186,6 +189,7 @@ class BridgeV1Contract extends ContractAbstract_js_1.default {
             let gasLimit = null;
             try {
                 gasLimit = yield __signer.estimateGas.adminRemoveRelayer(relayerAddress, _opt);
+                gasLimit = gasLimit.mul(120).div(100);
             }
             catch (error) {
                 console.log(error);
@@ -205,6 +209,7 @@ class BridgeV1Contract extends ContractAbstract_js_1.default {
             let gasLimit = null;
             try {
                 gasLimit = yield __signer.estimateGas.adminSetBurnable(handlerAddress, tokenAddress, _opt);
+                gasLimit = gasLimit.mul(120).div(100);
             }
             catch (error) {
                 console.log(error);
@@ -224,6 +229,7 @@ class BridgeV1Contract extends ContractAbstract_js_1.default {
             let gasLimit = null;
             try {
                 gasLimit = yield __signer.estimateGas.adminSetGasPrice(chainIds, prices, _opt);
+                gasLimit = gasLimit.mul(120).div(100);
             }
             catch (error) {
                 console.log(error);
@@ -243,6 +249,7 @@ class BridgeV1Contract extends ContractAbstract_js_1.default {
             let gasLimit = null;
             try {
                 gasLimit = yield __signer.estimateGas.adminSetGenericResource(handlerAddress, resourceID, contractAddress, depositFunctionSig, executeFunctionSig, _opt);
+                gasLimit = gasLimit.mul(120).div(100);
             }
             catch (error) {
                 console.log(error);
@@ -262,6 +269,7 @@ class BridgeV1Contract extends ContractAbstract_js_1.default {
             let gasLimit = null;
             try {
                 gasLimit = yield __signer.estimateGas.adminSetResource(handlerAddress, resourceID, tokenAddress, _opt);
+                gasLimit = gasLimit.mul(120).div(100);
             }
             catch (error) {
                 console.log(error);
@@ -281,6 +289,7 @@ class BridgeV1Contract extends ContractAbstract_js_1.default {
             let gasLimit = null;
             try {
                 gasLimit = yield __signer.estimateGas.adminSetTokenPrice(chainIds, prices, _opt);
+                gasLimit = gasLimit.mul(120).div(100);
             }
             catch (error) {
                 console.log(error);
@@ -300,6 +309,7 @@ class BridgeV1Contract extends ContractAbstract_js_1.default {
             let gasLimit = null;
             try {
                 gasLimit = yield __signer.estimateGas.adminUnpauseTransfers(_opt);
+                gasLimit = gasLimit.mul(120).div(100);
             }
             catch (error) {
                 console.log(error);
@@ -319,6 +329,7 @@ class BridgeV1Contract extends ContractAbstract_js_1.default {
             let gasLimit = null;
             try {
                 gasLimit = yield __signer.estimateGas.adminWithdraw(handlerAddress, tokenAddress, recipient, amountOrTokenID, _opt);
+                gasLimit = gasLimit.mul(120).div(100);
             }
             catch (error) {
                 console.log(error);
@@ -338,6 +349,7 @@ class BridgeV1Contract extends ContractAbstract_js_1.default {
             let gasLimit = null;
             try {
                 gasLimit = yield __signer.estimateGas.cancelProposal(chainID, depositNonce, dataHash, _opt);
+                gasLimit = gasLimit.mul(120).div(100);
             }
             catch (error) {
                 console.log(error);
@@ -357,6 +369,7 @@ class BridgeV1Contract extends ContractAbstract_js_1.default {
             let gasLimit = null;
             try {
                 gasLimit = yield __signer.estimateGas.deposit(destinationChainID, resourceID, data, _opt);
+                gasLimit = gasLimit.mul(120).div(100);
             }
             catch (error) {
                 console.log(error);
@@ -376,6 +389,7 @@ class BridgeV1Contract extends ContractAbstract_js_1.default {
             let gasLimit = null;
             try {
                 gasLimit = yield __signer.estimateGas.depositEventAgain(destinationChainID, resourceID, depositNonce, _opt);
+                gasLimit = gasLimit.mul(120).div(100);
             }
             catch (error) {
                 console.log(error);
@@ -395,6 +409,7 @@ class BridgeV1Contract extends ContractAbstract_js_1.default {
             let gasLimit = null;
             try {
                 gasLimit = yield __signer.estimateGas.executeProposal(chainID, depositNonce, data, resourceID, _opt);
+                gasLimit = gasLimit.mul(120).div(100);
             }
             catch (error) {
                 console.log(error);
@@ -444,6 +459,7 @@ class BridgeV1Contract extends ContractAbstract_js_1.default {
             let gasLimit = null;
             try {
                 gasLimit = yield __signer.estimateGas.grantRole(role, account, _opt);
+                gasLimit = gasLimit.mul(120).div(100);
             }
             catch (error) {
                 console.log(error);
@@ -481,6 +497,7 @@ class BridgeV1Contract extends ContractAbstract_js_1.default {
             let gasLimit = null;
             try {
                 gasLimit = yield __signer.estimateGas.renounceAdmin(newAdmin, _opt);
+                gasLimit = gasLimit.mul(120).div(100);
             }
             catch (error) {
                 console.log(error);
@@ -500,6 +517,7 @@ class BridgeV1Contract extends ContractAbstract_js_1.default {
             let gasLimit = null;
             try {
                 gasLimit = yield __signer.estimateGas.renounceRole(role, account, _opt);
+                gasLimit = gasLimit.mul(120).div(100);
             }
             catch (error) {
                 console.log(error);
@@ -519,6 +537,7 @@ class BridgeV1Contract extends ContractAbstract_js_1.default {
             let gasLimit = null;
             try {
                 gasLimit = yield __signer.estimateGas.revokeRole(role, account, _opt);
+                gasLimit = gasLimit.mul(120).div(100);
             }
             catch (error) {
                 console.log(error);
@@ -538,6 +557,7 @@ class BridgeV1Contract extends ContractAbstract_js_1.default {
             let gasLimit = null;
             try {
                 gasLimit = yield __signer.estimateGas.transferFunds(addrs, amounts, _opt);
+                gasLimit = gasLimit.mul(120).div(100);
             }
             catch (error) {
                 console.log(error);
@@ -557,6 +577,7 @@ class BridgeV1Contract extends ContractAbstract_js_1.default {
             let gasLimit = null;
             try {
                 gasLimit = yield __signer.estimateGas.voteProposal(chainID, depositNonce, resourceID, dataHash, _opt);
+                gasLimit = gasLimit.mul(120).div(100);
             }
             catch (error) {
                 console.log(error);

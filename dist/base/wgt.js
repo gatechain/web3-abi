@@ -27,6 +27,7 @@ class WGTContract extends ContractAbstract_js_1.default {
             let gasLimit = null;
             try {
                 gasLimit = yield __signer.estimateGas.approve(guy, wad, _opt);
+                gasLimit = gasLimit.mul(120).div(100);
             }
             catch (error) {
                 console.log(error);
@@ -52,6 +53,7 @@ class WGTContract extends ContractAbstract_js_1.default {
             let gasLimit = null;
             try {
                 gasLimit = yield __signer.estimateGas.transferFrom(src, dst, wad, _opt);
+                gasLimit = gasLimit.mul(120).div(100);
             }
             catch (error) {
                 console.log(error);
@@ -71,6 +73,7 @@ class WGTContract extends ContractAbstract_js_1.default {
             let gasLimit = null;
             try {
                 gasLimit = yield __signer.estimateGas.withdraw(wad, _opt);
+                gasLimit = gasLimit.mul(120).div(100);
             }
             catch (error) {
                 console.log(error);
@@ -108,6 +111,7 @@ class WGTContract extends ContractAbstract_js_1.default {
             let gasLimit = null;
             try {
                 gasLimit = yield __signer.estimateGas.transfer(dst, wad, _opt);
+                gasLimit = gasLimit.mul(120).div(100);
             }
             catch (error) {
                 console.log(error);
@@ -127,6 +131,7 @@ class WGTContract extends ContractAbstract_js_1.default {
             let gasLimit = null;
             try {
                 gasLimit = yield __signer.estimateGas.deposit(_opt);
+                gasLimit = gasLimit.mul(120).div(100);
             }
             catch (error) {
                 console.log(error);

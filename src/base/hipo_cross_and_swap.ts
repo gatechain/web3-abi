@@ -13,6 +13,7 @@ export class HipoCrossAndSwapContract extends ContractAbstract {
 			let  gasLimit: any = null
 			try {
 				gasLimit = await __signer.estimateGas.executeMessage2(_sender,_srcChainId,_message,_executor,_opt)
+        gasLimit = gasLimit.mul(120).div(100)
 			} catch (error) {
 			console.log(error)
 			}
@@ -31,6 +32,7 @@ export class HipoCrossAndSwapContract extends ContractAbstract {
 			let  gasLimit: any = null
 			try {
 				gasLimit = await __signer.estimateGas.executeMessage1(_sender,_srcChainId,_message,_executor,_opt)
+        gasLimit = gasLimit.mul(120).div(100)
 			} catch (error) {
 			console.log(error)
 			}
@@ -49,6 +51,7 @@ export class HipoCrossAndSwapContract extends ContractAbstract {
 			let  gasLimit: any = null
 			try {
 				gasLimit = await __signer.estimateGas.executeMessageWithTransfer(index_0,_token,_amount,_srcChainId,_message,index_5,_opt)
+        gasLimit = gasLimit.mul(120).div(100)
 			} catch (error) {
 			console.log(error)
 			}
@@ -67,6 +70,7 @@ export class HipoCrossAndSwapContract extends ContractAbstract {
 			let  gasLimit: any = null
 			try {
 				gasLimit = await __signer.estimateGas.executeMessageWithTransferFallback(index_0,index_1,index_2,_srcChainId,_message,index_5,_opt)
+        gasLimit = gasLimit.mul(120).div(100)
 			} catch (error) {
 			console.log(error)
 			}
@@ -85,6 +89,7 @@ export class HipoCrossAndSwapContract extends ContractAbstract {
 			let  gasLimit: any = null
 			try {
 				gasLimit = await __signer.estimateGas.executeMessageWithTransferRefund(_token,_amount,_message,_executor,_opt)
+        gasLimit = gasLimit.mul(120).div(100)
 			} catch (error) {
 			console.log(error)
 			}
@@ -131,6 +136,7 @@ export class HipoCrossAndSwapContract extends ContractAbstract {
 			let  gasLimit: any = null
 			try {
 				gasLimit = await __signer.estimateGas.outboundTransferTo(_from,_to,_data,_opt)
+        gasLimit = gasLimit.mul(120).div(100)
 			} catch (error) {
 			console.log(error)
 			}
@@ -156,6 +162,7 @@ export class HipoCrossAndSwapContract extends ContractAbstract {
 			let  gasLimit: any = null
 			try {
 				gasLimit = await __signer.estimateGas.rescueFunds(token,userAddress,amount,_opt)
+        gasLimit = gasLimit.mul(120).div(100)
 			} catch (error) {
 			console.log(error)
 			}
@@ -174,6 +181,7 @@ export class HipoCrossAndSwapContract extends ContractAbstract {
 			let  gasLimit: any = null
 			try {
 				gasLimit = await __signer.estimateGas.setMessageBus(_messageBus,_opt)
+        gasLimit = gasLimit.mul(120).div(100)
 			} catch (error) {
 			console.log(error)
 			}
@@ -192,6 +200,7 @@ export class HipoCrossAndSwapContract extends ContractAbstract {
 			let  gasLimit: any = null
 			try {
 				gasLimit = await __signer.estimateGas.setMinSwapAmount(_token,_minSwapAmount,_opt)
+        gasLimit = gasLimit.mul(120).div(100)
 			} catch (error) {
 			console.log(error)
 			}
@@ -210,6 +219,7 @@ export class HipoCrossAndSwapContract extends ContractAbstract {
 			let  gasLimit: any = null
 			try {
 				gasLimit = await __signer.estimateGas.setNativeWrap(_nativeWrap,_opt)
+        gasLimit = gasLimit.mul(120).div(100)
 			} catch (error) {
 			console.log(error)
 			}
@@ -228,6 +238,7 @@ export class HipoCrossAndSwapContract extends ContractAbstract {
 			let  gasLimit: any = null
 			try {
 				gasLimit = await __signer.estimateGas.setOOSwap(_ooSwap,_opt)
+        gasLimit = gasLimit.mul(120).div(100)
 			} catch (error) {
 			console.log(error)
 			}
@@ -246,6 +257,7 @@ export class HipoCrossAndSwapContract extends ContractAbstract {
 			let  gasLimit: any = null
 			try {
 				gasLimit = await __signer.estimateGas.transferOwnership(newOwner,_opt)
+        gasLimit = gasLimit.mul(120).div(100)
 			} catch (error) {
 			console.log(error)
 			}
@@ -264,6 +276,7 @@ export class HipoCrossAndSwapContract extends ContractAbstract {
 			let  gasLimit: any = null
 			try {
 				gasLimit = await __signer.estimateGas.transferWithSwap(_from,_tokenReceiver,_tws,_opt)
+        gasLimit = gasLimit.mul(120).div(100)
 			} catch (error) {
 			console.log(error)
 			}
@@ -282,6 +295,7 @@ export class HipoCrossAndSwapContract extends ContractAbstract {
 			let  gasLimit: any = null
 			try {
 				gasLimit = await __signer.estimateGas.transferWithSwapNative(_tokenReceiver,_tws,_opt)
+        gasLimit = gasLimit.mul(120).div(100)
 			} catch (error) {
 			console.log(error)
 			}
@@ -300,6 +314,7 @@ export class HipoCrossAndSwapContract extends ContractAbstract {
 			let  gasLimit: any = null
 			try {
 				gasLimit = await __signer.estimateGas.withdrewNative(_opt)
+        gasLimit = gasLimit.mul(120).div(100)
 			} catch (error) {
 			console.log(error)
 			}

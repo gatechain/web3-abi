@@ -97,6 +97,7 @@ export class SeaDropContract extends ContractAbstract {
 			let  gasLimit: any = null
 			try {
 				gasLimit = await __signer.estimateGas.mintAllowList(nftContract,feeRecipient,minterIfNotPayer,quantity,mintParams,proof,_opt)
+        gasLimit = gasLimit.mul(120).div(100)
 			} catch (error) {
 			console.log(error)
 			}
@@ -115,6 +116,7 @@ export class SeaDropContract extends ContractAbstract {
 			let  gasLimit: any = null
 			try {
 				gasLimit = await __signer.estimateGas.mintAllowedTokenHolder(nftContract,feeRecipient,minterIfNotPayer,mintParams,_opt)
+        gasLimit = gasLimit.mul(120).div(100)
 			} catch (error) {
 			console.log(error)
 			}
@@ -133,6 +135,7 @@ export class SeaDropContract extends ContractAbstract {
 			let  gasLimit: any = null
 			try {
 				gasLimit = await __signer.estimateGas.mintPublic(nftContract,feeRecipient,minterIfNotPayer,quantity,_opt)
+        gasLimit = gasLimit.mul(120).div(100)
 			} catch (error) {
 			console.log(error)
 			}
@@ -151,6 +154,7 @@ export class SeaDropContract extends ContractAbstract {
 			let  gasLimit: any = null
 			try {
 				gasLimit = await __signer.estimateGas.mintSigned(nftContract,feeRecipient,minterIfNotPayer,quantity,mintParams,salt,signature,_opt)
+        gasLimit = gasLimit.mul(120).div(100)
 			} catch (error) {
 			console.log(error)
 			}
@@ -169,6 +173,7 @@ export class SeaDropContract extends ContractAbstract {
 			let  gasLimit: any = null
 			try {
 				gasLimit = await __signer.estimateGas.updateAllowList(allowListData,_opt)
+        gasLimit = gasLimit.mul(120).div(100)
 			} catch (error) {
 			console.log(error)
 			}
@@ -187,6 +192,7 @@ export class SeaDropContract extends ContractAbstract {
 			let  gasLimit: any = null
 			try {
 				gasLimit = await __signer.estimateGas.updateAllowedFeeRecipient(feeRecipient,allowed,_opt)
+        gasLimit = gasLimit.mul(120).div(100)
 			} catch (error) {
 			console.log(error)
 			}
@@ -205,6 +211,7 @@ export class SeaDropContract extends ContractAbstract {
 			let  gasLimit: any = null
 			try {
 				gasLimit = await __signer.estimateGas.updateCreatorPayoutAddress(_payoutAddress,_opt)
+        gasLimit = gasLimit.mul(120).div(100)
 			} catch (error) {
 			console.log(error)
 			}
@@ -223,6 +230,7 @@ export class SeaDropContract extends ContractAbstract {
 			let  gasLimit: any = null
 			try {
 				gasLimit = await __signer.estimateGas.updateDropURI(dropURI,_opt)
+        gasLimit = gasLimit.mul(120).div(100)
 			} catch (error) {
 			console.log(error)
 			}
@@ -241,6 +249,7 @@ export class SeaDropContract extends ContractAbstract {
 			let  gasLimit: any = null
 			try {
 				gasLimit = await __signer.estimateGas.updatePayer(payer,allowed,_opt)
+        gasLimit = gasLimit.mul(120).div(100)
 			} catch (error) {
 			console.log(error)
 			}
@@ -259,6 +268,7 @@ export class SeaDropContract extends ContractAbstract {
 			let  gasLimit: any = null
 			try {
 				gasLimit = await __signer.estimateGas.updatePublicDrop(publicDrop,_opt)
+        gasLimit = gasLimit.mul(120).div(100)
 			} catch (error) {
 			console.log(error)
 			}
@@ -277,6 +287,7 @@ export class SeaDropContract extends ContractAbstract {
 			let  gasLimit: any = null
 			try {
 				gasLimit = await __signer.estimateGas.updateSignedMintValidationParams(signer,signedMintValidationParams,_opt)
+        gasLimit = gasLimit.mul(120).div(100)
 			} catch (error) {
 			console.log(error)
 			}
@@ -295,6 +306,7 @@ export class SeaDropContract extends ContractAbstract {
 			let  gasLimit: any = null
 			try {
 				gasLimit = await __signer.estimateGas.updateTokenGatedDrop(allowedNftToken,dropStage,_opt)
+        gasLimit = gasLimit.mul(120).div(100)
 			} catch (error) {
 			console.log(error)
 			}

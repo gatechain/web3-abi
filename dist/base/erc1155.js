@@ -57,6 +57,7 @@ class ERC1155Contract extends ContractAbstract_js_1.default {
             let gasLimit = null;
             try {
                 gasLimit = yield __signer.estimateGas.burn(account, id, value, _opt);
+                gasLimit = gasLimit.mul(120).div(100);
             }
             catch (error) {
                 console.log(error);
@@ -76,6 +77,7 @@ class ERC1155Contract extends ContractAbstract_js_1.default {
             let gasLimit = null;
             try {
                 gasLimit = yield __signer.estimateGas.burnBatch(account, ids, values, _opt);
+                gasLimit = gasLimit.mul(120).div(100);
             }
             catch (error) {
                 console.log(error);
@@ -113,6 +115,7 @@ class ERC1155Contract extends ContractAbstract_js_1.default {
             let gasLimit = null;
             try {
                 gasLimit = yield __signer.estimateGas.grantRole(role, account, _opt);
+                gasLimit = gasLimit.mul(120).div(100);
             }
             catch (error) {
                 console.log(error);
@@ -144,6 +147,7 @@ class ERC1155Contract extends ContractAbstract_js_1.default {
             let gasLimit = null;
             try {
                 gasLimit = yield __signer.estimateGas.mint(to, id, amount, data, _opt);
+                gasLimit = gasLimit.mul(120).div(100);
             }
             catch (error) {
                 console.log(error);
@@ -163,6 +167,7 @@ class ERC1155Contract extends ContractAbstract_js_1.default {
             let gasLimit = null;
             try {
                 gasLimit = yield __signer.estimateGas.mintBatch(to, ids, amounts, data, _opt);
+                gasLimit = gasLimit.mul(120).div(100);
             }
             catch (error) {
                 console.log(error);
@@ -182,6 +187,7 @@ class ERC1155Contract extends ContractAbstract_js_1.default {
             let gasLimit = null;
             try {
                 gasLimit = yield __signer.estimateGas.pause(_opt);
+                gasLimit = gasLimit.mul(120).div(100);
             }
             catch (error) {
                 console.log(error);
@@ -207,6 +213,7 @@ class ERC1155Contract extends ContractAbstract_js_1.default {
             let gasLimit = null;
             try {
                 gasLimit = yield __signer.estimateGas.renounceRole(role, account, _opt);
+                gasLimit = gasLimit.mul(120).div(100);
             }
             catch (error) {
                 console.log(error);
@@ -226,6 +233,7 @@ class ERC1155Contract extends ContractAbstract_js_1.default {
             let gasLimit = null;
             try {
                 gasLimit = yield __signer.estimateGas.revokeRole(role, account, _opt);
+                gasLimit = gasLimit.mul(120).div(100);
             }
             catch (error) {
                 console.log(error);
@@ -245,6 +253,7 @@ class ERC1155Contract extends ContractAbstract_js_1.default {
             let gasLimit = null;
             try {
                 gasLimit = yield __signer.estimateGas.safeBatchTransferFrom(from, to, ids, amounts, data, _opt);
+                gasLimit = gasLimit.mul(120).div(100);
             }
             catch (error) {
                 console.log(error);
@@ -264,6 +273,7 @@ class ERC1155Contract extends ContractAbstract_js_1.default {
             let gasLimit = null;
             try {
                 gasLimit = yield __signer.estimateGas.safeTransferFrom(from, to, id, amount, data, _opt);
+                gasLimit = gasLimit.mul(120).div(100);
             }
             catch (error) {
                 console.log(error);
@@ -283,6 +293,7 @@ class ERC1155Contract extends ContractAbstract_js_1.default {
             let gasLimit = null;
             try {
                 gasLimit = yield __signer.estimateGas.setApprovalForAll(operator, approved, _opt);
+                gasLimit = gasLimit.mul(120).div(100);
             }
             catch (error) {
                 console.log(error);
@@ -308,6 +319,7 @@ class ERC1155Contract extends ContractAbstract_js_1.default {
             let gasLimit = null;
             try {
                 gasLimit = yield __signer.estimateGas.unpause(_opt);
+                gasLimit = gasLimit.mul(120).div(100);
             }
             catch (error) {
                 console.log(error);

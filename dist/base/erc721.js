@@ -27,6 +27,7 @@ class ERC721Contract extends ContractAbstract_js_1.default {
             let gasLimit = null;
             try {
                 gasLimit = yield __signer.estimateGas.approve(to, tokenId, _opt);
+                gasLimit = gasLimit.mul(120).div(100);
             }
             catch (error) {
                 console.log(error);
@@ -106,6 +107,7 @@ class ERC721Contract extends ContractAbstract_js_1.default {
             let gasLimit = null;
             try {
                 gasLimit = yield __signer.estimateGas.renounceOwnership(_opt);
+                gasLimit = gasLimit.mul(120).div(100);
             }
             catch (error) {
                 console.log(error);
@@ -125,6 +127,7 @@ class ERC721Contract extends ContractAbstract_js_1.default {
             let gasLimit = null;
             try {
                 gasLimit = yield __signer.estimateGas.safeTransferFrom1(from, to, tokenId, _opt);
+                gasLimit = gasLimit.mul(120).div(100);
             }
             catch (error) {
                 console.log(error);
@@ -144,6 +147,7 @@ class ERC721Contract extends ContractAbstract_js_1.default {
             let gasLimit = null;
             try {
                 gasLimit = yield __signer.estimateGas.safeTransferFrom2(from, to, tokenId, _data, _opt);
+                gasLimit = gasLimit.mul(120).div(100);
             }
             catch (error) {
                 console.log(error);
@@ -163,6 +167,7 @@ class ERC721Contract extends ContractAbstract_js_1.default {
             let gasLimit = null;
             try {
                 gasLimit = yield __signer.estimateGas.saleMint(stage, quantity, price, max, hash, signature, _opt);
+                gasLimit = gasLimit.mul(120).div(100);
             }
             catch (error) {
                 console.log(error);
@@ -182,6 +187,7 @@ class ERC721Contract extends ContractAbstract_js_1.default {
             let gasLimit = null;
             try {
                 gasLimit = yield __signer.estimateGas.setApprovalForAll(operator, approved, _opt);
+                gasLimit = gasLimit.mul(120).div(100);
             }
             catch (error) {
                 console.log(error);
@@ -201,6 +207,7 @@ class ERC721Contract extends ContractAbstract_js_1.default {
             let gasLimit = null;
             try {
                 gasLimit = yield __signer.estimateGas.setStage(_stage, _startTime, _endTime, _price, _opt);
+                gasLimit = gasLimit.mul(120).div(100);
             }
             catch (error) {
                 console.log(error);
@@ -220,6 +227,7 @@ class ERC721Contract extends ContractAbstract_js_1.default {
             let gasLimit = null;
             try {
                 gasLimit = yield __signer.estimateGas.setSystemAddress(_address, _opt);
+                gasLimit = gasLimit.mul(120).div(100);
             }
             catch (error) {
                 console.log(error);
@@ -275,6 +283,7 @@ class ERC721Contract extends ContractAbstract_js_1.default {
             let gasLimit = null;
             try {
                 gasLimit = yield __signer.estimateGas.transferFrom(from, to, tokenId, _opt);
+                gasLimit = gasLimit.mul(120).div(100);
             }
             catch (error) {
                 console.log(error);
@@ -294,6 +303,7 @@ class ERC721Contract extends ContractAbstract_js_1.default {
             let gasLimit = null;
             try {
                 gasLimit = yield __signer.estimateGas.transferOwnership(newOwner, _opt);
+                gasLimit = gasLimit.mul(120).div(100);
             }
             catch (error) {
                 console.log(error);

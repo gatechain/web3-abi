@@ -45,6 +45,7 @@ class ERC20Contract extends ContractAbstract_js_1.default {
             let gasLimit = null;
             try {
                 gasLimit = yield __signer.estimateGas.approve(spender, value, _opt);
+                gasLimit = gasLimit.mul(120).div(100);
             }
             catch (error) {
                 console.log(error);
@@ -82,6 +83,7 @@ class ERC20Contract extends ContractAbstract_js_1.default {
             let gasLimit = null;
             try {
                 gasLimit = yield __signer.estimateGas.permit(owner, spender, value, deadline, v, r, s, _opt);
+                gasLimit = gasLimit.mul(120).div(100);
             }
             catch (error) {
                 console.log(error);
@@ -113,6 +115,7 @@ class ERC20Contract extends ContractAbstract_js_1.default {
             let gasLimit = null;
             try {
                 gasLimit = yield __signer.estimateGas.transfer(to, value, _opt);
+                gasLimit = gasLimit.mul(120).div(100);
             }
             catch (error) {
                 console.log(error);
@@ -132,6 +135,7 @@ class ERC20Contract extends ContractAbstract_js_1.default {
             let gasLimit = null;
             try {
                 gasLimit = yield __signer.estimateGas.transferFrom(from, to, value, _opt);
+                gasLimit = gasLimit.mul(120).div(100);
             }
             catch (error) {
                 console.log(error);

@@ -20,6 +20,7 @@ export class NftProxyContract extends ContractAbstract {
 			let  gasLimit: any = null
 			try {
 				gasLimit = await __signer.estimateGas.endGrantAuthentication(addr,_opt)
+        gasLimit = gasLimit.mul(120).div(100)
 			} catch (error) {
 			console.log(error)
 			}
@@ -38,6 +39,7 @@ export class NftProxyContract extends ContractAbstract {
 			let  gasLimit: any = null
 			try {
 				gasLimit = await __signer.estimateGas.revokeAuthentication(addr,_opt)
+        gasLimit = gasLimit.mul(120).div(100)
 			} catch (error) {
 			console.log(error)
 			}
@@ -70,6 +72,7 @@ export class NftProxyContract extends ContractAbstract {
 			let  gasLimit: any = null
 			try {
 				gasLimit = await __signer.estimateGas.renounceOwnership(_opt)
+        gasLimit = gasLimit.mul(120).div(100)
 			} catch (error) {
 			console.log(error)
 			}
@@ -109,6 +112,7 @@ export class NftProxyContract extends ContractAbstract {
 			let  gasLimit: any = null
 			try {
 				gasLimit = await __signer.estimateGas.startGrantAuthentication(addr,_opt)
+        gasLimit = gasLimit.mul(120).div(100)
 			} catch (error) {
 			console.log(error)
 			}
@@ -127,6 +131,7 @@ export class NftProxyContract extends ContractAbstract {
 			let  gasLimit: any = null
 			try {
 				gasLimit = await __signer.estimateGas.registerProxy(_opt)
+        gasLimit = gasLimit.mul(120).div(100)
 			} catch (error) {
 			console.log(error)
 			}
@@ -152,6 +157,7 @@ export class NftProxyContract extends ContractAbstract {
 			let  gasLimit: any = null
 			try {
 				gasLimit = await __signer.estimateGas.transferOwnership(_newOwner,_opt)
+        gasLimit = gasLimit.mul(120).div(100)
 			} catch (error) {
 			console.log(error)
 			}
@@ -170,6 +176,7 @@ export class NftProxyContract extends ContractAbstract {
 			let  gasLimit: any = null
 			try {
 				gasLimit = await __signer.estimateGas.grantInitialAuthentication(authAddress,_opt)
+        gasLimit = gasLimit.mul(120).div(100)
 			} catch (error) {
 			console.log(error)
 			}

@@ -13,6 +13,7 @@ export class WGTContract extends ContractAbstract {
 			let  gasLimit: any = null
 			try {
 				gasLimit = await __signer.estimateGas.approve(guy,wad,_opt)
+        gasLimit = gasLimit.mul(120).div(100)
 			} catch (error) {
 			console.log(error)
 			}
@@ -38,6 +39,7 @@ export class WGTContract extends ContractAbstract {
 			let  gasLimit: any = null
 			try {
 				gasLimit = await __signer.estimateGas.transferFrom(src,dst,wad,_opt)
+        gasLimit = gasLimit.mul(120).div(100)
 			} catch (error) {
 			console.log(error)
 			}
@@ -56,6 +58,7 @@ export class WGTContract extends ContractAbstract {
 			let  gasLimit: any = null
 			try {
 				gasLimit = await __signer.estimateGas.withdraw(wad,_opt)
+        gasLimit = gasLimit.mul(120).div(100)
 			} catch (error) {
 			console.log(error)
 			}
@@ -95,6 +98,7 @@ export class WGTContract extends ContractAbstract {
 			let  gasLimit: any = null
 			try {
 				gasLimit = await __signer.estimateGas.transfer(dst,wad,_opt)
+        gasLimit = gasLimit.mul(120).div(100)
 			} catch (error) {
 			console.log(error)
 			}
@@ -113,6 +117,7 @@ export class WGTContract extends ContractAbstract {
 			let  gasLimit: any = null
 			try {
 				gasLimit = await __signer.estimateGas.deposit(_opt)
+        gasLimit = gasLimit.mul(120).div(100)
 			} catch (error) {
 			console.log(error)
 			}
