@@ -4,9 +4,9 @@
 
 ```
 "web3-abi": "https://github.com/gatechain/web3-abi#3.0.6"
-|
-dist/umd/web3-abi.x.x.x.js // window.web3Abi
 ```
+
+- dist/umd/web3-abi.x.x.x.js // window.web3Abi
 
 ### 前置依赖
 
