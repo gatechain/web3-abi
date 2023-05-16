@@ -7,7 +7,8 @@
     "genindex": "node ./scripts/gen-index.js",
     "abigen": "rm -rf ./src/base && abigen abis='./src/abis/**/*.json' out='./src/base'",
     "tsc": "rm -rf ./dist && tsc",
-    "build": "npm run abigen && npm run genindex && npm run tsc"
+    "wp": "webpack -c webpack.config.js",
+    "build": "npm run abigen && npm run genindex && npm run wp"
   },
   "files": [
     "dist"
@@ -17,11 +18,15 @@
     "abigen": "https://github.com/gatechain/abigen#1.0.5",
     "ethers": "^5.7.2",
     "fs-extra": "^11.1.0",
+    "ts-loader": "^9.4.2",
     "typescript": "^4.9.4",
-    "web3-contract": "https://github.com/gatechain/web3-contract#3.0.0"
+    "web3-contract": "https://github.com/gatechain/web3-contract#3.0.1",
+    "webpack": "^5.82.1",
+    "webpack-cli": "^5.1.1"
   },
   "peerDependencies": {
-    "web3-contract": "https://github.com/gatechain/web3-contract#3.0.0"
+    "ethers": "^5.7.2",
+    "web3-contract": "https://github.com/gatechain/web3-contract#3.0.1"
   },
   "dependencies": {}
 }
