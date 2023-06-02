@@ -3,7 +3,7 @@
 ### Install
 
 ```
-"web3-abi": "https://github.com/gatechain/web3-abi#3.0.6"
+"web3-abi": "https://github.com/gatechain/web3-abi#3.0.7"
 ```
 
 - dist/umd/web3-abi.x.x.x.js // window.web3Abi
@@ -33,12 +33,15 @@ const fee = await contract.SelfBridgeV1Contract?.getFee(5, 85)
 
 ### abi 集合
 
-| 名称         | 描述         |
-| ------------ | ------------ |
-| erc20        | erc20        |
-| BridgeV1     | 跨链合约     |
-| erc1155      | erc1155      |
-| erc720       | erc720       |
-| NFT_exchange | NFT_exchange |
-| NFT_proxy    | NFT_proxy    |
-| wgt          | wgt          |
+| 名称                | 描述         |
+| ------------------- | ------------ |
+| erc20               | erc20        |
+| BridgeV1            | 跨链合约     |
+| erc1155             | erc1155      |
+| erc720              | erc720       |
+| NFT_exchange        | NFT_exchange |
+| NFT_proxy           | NFT_proxy    |
+| wgt                 | wgt          |
+| UniswapV2Pair       | uniswapV2    |
+| UniswapV2Router02   | uniswapV2    |
+| UniswapV3SwapRouter | uniswapV3    |

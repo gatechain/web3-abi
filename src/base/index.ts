@@ -7,4 +7,7 @@ export * from './hipo_n_f_t_swap_v2';
 export * from './nft_exchange';
 export * from './nft_proxy';
 export * from './sea_drop';
+export * from './uniswap_v2_pair';
+export * from './uniswap_v2_router02';
+export * from './uniswap_v3_swap_router';
 export * from './wgt';
