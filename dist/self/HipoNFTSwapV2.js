@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.SelfHipoNFTSwapV2Contract = void 0;
 const hipo_n_f_t_swap_v2_1 = require("../base/hipo_n_f_t_swap_v2");
-const ethers_1 = require("ethers");
+const web3_contract_1 = require("web3-contract");
 class SelfHipoNFTSwapV2Contract extends hipo_n_f_t_swap_v2_1.HipoNFTSwapV2Contract {
     constructor(props) {
         super(props);
@@ -22,7 +22,7 @@ class SelfHipoNFTSwapV2Contract extends hipo_n_f_t_swap_v2_1.HipoNFTSwapV2Contra
         return "0x" + marketId + continueIfFailed + ethValue + itemLength + item;
     }
     formatEthValue(ethValue) {
-        const hex = ethers_1.BigNumber.from(ethValue).toHexString().slice(2);
+        const hex = web3_contract_1.BigNumber.from(ethValue).toHexString().slice(2);
         const ethValueBytes = 21;
         const zeroStr = new Array(ethValueBytes * 2 - hex.length)
             .fill("0")
@@ -34,7 +34,7 @@ class SelfHipoNFTSwapV2Contract extends hipo_n_f_t_swap_v2_1.HipoNFTSwapV2Contra
         if (_callData.length % 2 !== 0) {
             _callData += "0";
         }
-        const _lengthHex = ethers_1.BigNumber.from(_callData.length / 2 + "")
+        const _lengthHex = web3_contract_1.BigNumber.from(_callData.length / 2 + "")
             .toHexString()
             .slice(2);
         const lengthBytes = 4;

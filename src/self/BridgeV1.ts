@@ -1,5 +1,5 @@
 import { BridgeV1Contract } from "../base/bridge_v1";
-import { ethers } from "ethers";
+import { ethers } from "web3-contract";
 
 export class SelfBridgeV1Contract extends BridgeV1Contract {
   public static contractName = "SelfBridgeV1Contract";

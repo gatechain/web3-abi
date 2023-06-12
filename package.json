@@ -1,11 +1,11 @@
 {
   "name": "web3-abi",
-  "version": "3.0.8",
+  "version": "3.1.0",
   "main": "./dist/index.js",
   "license": "MIT",
   "scripts": {
     "genindex": "node ./scripts/gen-index.js",
-    "abigen": "rm -rf ./src/base && abigen abis='./src/abis/**/*.json' out='./src/base'",
+    "abigen": "rm -rf ./src/base && abigen abis='./src/abis/**/*.json' out='./src/base' abibasepath='../abis'",
     "tsc": "rm -rf ./dist && tsc",
     "wp": "webpack -c webpack.config.js",
     "build": "npm run abigen && npm run genindex && npm run tsc && npm run wp"
@@ -20,13 +20,11 @@
     "fs-extra": "^11.1.0",
     "ts-loader": "^9.4.2",
     "typescript": "^4.9.4",
-    "web3-contract": "https://github.com/gatechain/web3-contract#3.0.1",
+    "web3-contract": "https://github.com/gatechain/web3-contract#3.1.0",
     "webpack": "^5.82.1",
     "webpack-cli": "^5.1.1"
   },
   "peerDependencies": {
-    "ethers": "^5.7.2",
-    "web3-contract": "https://github.com/gatechain/web3-contract#3.0.1"
-  },
-  "dependencies": {}
+    "web3-contract": "https://github.com/gatechain/web3-contract#3.1.0"
+  }
 }

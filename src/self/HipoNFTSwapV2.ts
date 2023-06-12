@@ -1,5 +1,5 @@
 import { HipoNFTSwapV2Contract } from "../base/hipo_n_f_t_swap_v2";
-import { BigNumber } from "ethers";
+import { BigNumber } from "web3-contract";
 
 interface IGetTradeBytesParam {
   marketId: string;

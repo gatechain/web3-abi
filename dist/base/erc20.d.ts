@@ -1,19 +1,6 @@
 import ContractAbstract, { BigNumber, IOption } from "web3-contract/dist/contract/ContractAbstract.js";
 export declare class ERC20Contract extends ContractAbstract {
     static contractName: string;
-    constructor(props: any);
-    DOMAIN_SEPARATOR(opt?: IOption): any;
-    PERMIT_TYPEHASH(opt?: IOption): any;
-    allowance(index_0: string, index_1: string, opt?: IOption): any;
-    approve(spender: string, value: BigNumber, opt?: IOption): Promise<any>;
-    balanceOf(index_0: string, opt?: IOption): any;
-    decimals(opt?: IOption): any;
-    nonces(index_0: string, opt?: IOption): any;
-    permit(owner: string, spender: string, value: BigNumber, deadline: BigNumber, v: number | BigNumber, r: string, s: string, opt?: IOption): Promise<any>;
-    symbol(opt?: IOption): any;
-    totalSupply(opt?: IOption): any;
-    transfer(to: string, value: BigNumber, opt?: IOption): Promise<any>;
-    transferFrom(from: string, to: string, value: BigNumber, opt?: IOption): Promise<any>;
     Abi: ({
         inputs: {
             internalType: string;
@@ -59,4 +46,18 @@ export declare class ERC20Contract extends ContractAbstract {
         type: string;
         anonymous?: undefined;
     })[];
+    constructor(props: any);
+    DOMAIN_SEPARATOR(opt?: IOption): any;
+    PERMIT_TYPEHASH(opt?: IOption): any;
+    allowance(index_0: string, index_1: string, opt?: IOption): any;
+    approve(spender: string, value: BigNumber, opt?: IOption): Promise<any>;
+    balanceOf(index_0: string, opt?: IOption): any;
+    decimals(opt?: IOption): any;
+    name(opt?: IOption): any;
+    nonces(index_0: string, opt?: IOption): any;
+    permit(owner: string, spender: string, value: BigNumber, deadline: BigNumber, v: number | BigNumber, r: string, s: string, opt?: IOption): Promise<any>;
+    symbol(opt?: IOption): any;
+    totalSupply(opt?: IOption): any;
+    transfer(to: string, value: BigNumber, opt?: IOption): Promise<any>;
+    transferFrom(from: string, to: string, value: BigNumber, opt?: IOption): Promise<any>;
 }

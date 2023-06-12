@@ -1,17 +1,6 @@
 import ContractAbstract, { BigNumber, IOption } from "web3-contract/dist/contract/ContractAbstract.js";
 export declare class WGTContract extends ContractAbstract {
     static contractName: string;
-    constructor(props: any);
-    approve(guy: string, wad: BigNumber, opt?: IOption): Promise<any>;
-    totalSupply(opt?: IOption): any;
-    transferFrom(src: string, dst: string, wad: BigNumber, opt?: IOption): Promise<any>;
-    withdraw(wad: BigNumber, opt?: IOption): Promise<any>;
-    decimals(opt?: IOption): any;
-    balanceOf(index_0: string, opt?: IOption): any;
-    symbol(opt?: IOption): any;
-    transfer(dst: string, wad: BigNumber, opt?: IOption): Promise<any>;
-    deposit(opt?: IOption): Promise<any>;
-    allowance(index_0: string, index_1: string, opt?: IOption): any;
     Abi: ({
         constant: boolean;
         inputs: {
@@ -50,4 +39,16 @@ export declare class WGTContract extends ContractAbstract {
         payable?: undefined;
         stateMutability?: undefined;
     })[];
+    constructor(props: any);
+    name(opt?: IOption): any;
+    approve(guy: string, wad: BigNumber, opt?: IOption): Promise<any>;
+    totalSupply(opt?: IOption): any;
+    transferFrom(src: string, dst: string, wad: BigNumber, opt?: IOption): Promise<any>;
+    withdraw(wad: BigNumber, opt?: IOption): Promise<any>;
+    decimals(opt?: IOption): any;
+    balanceOf(index_0: string, opt?: IOption): any;
+    symbol(opt?: IOption): any;
+    transfer(dst: string, wad: BigNumber, opt?: IOption): Promise<any>;
+    deposit(opt?: IOption): Promise<any>;
+    allowance(index_0: string, index_1: string, opt?: IOption): any;
 }

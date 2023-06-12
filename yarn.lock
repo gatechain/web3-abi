@@ -1186,7 +1186,7 @@ ethereumjs-util@^7.1.5:
     ethereum-cryptography "^0.1.3"
     rlp "^2.2.4"
 
-ethers@^5.5.4, ethers@^5.7.2:
+ethers@^5.7.2:
   version "5.7.2"
   resolved "https://registry.npmmirror.com/ethers/-/ethers-5.7.2.tgz#3a7deeabbb8c030d4126b24f84e525466145872e"
   integrity sha512-wswUsmWo1aOK8rR7DIKiWSw9DbLWe6x98Jrn8wcTflTVvaXhAMaB5zGAXy0GYQEQp9iO1iSHWVyARQm11zUtyg==
@@ -2193,11 +2193,9 @@ watchpack@^2.4.0:
     glob-to-regexp "^0.4.1"
     graceful-fs "^4.1.2"
 
-"web3-contract@https://github.com/gatechain/web3-contract#3.0.0":
-  version "3.0.0"
-  resolved "https://github.com/gatechain/web3-contract#9b3a9821463f5bc3452c07d379c1281f7b287508"
-  dependencies:
-    ethers "^5.5.4"
+"web3-contract@https://github.com/gatechain/web3-contract#3.1.0":
+  version "3.1.0"
+  resolved "https://github.com/gatechain/web3-contract#86188cb0c94c5b1d5775125d1106ed4dd852b9c6"
 
 webidl-conversions@^3.0.0:
   version "3.0.1"
