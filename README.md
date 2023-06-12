@@ -35,7 +35,7 @@ const fee = await contract.SelfBridgeV1Contract?.getFee(5, 85)
 
 | 版本  | 修改            | 备注                                       |
 | ----- | --------------- | ------------------------------------------ |
-| 3.1.1 | 修改 readme     | web3-contract: 3.1.1 ethers: 5.7.2         |
+| 3.1.1 | 修改 readme     | web3-contract: 3.1.0 ethers: 5.7.2         |
 | 3.1.0 | import abi json | web3-contract: 3.1.0 ethers: 5.7.2         |
 | 3.0.7 |                 | (old) web3-contract: 3.0.1 , ethers: 5.7.2 |
 
