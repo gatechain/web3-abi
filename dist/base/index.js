@@ -22,6 +22,7 @@ __exportStar(require("./hipo_cross_and_swap"), exports);
 __exportStar(require("./hipo_n_f_t_swap_v2"), exports);
 __exportStar(require("./nft_exchange"), exports);
 __exportStar(require("./nft_proxy"), exports);
+__exportStar(require("./perpetual_temp"), exports);
 __exportStar(require("./sea_drop"), exports);
 __exportStar(require("./uniswap_v2_pair"), exports);
 __exportStar(require("./uniswap_v2_router02"), exports);
