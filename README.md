@@ -3,7 +3,7 @@
 ### Install
 
 ```
-"web3-abi": "https://github.com/gatechain/web3-abi#3.1.3"
+"web3-abi": "https://github.com/gatechain/web3-abi#3.1.4"
 ```
 
 - dist/umd/web3-abi.x.x.x.js // window.web3Abi
