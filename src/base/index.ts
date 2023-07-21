@@ -8,6 +8,7 @@ export * from './nft_exchange';
 export * from './nft_proxy';
 export * from './perpetual_temp';
 export * from './sea_drop';
+export * from './spot_main';
 export * from './uniswap_v2_pair';
 export * from './uniswap_v2_router02';
 export * from './uniswap_v3_swap_router';

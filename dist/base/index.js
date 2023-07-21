@@ -24,6 +24,7 @@ __exportStar(require("./nft_exchange"), exports);
 __exportStar(require("./nft_proxy"), exports);
 __exportStar(require("./perpetual_temp"), exports);
 __exportStar(require("./sea_drop"), exports);
+__exportStar(require("./spot_main"), exports);
 __exportStar(require("./uniswap_v2_pair"), exports);
 __exportStar(require("./uniswap_v2_router02"), exports);
 __exportStar(require("./uniswap_v3_swap_router"), exports);
