@@ -283,6 +283,19 @@
             {
                 "indexed": true,
                 "internalType": "address",
+                "name": "bridge",
+                "type": "address"
+            }
+        ],
+        "name": "UpdateBridgeAddress",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
                 "name": "token",
                 "type": "address"
             },
@@ -361,6 +374,19 @@
                 "internalType": "bool",
                 "name": "",
                 "type": "bool"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "bridgeAddress",
+        "outputs": [
+            {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
             }
         ],
         "stateMutability": "view",
@@ -529,7 +555,7 @@
                 "type": "uint256"
             }
         ],
-        "stateMutability": "pure",
+        "stateMutability": "view",
         "type": "function"
     },
     {
@@ -564,6 +590,11 @@
                 "type": "address"
             },
             {
+                "internalType": "uint24",
+                "name": "tokenId",
+                "type": "uint24"
+            },
+            {
                 "internalType": "uint192",
                 "name": "amount",
                 "type": "uint192"
@@ -577,9 +608,9 @@
         "name": "getHash",
         "outputs": [
             {
-                "internalType": "uint256[5]",
+                "internalType": "uint256[4]",
                 "name": "",
-                "type": "uint256[5]"
+                "type": "uint256[4]"
             },
             {
                 "internalType": "uint256",
@@ -856,6 +887,19 @@
     {
         "inputs": [
             {
+                "internalType": "address",
+                "name": "adr",
+                "type": "address"
+            }
+        ],
+        "name": "setBridgeAddress",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
                 "internalType": "uint48",
                 "name": "_feeAccId",
                 "type": "uint48"
@@ -887,12 +931,12 @@
                 "type": "address"
             },
             {
-                "internalType": "bool",
-                "name": "state",
-                "type": "bool"
+                "internalType": "uint256",
+                "name": "tokenId",
+                "type": "uint256"
             }
         ],
-        "name": "setTokenState",
+        "name": "setTokenMap",
         "outputs": [],
         "stateMutability": "nonpayable",
         "type": "function"
@@ -940,6 +984,25 @@
         "name": "toggleProofVerify",
         "outputs": [],
         "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "name": "tokenMap",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
         "type": "function"
     },
     {
@@ -1032,13 +1095,28 @@
             },
             {
                 "internalType": "uint48",
-                "name": "idx",
+                "name": "userIdx",
                 "type": "uint48"
+            },
+            {
+                "internalType": "uint8",
+                "name": "destinationChainID",
+                "type": "uint8"
+            },
+            {
+                "internalType": "bytes32",
+                "name": "resourceID",
+                "type": "bytes32"
+            },
+            {
+                "internalType": "bytes",
+                "name": "data",
+                "type": "bytes"
             }
         ],
         "name": "withdrawMerkleProof",
         "outputs": [],
-        "stateMutability": "nonpayable",
+        "stateMutability": "payable",
         "type": "function"
     },
     {

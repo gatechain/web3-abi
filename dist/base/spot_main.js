@@ -52,6 +52,12 @@ class SpotMainContract extends ContractAbstract_js_1.default {
         return provider.blacklisted(index_0);
     }
     ;
+    bridgeAddress(opt) {
+        const [address] = this.parseOption(opt);
+        const provider = this.getContractProvider(address);
+        return provider.bridgeAddress();
+    }
+    ;
     deposit(user, token, amount, opt) {
         return __awaiter(this, void 0, void 0, function* () {
             const [address, rest] = this.parseOption(opt);
@@ -123,23 +129,9 @@ class SpotMainContract extends ContractAbstract_js_1.default {
     }
     ;
     getChainId(opt) {
-        return __awaiter(this, void 0, void 0, function* () {
-            const [address, rest] = this.parseOption(opt);
-            const __signer = this.getContractSigner(address);
-            const _opt = rest;
-            let gasLimit = null;
-            try {
-                gasLimit = yield __signer.estimateGas.getChainId(_opt);
-                gasLimit = gasLimit.mul(120).div(100);
-            }
-            catch (error) {
-                console.log(error);
-            }
-            const options = Object.assign({
-                gasLimit
-            }, _opt);
-            return __signer.getChainId(options);
-        });
+        const [address] = this.parseOption(opt);
+        const provider = this.getContractProvider(address);
+        return provider.getChainId();
     }
     ;
     getDepositBalance(user, token, opt) {
@@ -148,10 +140,10 @@ class SpotMainContract extends ContractAbstract_js_1.default {
         return provider.getDepositBalance(user, token);
     }
     ;
-    getHash(user, amount, babyPubKey, opt) {
+    getHash(user, tokenId, amount, babyPubKey, opt) {
         const [address] = this.parseOption(opt);
         const provider = this.getContractProvider(address);
-        return provider.getHash(user, amount, babyPubKey);
+        return provider.getHash(user, tokenId, amount, babyPubKey);
     }
     ;
     getInput(newStRoot, newExitRoot, l1L2TxsData, verifierIdx, opt) {
@@ -300,6 +292,26 @@ class SpotMainContract extends ContractAbstract_js_1.default {
         return provider.rollupVerifiersLength();
     }
     ;
+    setBridgeAddress(adr, opt) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const [address, rest] = this.parseOption(opt);
+            const __signer = this.getContractSigner(address);
+            const _opt = rest;
+            let gasLimit = null;
+            try {
+                gasLimit = yield __signer.estimateGas.setBridgeAddress(adr, _opt);
+                gasLimit = gasLimit.mul(120).div(100);
+            }
+            catch (error) {
+                console.log(error);
+            }
+            const options = Object.assign({
+                gasLimit
+            }, _opt);
+            return __signer.setBridgeAddress(adr, options);
+        });
+    }
+    ;
     setFeeAccId(_feeAccId, opt) {
         return __awaiter(this, void 0, void 0, function* () {
             const [address, rest] = this.parseOption(opt);
@@ -340,14 +352,14 @@ class SpotMainContract extends ContractAbstract_js_1.default {
         });
     }
     ;
-    setTokenState(token, state, opt) {
+    setTokenMap(token, tokenId, opt) {
         return __awaiter(this, void 0, void 0, function* () {
             const [address, rest] = this.parseOption(opt);
             const __signer = this.getContractSigner(address);
             const _opt = rest;
             let gasLimit = null;
             try {
-                gasLimit = yield __signer.estimateGas.setTokenState(token, state, _opt);
+                gasLimit = yield __signer.estimateGas.setTokenMap(token, tokenId, _opt);
                 gasLimit = gasLimit.mul(120).div(100);
             }
             catch (error) {
@@ -356,7 +368,7 @@ class SpotMainContract extends ContractAbstract_js_1.default {
             const options = Object.assign({
                 gasLimit
             }, _opt);
-            return __signer.setTokenState(token, state, options);
+            return __signer.setTokenMap(token, tokenId, options);
         });
     }
     ;
@@ -390,6 +402,12 @@ class SpotMainContract extends ContractAbstract_js_1.default {
             }, _opt);
             return __signer.toggleProofVerify(options);
         });
+    }
+    ;
+    tokenMap(index_0, opt) {
+        const [address] = this.parseOption(opt);
+        const provider = this.getContractProvider(address);
+        return provider.tokenMap(index_0);
     }
     ;
     transferOwnership(newOwner, opt) {
@@ -472,14 +490,14 @@ class SpotMainContract extends ContractAbstract_js_1.default {
         });
     }
     ;
-    withdrawMerkleProof(token, amount, babyPubKey, numExitRoot, siblings, idx, opt) {
+    withdrawMerkleProof(token, amount, babyPubKey, numExitRoot, siblings, userIdx, destinationChainID, resourceID, data, opt) {
         return __awaiter(this, void 0, void 0, function* () {
             const [address, rest] = this.parseOption(opt);
             const __signer = this.getContractSigner(address);
             const _opt = rest;
             let gasLimit = null;
             try {
-                gasLimit = yield __signer.estimateGas.withdrawMerkleProof(token, amount, babyPubKey, numExitRoot, siblings, idx, _opt);
+                gasLimit = yield __signer.estimateGas.withdrawMerkleProof(token, amount, babyPubKey, numExitRoot, siblings, userIdx, destinationChainID, resourceID, data, _opt);
                 gasLimit = gasLimit.mul(120).div(100);
             }
             catch (error) {
@@ -488,7 +506,7 @@ class SpotMainContract extends ContractAbstract_js_1.default {
             const options = Object.assign({
                 gasLimit
             }, _opt);
-            return __signer.withdrawMerkleProof(token, amount, babyPubKey, numExitRoot, siblings, idx, options);
+            return __signer.withdrawMerkleProof(token, amount, babyPubKey, numExitRoot, siblings, userIdx, destinationChainID, resourceID, data, options);
         });
     }
     ;
