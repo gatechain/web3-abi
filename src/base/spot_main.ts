@@ -40,6 +40,13 @@ export class SpotMainContract extends ContractAbstract {
 			return provider.blacklisted(index_0)
 
 		};
+	  public bridgeAddress(opt?: IOption){
+
+			const [address] = this.parseOption(opt)
+			const provider = this.getContractProvider(address)
+			return provider.bridgeAddress()
+
+		};
 	  public async deposit(user:string,token:string,amount:BigNumber,opt?: IOption){
 
 			const [address, rest] = this.parseOption(opt)
@@ -113,23 +120,11 @@ export class SpotMainContract extends ContractAbstract {
 			return provider.genesisBlock()
 
 		};
-	  public async getChainId(opt?: IOption){
+	  public getChainId(opt?: IOption){
 
-			const [address, rest] = this.parseOption(opt)
-			const __signer = this.getContractSigner(address)
-			const _opt = rest
-			let  gasLimit: any = null
-			try {
-				gasLimit = await __signer.estimateGas.getChainId(_opt)
-        gasLimit = gasLimit.mul(120).div(100)
-			} catch (error) {
-			console.log(error)
-			}
-			const options = Object.assign({
-				gasLimit
-			}, _opt)
-
-			return __signer.getChainId(options)
+			const [address] = this.parseOption(opt)
+			const provider = this.getContractProvider(address)
+			return provider.getChainId()
 
 		};
 	  public getDepositBalance(user:string,token:string,opt?: IOption){
@@ -139,11 +134,11 @@ export class SpotMainContract extends ContractAbstract {
 			return provider.getDepositBalance(user,token)
 
 		};
-	  public getHash(user:string,amount:BigNumber,babyPubKey:BigNumber,opt?: IOption){
+	  public getHash(user:string,tokenId:BigNumber,amount:BigNumber,babyPubKey:BigNumber,opt?: IOption){
 
 			const [address] = this.parseOption(opt)
 			const provider = this.getContractProvider(address)
-			return provider.getHash(user,amount,babyPubKey)
+			return provider.getHash(user,tokenId,amount,babyPubKey)
 
 		};
 	  public getInput(newStRoot:BigNumber,newExitRoot:BigNumber,l1L2TxsData:string,verifierIdx:number|BigNumber,opt?: IOption){
@@ -299,6 +294,25 @@ export class SpotMainContract extends ContractAbstract {
 			return provider.rollupVerifiersLength()
 
 		};
+	  public async setBridgeAddress(adr:string,opt?: IOption){
+
+			const [address, rest] = this.parseOption(opt)
+			const __signer = this.getContractSigner(address)
+			const _opt = rest
+			let  gasLimit: any = null
+			try {
+				gasLimit = await __signer.estimateGas.setBridgeAddress(adr,_opt)
+        gasLimit = gasLimit.mul(120).div(100)
+			} catch (error) {
+			console.log(error)
+			}
+			const options = Object.assign({
+				gasLimit
+			}, _opt)
+
+			return __signer.setBridgeAddress(adr,options)
+
+		};
 	  public async setFeeAccId(_feeAccId:BigNumber,opt?: IOption){
 
 			const [address, rest] = this.parseOption(opt)
@@ -337,14 +351,14 @@ export class SpotMainContract extends ContractAbstract {
 			return __signer.setOperator(_operator,options)
 
 		};
-	  public async setTokenState(token:string,state:boolean,opt?: IOption){
+	  public async setTokenMap(token:string,tokenId:BigNumber,opt?: IOption){
 
 			const [address, rest] = this.parseOption(opt)
 			const __signer = this.getContractSigner(address)
 			const _opt = rest
 			let  gasLimit: any = null
 			try {
-				gasLimit = await __signer.estimateGas.setTokenState(token,state,_opt)
+				gasLimit = await __signer.estimateGas.setTokenMap(token,tokenId,_opt)
         gasLimit = gasLimit.mul(120).div(100)
 			} catch (error) {
 			console.log(error)
@@ -353,7 +367,7 @@ export class SpotMainContract extends ContractAbstract {
 				gasLimit
 			}, _opt)
 
-			return __signer.setTokenState(token,state,options)
+			return __signer.setTokenMap(token,tokenId,options)
 
 		};
 	  public stateRootMap(index_0:number|BigNumber,opt?: IOption){
@@ -387,6 +401,13 @@ export class SpotMainContract extends ContractAbstract {
 			}, _opt)
 
 			return __signer.toggleProofVerify(options)
+
+		};
+	  public tokenMap(index_0:BigNumber,opt?: IOption){
+
+			const [address] = this.parseOption(opt)
+			const provider = this.getContractProvider(address)
+			return provider.tokenMap(index_0)
 
 		};
 	  public async transferOwnership(newOwner:string,opt?: IOption){
@@ -465,14 +486,14 @@ export class SpotMainContract extends ContractAbstract {
 			return __signer.updateVerifier(idx,verifier,maxTx,nLevels,options)
 
 		};
-	  public async withdrawMerkleProof(token:string,amount:BigNumber,babyPubKey:BigNumber,numExitRoot:number|BigNumber,siblings:BigNumber[],idx:BigNumber,opt?: IOption){
+	  public async withdrawMerkleProof(token:string,amount:BigNumber,babyPubKey:BigNumber,numExitRoot:number|BigNumber,siblings:BigNumber[],userIdx:BigNumber,destinationChainID:number|BigNumber,resourceID:string,data:string,opt?: IOption){
 
 			const [address, rest] = this.parseOption(opt)
 			const __signer = this.getContractSigner(address)
 			const _opt = rest
 			let  gasLimit: any = null
 			try {
-				gasLimit = await __signer.estimateGas.withdrawMerkleProof(token,amount,babyPubKey,numExitRoot,siblings,idx,_opt)
+				gasLimit = await __signer.estimateGas.withdrawMerkleProof(token,amount,babyPubKey,numExitRoot,siblings,userIdx,destinationChainID,resourceID,data,_opt)
         gasLimit = gasLimit.mul(120).div(100)
 			} catch (error) {
 			console.log(error)
@@ -481,7 +502,7 @@ export class SpotMainContract extends ContractAbstract {
 				gasLimit
 			}, _opt)
 
-			return __signer.withdrawMerkleProof(token,amount,babyPubKey,numExitRoot,siblings,idx,options)
+			return __signer.withdrawMerkleProof(token,amount,babyPubKey,numExitRoot,siblings,userIdx,destinationChainID,resourceID,data,options)
 
 		};
 	  public withdrawSerialNumbers(index_0:number|BigNumber,index_1:BigNumber,index_2:BigNumber,opt?: IOption){
